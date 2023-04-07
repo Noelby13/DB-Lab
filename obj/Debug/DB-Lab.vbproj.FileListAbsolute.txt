@@ -1,0 +1,13 @@
+C:\Users\50584\Documents\DB-LAB\DB-Lab\obj\Debug\DB-Lab.vbproj.AssemblyReference.cache
+C:\Users\50584\Documents\DB-LAB\DB-Lab\obj\Debug\DB-Lab.vbproj.SuggestedBindingRedirects.cache
+C:\Users\50584\Documents\DB-LAB\DB-Lab\obj\Debug\DB_Lab.FrmLogin.resources
+C:\Users\50584\Documents\DB-LAB\DB-Lab\obj\Debug\DB_Lab.Resources.resources
+C:\Users\50584\Documents\DB-LAB\DB-Lab\obj\Debug\DB-Lab.vbproj.GenerateResource.cache
+C:\Users\50584\Documents\DB-LAB\DB-Lab\obj\Debug\DB-Lab.vbproj.CoreCompileInputs.cache
+C:\Users\50584\Documents\DB-LAB\DB-Lab\bin\Debug\DB-Lab.exe.config
+C:\Users\50584\Documents\DB-LAB\DB-Lab\bin\Debug\DB-Lab.exe
+C:\Users\50584\Documents\DB-LAB\DB-Lab\bin\Debug\DB-Lab.pdb
+C:\Users\50584\Documents\DB-LAB\DB-Lab\bin\Debug\DB-Lab.xml
+C:\Users\50584\Documents\DB-LAB\DB-Lab\obj\Debug\DB-Lab.exe
+C:\Users\50584\Documents\DB-LAB\DB-Lab\obj\Debug\DB-Lab.xml
+C:\Users\50584\Documents\DB-LAB\DB-Lab\obj\Debug\DB-Lab.pdb
