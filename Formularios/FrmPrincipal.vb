@@ -40,4 +40,17 @@
     Private Sub BtnResultados_Click(sender As Object, e As EventArgs) Handles BtnResultados.Click
         mostrarSubMenu(PanelSubResultado)
     End Sub
+
+    Private formActual As Form = Nothing
+    Private Sub abrirFormulario(formHijo As Form)
+        If formActual IsNot Nothing Then formActual.Close()
+        formActual = formHijo
+        formHijo.TopLevel = False
+        formHijo.FormBorderStyle = FormBorderStyle.None
+        formHijo.Dock = DockStyle.Fill
+        PanelContenedor.Controls.Add(formHijo)
+        PanelContenedor.BringToFront()
+        formHijo.Show()
+    End Sub
+
 End Class
