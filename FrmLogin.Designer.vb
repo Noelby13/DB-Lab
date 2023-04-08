@@ -22,6 +22,7 @@ Partial Class FrmLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -29,6 +30,8 @@ Partial Class FrmLogin
         Me.TxbUsuario = New System.Windows.Forms.TextBox()
         Me.TxbContraseña = New System.Windows.Forms.TextBox()
         Me.BtnEntrar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -36,8 +39,8 @@ Partial Class FrmLogin
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Variable Display", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label1.Location = New System.Drawing.Point(117, 54)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(83, 51)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(168, 57)
         Me.Label1.TabIndex = 0
@@ -46,12 +49,12 @@ Partial Class FrmLogin
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Variable Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label2.Location = New System.Drawing.Point(105, 111)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Variable Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(70, 108)
         Me.Label2.Name = "Label2"
         Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label2.Size = New System.Drawing.Size(195, 27)
+        Me.Label2.Size = New System.Drawing.Size(272, 37)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Database Laboratory"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -97,7 +100,7 @@ Partial Class FrmLogin
         '
         'BtnEntrar
         '
-        Me.BtnEntrar.BackColor = System.Drawing.Color.DarkMagenta
+        Me.BtnEntrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.BtnEntrar.Font = New System.Drawing.Font("Segoe UI Variable Text Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEntrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnEntrar.Location = New System.Drawing.Point(57, 390)
@@ -107,12 +110,23 @@ Partial Class FrmLogin
         Me.BtnEntrar.Text = "Entrar"
         Me.BtnEntrar.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(267, 51)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(406, 579)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.BtnEntrar)
         Me.Controls.Add(Me.TxbContraseña)
         Me.Controls.Add(Me.TxbUsuario)
@@ -123,7 +137,8 @@ Partial Class FrmLogin
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmLogin"
-        Me.Text = "Form1"
+        Me.Text = "Inicio de Sesión"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -136,4 +151,5 @@ Partial Class FrmLogin
     Friend WithEvents TxbUsuario As TextBox
     Friend WithEvents TxbContraseña As TextBox
     Friend WithEvents BtnEntrar As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
