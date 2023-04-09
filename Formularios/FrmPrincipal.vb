@@ -40,4 +40,20 @@
     Private Sub BtnResultados_Click(sender As Object, e As EventArgs) Handles BtnResultados.Click
         mostrarSubMenu(PanelSubResultado)
     End Sub
+
+    Private FrmActual As Form = Nothing
+    Private Sub abrirFrmHijo(FrmHijo As Form)
+        If FrmActual IsNot Nothing Then FrmActual.Close()
+        FrmActual = FrmHijo
+        FrmHijo.TopLevel = False
+        FrmHijo.FormBorderStyle = FormBorderStyle.None
+        FrmHijo.Dock = DockStyle.Fill
+        PanelFrmHijo.Controls.Add(FrmHijo)
+        PanelFrmHijo.Tag = FrmHijo
+        FrmHijo.Show()
+    End Sub
+
+    Private Sub BtnCrearUsuario_Click(sender As Object, e As EventArgs) Handles BtnCrearUsuario.Click
+        abrirFrmHijo(New FrmCrearUsuario())
+    End Sub
 End Class
