@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FrmCrearRol.Designer.vb">
+      <DependentUpon>FrmCrearRol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCrearRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmCrearUsuario.Designer.vb">
       <DependentUpon>FrmCrearUsuario.vb</DependentUpon>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FrmCrearRol.resx">
+      <DependentUpon>FrmCrearRol.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCrearUsuario.resx">
       <DependentUpon>FrmCrearUsuario.vb</DependentUpon>
     </EmbeddedResource>
