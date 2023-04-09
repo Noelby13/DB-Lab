@@ -51,8 +51,9 @@ Partial Class FrmPrincipal
         Me.BtnCrearUsuario = New System.Windows.Forms.Button()
         Me.BtnUsuario = New System.Windows.Forms.Button()
         Me.PanelLogo = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PanelContenedor = New System.Windows.Forms.Panel()
         Me.PanelMenuLateral.SuspendLayout()
         Me.PanelSubResultado.SuspendLayout()
         Me.PanelSubOrdenes.SuspendLayout()
@@ -470,16 +471,6 @@ Partial Class FrmPrincipal
         Me.PanelLogo.Size = New System.Drawing.Size(220, 100)
         Me.PanelLogo.TabIndex = 0
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(70, 70)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -491,11 +482,30 @@ Partial Class FrmPrincipal
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "DB-LAB"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(70, 70)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'PanelContenedor
+        '
+        Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelContenedor.Location = New System.Drawing.Point(220, 0)
+        Me.PanelContenedor.Name = "PanelContenedor"
+        Me.PanelContenedor.Size = New System.Drawing.Size(868, 891)
+        Me.PanelContenedor.TabIndex = 1
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1088, 891)
+        Me.Controls.Add(Me.PanelContenedor)
         Me.Controls.Add(Me.PanelMenuLateral)
         Me.Name = "FrmPrincipal"
         Me.Text = "FrmPrincipal"
@@ -542,4 +552,5 @@ Partial Class FrmPrincipal
     Friend WithEvents BtnResultados As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PanelContenedor As Panel
 End Class
