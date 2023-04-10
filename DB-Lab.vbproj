@@ -91,6 +91,12 @@
     <Compile Include="Formularios\FrmCrearUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmFacturarOrdenes.Designer.vb">
+      <DependentUpon>FrmFacturarOrdenes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmFacturarOrdenes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmPrincipal.Designer.vb">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCrearUsuario.resx">
       <DependentUpon>FrmCrearUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmFacturarOrdenes.resx">
+      <DependentUpon>FrmFacturarOrdenes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>

@@ -64,4 +64,8 @@
     Private Sub BtnCrearCategoria_Click(sender As Object, e As EventArgs) Handles BtnCrearCategoria.Click
         abrirFrmHijo(New FrmCategorias())
     End Sub
+
+    Private Sub BtnFacturar_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
+        abrirFrmHijo(New FrmFacturarOrdenes())
+    End Sub
 End Class
