@@ -57,6 +57,10 @@
         abrirFrmHijo(New FrmCrearUsuario())
     End Sub
 
+
+    Private Sub BtnFacturar_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
+        abrirFrmHijo(New FrmFacturarOrdenes())
+
     Private Sub BtnCrearRol_Click(sender As Object, e As EventArgs) Handles BtnCrearRol.Click
         abrirFrmHijo(New FrmCrearRol())
     End Sub
