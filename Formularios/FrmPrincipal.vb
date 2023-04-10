@@ -56,4 +56,8 @@
     Private Sub BtnCrearUsuario_Click(sender As Object, e As EventArgs) Handles BtnCrearUsuario.Click
         abrirFrmHijo(New FrmCrearUsuario())
     End Sub
+
+    Private Sub BtnFacturar_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
+        abrirFrmHijo(New FrmFacturarOrdenes())
+    End Sub
 End Class
