@@ -97,7 +97,7 @@ Partial Class FrmCrearUsuario
         Me.Btn_buscar.BackColor = System.Drawing.Color.White
         Me.Btn_buscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_buscar.ForeColor = System.Drawing.Color.Black
-        Me.Btn_buscar.Location = New System.Drawing.Point(24, 427)
+        Me.Btn_buscar.Location = New System.Drawing.Point(24, 447)
         Me.Btn_buscar.Name = "Btn_buscar"
         Me.Btn_buscar.Size = New System.Drawing.Size(90, 40)
         Me.Btn_buscar.TabIndex = 1
@@ -108,7 +108,7 @@ Partial Class FrmCrearUsuario
         '
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(130, 24)
+        Me.TextBox1.Location = New System.Drawing.Point(123, 29)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(215, 27)
         Me.TextBox1.TabIndex = 1
@@ -118,7 +118,7 @@ Partial Class FrmCrearUsuario
         Me.Lbl_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Lbl_nombre.AutoSize = True
         Me.Lbl_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_nombre.Location = New System.Drawing.Point(46, 29)
+        Me.Lbl_nombre.Location = New System.Drawing.Point(39, 34)
         Me.Lbl_nombre.Name = "Lbl_nombre"
         Me.Lbl_nombre.Size = New System.Drawing.Size(78, 22)
         Me.Lbl_nombre.TabIndex = 2
@@ -128,7 +128,7 @@ Partial Class FrmCrearUsuario
         '
         Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(130, 67)
+        Me.TextBox2.Location = New System.Drawing.Point(123, 72)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(215, 27)
         Me.TextBox2.TabIndex = 3
@@ -138,7 +138,7 @@ Partial Class FrmCrearUsuario
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(45, 72)
+        Me.Label1.Location = New System.Drawing.Point(38, 77)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(79, 22)
         Me.Label1.TabIndex = 4
@@ -148,7 +148,7 @@ Partial Class FrmCrearUsuario
         '
         Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(130, 110)
+        Me.TextBox3.Location = New System.Drawing.Point(123, 115)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(215, 27)
         Me.TextBox3.TabIndex = 5
@@ -158,7 +158,7 @@ Partial Class FrmCrearUsuario
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(20, 116)
+        Me.Label2.Location = New System.Drawing.Point(13, 121)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(104, 22)
         Me.Label2.TabIndex = 6
@@ -168,7 +168,7 @@ Partial Class FrmCrearUsuario
         '
         Me.TextBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(130, 153)
+        Me.TextBox4.Location = New System.Drawing.Point(123, 158)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(215, 27)
         Me.TextBox4.TabIndex = 7
@@ -178,7 +178,7 @@ Partial Class FrmCrearUsuario
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(38, 158)
+        Me.Label3.Location = New System.Drawing.Point(31, 163)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 22)
         Me.Label3.TabIndex = 8
@@ -188,7 +188,7 @@ Partial Class FrmCrearUsuario
         '
         Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(130, 196)
+        Me.TextBox5.Location = New System.Drawing.Point(123, 201)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(215, 27)
         Me.TextBox5.TabIndex = 9
@@ -198,7 +198,7 @@ Partial Class FrmCrearUsuario
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(34, 201)
+        Me.Label4.Location = New System.Drawing.Point(27, 206)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(90, 22)
         Me.Label4.TabIndex = 10
@@ -208,7 +208,7 @@ Partial Class FrmCrearUsuario
         '
         Me.TextBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(528, 24)
+        Me.TextBox6.Location = New System.Drawing.Point(521, 29)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(215, 27)
         Me.TextBox6.TabIndex = 11
@@ -218,7 +218,7 @@ Partial Class FrmCrearUsuario
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(448, 29)
+        Me.Label5.Location = New System.Drawing.Point(441, 34)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(74, 22)
         Me.Label5.TabIndex = 12
@@ -228,7 +228,7 @@ Partial Class FrmCrearUsuario
         '
         Me.TextBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(528, 67)
+        Me.TextBox7.Location = New System.Drawing.Point(521, 72)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(215, 27)
         Me.TextBox7.TabIndex = 13
@@ -238,7 +238,7 @@ Partial Class FrmCrearUsuario
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(450, 72)
+        Me.Label6.Location = New System.Drawing.Point(443, 77)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(72, 22)
         Me.Label6.TabIndex = 14
@@ -250,7 +250,7 @@ Partial Class FrmCrearUsuario
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Administrador", "Recepcionista", "Laboratorista"})
-        Me.ComboBox1.Location = New System.Drawing.Point(528, 110)
+        Me.ComboBox1.Location = New System.Drawing.Point(521, 115)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(215, 28)
         Me.ComboBox1.TabIndex = 15
@@ -261,7 +261,7 @@ Partial Class FrmCrearUsuario
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(480, 116)
+        Me.Label7.Location = New System.Drawing.Point(473, 121)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(42, 22)
         Me.Label7.TabIndex = 16
@@ -271,7 +271,7 @@ Partial Class FrmCrearUsuario
         '
         Me.TextBox8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(528, 157)
+        Me.TextBox8.Location = New System.Drawing.Point(521, 162)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.TextBox8.Size = New System.Drawing.Size(215, 27)
@@ -282,7 +282,7 @@ Partial Class FrmCrearUsuario
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(414, 162)
+        Me.Label8.Location = New System.Drawing.Point(407, 167)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(108, 22)
         Me.Label8.TabIndex = 18
@@ -294,7 +294,7 @@ Partial Class FrmCrearUsuario
         Me.Btn_limpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(228, Byte), Integer))
         Me.Btn_limpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_limpiar.ForeColor = System.Drawing.Color.White
-        Me.Btn_limpiar.Location = New System.Drawing.Point(479, 243)
+        Me.Btn_limpiar.Location = New System.Drawing.Point(263, 276)
         Me.Btn_limpiar.Name = "Btn_limpiar"
         Me.Btn_limpiar.Size = New System.Drawing.Size(141, 43)
         Me.Btn_limpiar.TabIndex = 19
@@ -307,7 +307,7 @@ Partial Class FrmCrearUsuario
         Me.Btn_crear.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(228, Byte), Integer))
         Me.Btn_crear.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_crear.ForeColor = System.Drawing.Color.White
-        Me.Btn_crear.Location = New System.Drawing.Point(643, 243)
+        Me.Btn_crear.Location = New System.Drawing.Point(447, 276)
         Me.Btn_crear.Name = "Btn_crear"
         Me.Btn_crear.Size = New System.Drawing.Size(141, 43)
         Me.Btn_crear.TabIndex = 20
@@ -339,14 +339,14 @@ Partial Class FrmCrearUsuario
         Me.Pnl_datosUsuario.Controls.Add(Me.TextBox1)
         Me.Pnl_datosUsuario.Location = New System.Drawing.Point(0, 80)
         Me.Pnl_datosUsuario.Name = "Pnl_datosUsuario"
-        Me.Pnl_datosUsuario.Size = New System.Drawing.Size(872, 324)
+        Me.Pnl_datosUsuario.Size = New System.Drawing.Size(872, 343)
         Me.Pnl_datosUsuario.TabIndex = 1
         '
         'DataGridView1
         '
         Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(24, 484)
+        Me.DataGridView1.Location = New System.Drawing.Point(24, 504)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
@@ -357,7 +357,7 @@ Partial Class FrmCrearUsuario
         '
         Me.TextBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(120, 434)
+        Me.TextBox9.Location = New System.Drawing.Point(120, 454)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(725, 27)
         Me.TextBox9.TabIndex = 3
