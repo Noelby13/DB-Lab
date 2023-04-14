@@ -58,6 +58,8 @@
     End Sub
 
     Private Sub BtnFacturar_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
+        Me.Size = New Size(1106, 940)
+
         abrirFrmHijo(New FrmFacturarOrdenes())
     End Sub
 
@@ -79,5 +81,9 @@
 
     Private Sub BtnAgregarEstudio_Click(sender As Object, e As EventArgs) Handles BtnAgregarEstudio.Click
         abrirFrmHijo(New FrmAgregarEstudio())
+    End Sub
+
+    Private Sub BtnAgregarExamen_Click(sender As Object, e As EventArgs) Handles BtnAgregarExamen.Click
+        abrirFrmHijo(New FrmAgregarExamen())
     End Sub
 End Class

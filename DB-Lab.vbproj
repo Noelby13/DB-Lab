@@ -79,6 +79,12 @@
     <Compile Include="Formularios\FrmAgregarEstudio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmAgregarExamen.Designer.vb">
+      <DependentUpon>FrmAgregarExamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmAgregarExamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmCategorias.Designer.vb">
       <DependentUpon>FrmCategorias.vb</DependentUpon>
     </Compile>
@@ -149,6 +155,9 @@
     <EmbeddedResource Include="Formularios\FrmAgregarEstudio.resx">
       <DependentUpon>FrmAgregarEstudio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmAgregarExamen.resx">
+      <DependentUpon>FrmAgregarExamen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCategorias.resx">
       <DependentUpon>FrmCategorias.vb</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +205,7 @@
   <ItemGroup>
     <None Include="img\searchButton.png" />
     <None Include="img\editButton.png" />
+    <None Include="img\addButton24px.png" />
     <Content Include="img\saveButton.png" />
     <Content Include="img\cleanButton.png" />
   </ItemGroup>
