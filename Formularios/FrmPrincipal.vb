@@ -72,4 +72,8 @@
     Private Sub BtnListaTrabajo_Click(sender As Object, e As EventArgs) Handles BtnListaTrabajo.Click
         abrirFrmHijo(New FrmListaTrabajo())
     End Sub
+
+    Private Sub BtnAgregarPaciente_Click(sender As Object, e As EventArgs) Handles BtnAgregarPaciente.Click
+        abrirFrmHijo(New FrmPaciente())
+    End Sub
 End Class
