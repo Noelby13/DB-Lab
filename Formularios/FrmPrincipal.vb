@@ -76,4 +76,8 @@
     Private Sub BtnAgregarPaciente_Click(sender As Object, e As EventArgs) Handles BtnAgregarPaciente.Click
         abrirFrmHijo(New FrmPaciente())
     End Sub
+
+    Private Sub BtnAgregarEstudio_Click(sender As Object, e As EventArgs) Handles BtnAgregarEstudio.Click
+        abrirFrmHijo(New FrmAgregarEstudio())
+    End Sub
 End Class

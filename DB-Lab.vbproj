@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FrmAgregarEstudio.Designer.vb">
+      <DependentUpon>FrmAgregarEstudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmAgregarEstudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmCategorias.Designer.vb">
       <DependentUpon>FrmCategorias.vb</DependentUpon>
     </Compile>
@@ -140,6 +146,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FrmAgregarEstudio.resx">
+      <DependentUpon>FrmAgregarEstudio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCategorias.resx">
       <DependentUpon>FrmCategorias.vb</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +194,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="img\searchButton.png" />
+    <None Include="img\editButton.png" />
     <Content Include="img\saveButton.png" />
     <Content Include="img\cleanButton.png" />
   </ItemGroup>

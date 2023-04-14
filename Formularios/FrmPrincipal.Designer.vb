@@ -52,8 +52,8 @@ Partial Class FrmPrincipal
         Me.BtnUsuario = New System.Windows.Forms.Button()
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelFrmHijo = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelMenuLateral.SuspendLayout()
         Me.PanelSubResultado.SuspendLayout()
         Me.PanelSubOrdenes.SuspendLayout()
@@ -81,9 +81,9 @@ Partial Class FrmPrincipal
         Me.PanelMenuLateral.Controls.Add(Me.PanelLogo)
         Me.PanelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenuLateral.Location = New System.Drawing.Point(0, 0)
-        Me.PanelMenuLateral.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelMenuLateral.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelMenuLateral.Name = "PanelMenuLateral"
-        Me.PanelMenuLateral.Size = New System.Drawing.Size(165, 724)
+        Me.PanelMenuLateral.Size = New System.Drawing.Size(220, 891)
         Me.PanelMenuLateral.TabIndex = 0
         '
         'PanelSubResultado
@@ -93,10 +93,10 @@ Partial Class FrmPrincipal
         Me.PanelSubResultado.Controls.Add(Me.BtnRegistroResultado)
         Me.PanelSubResultado.Controls.Add(Me.BtnListaTrabajo)
         Me.PanelSubResultado.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubResultado.Location = New System.Drawing.Point(0, 614)
-        Me.PanelSubResultado.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelSubResultado.Location = New System.Drawing.Point(0, 757)
+        Me.PanelSubResultado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelSubResultado.Name = "PanelSubResultado"
-        Me.PanelSubResultado.Size = New System.Drawing.Size(165, 80)
+        Me.PanelSubResultado.Size = New System.Drawing.Size(220, 98)
         Me.PanelSubResultado.TabIndex = 10
         '
         'BtnActualizacionResultado
@@ -105,11 +105,11 @@ Partial Class FrmPrincipal
         Me.BtnActualizacionResultado.FlatAppearance.BorderSize = 0
         Me.BtnActualizacionResultado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnActualizacionResultado.ForeColor = System.Drawing.Color.White
-        Me.BtnActualizacionResultado.Location = New System.Drawing.Point(0, 48)
-        Me.BtnActualizacionResultado.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnActualizacionResultado.Location = New System.Drawing.Point(0, 60)
+        Me.BtnActualizacionResultado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnActualizacionResultado.Name = "BtnActualizacionResultado"
-        Me.BtnActualizacionResultado.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnActualizacionResultado.Size = New System.Drawing.Size(165, 24)
+        Me.BtnActualizacionResultado.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnActualizacionResultado.Size = New System.Drawing.Size(220, 30)
         Me.BtnActualizacionResultado.TabIndex = 2
         Me.BtnActualizacionResultado.Text = "Actualización de resultado"
         Me.BtnActualizacionResultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -121,11 +121,11 @@ Partial Class FrmPrincipal
         Me.BtnRegistroResultado.FlatAppearance.BorderSize = 0
         Me.BtnRegistroResultado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRegistroResultado.ForeColor = System.Drawing.Color.White
-        Me.BtnRegistroResultado.Location = New System.Drawing.Point(0, 24)
-        Me.BtnRegistroResultado.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnRegistroResultado.Location = New System.Drawing.Point(0, 30)
+        Me.BtnRegistroResultado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnRegistroResultado.Name = "BtnRegistroResultado"
-        Me.BtnRegistroResultado.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnRegistroResultado.Size = New System.Drawing.Size(165, 24)
+        Me.BtnRegistroResultado.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnRegistroResultado.Size = New System.Drawing.Size(220, 30)
         Me.BtnRegistroResultado.TabIndex = 1
         Me.BtnRegistroResultado.Text = "Registro de Resultado"
         Me.BtnRegistroResultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -138,10 +138,10 @@ Partial Class FrmPrincipal
         Me.BtnListaTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnListaTrabajo.ForeColor = System.Drawing.Color.White
         Me.BtnListaTrabajo.Location = New System.Drawing.Point(0, 0)
-        Me.BtnListaTrabajo.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnListaTrabajo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnListaTrabajo.Name = "BtnListaTrabajo"
-        Me.BtnListaTrabajo.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnListaTrabajo.Size = New System.Drawing.Size(165, 24)
+        Me.BtnListaTrabajo.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnListaTrabajo.Size = New System.Drawing.Size(220, 30)
         Me.BtnListaTrabajo.TabIndex = 0
         Me.BtnListaTrabajo.Text = "Lista de Trabajo"
         Me.BtnListaTrabajo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -153,11 +153,11 @@ Partial Class FrmPrincipal
         Me.BtnResultados.FlatAppearance.BorderSize = 0
         Me.BtnResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnResultados.ForeColor = System.Drawing.Color.White
-        Me.BtnResultados.Location = New System.Drawing.Point(0, 577)
-        Me.BtnResultados.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnResultados.Location = New System.Drawing.Point(0, 711)
+        Me.BtnResultados.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnResultados.Name = "BtnResultados"
-        Me.BtnResultados.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
-        Me.BtnResultados.Size = New System.Drawing.Size(165, 37)
+        Me.BtnResultados.Padding = New System.Windows.Forms.Padding(11, 0, 0, 0)
+        Me.BtnResultados.Size = New System.Drawing.Size(220, 46)
         Me.BtnResultados.TabIndex = 9
         Me.BtnResultados.Text = "Resultados"
         Me.BtnResultados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -170,10 +170,10 @@ Partial Class FrmPrincipal
         Me.PanelSubOrdenes.Controls.Add(Me.BtnCancelarFactura)
         Me.PanelSubOrdenes.Controls.Add(Me.BtnFacturar)
         Me.PanelSubOrdenes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubOrdenes.Location = New System.Drawing.Point(0, 497)
-        Me.PanelSubOrdenes.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelSubOrdenes.Location = New System.Drawing.Point(0, 613)
+        Me.PanelSubOrdenes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelSubOrdenes.Name = "PanelSubOrdenes"
-        Me.PanelSubOrdenes.Size = New System.Drawing.Size(165, 80)
+        Me.PanelSubOrdenes.Size = New System.Drawing.Size(220, 98)
         Me.PanelSubOrdenes.TabIndex = 8
         '
         'BtnBuscarFactura
@@ -182,11 +182,11 @@ Partial Class FrmPrincipal
         Me.BtnBuscarFactura.FlatAppearance.BorderSize = 0
         Me.BtnBuscarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnBuscarFactura.ForeColor = System.Drawing.Color.White
-        Me.BtnBuscarFactura.Location = New System.Drawing.Point(0, 48)
-        Me.BtnBuscarFactura.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnBuscarFactura.Location = New System.Drawing.Point(0, 60)
+        Me.BtnBuscarFactura.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnBuscarFactura.Name = "BtnBuscarFactura"
-        Me.BtnBuscarFactura.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnBuscarFactura.Size = New System.Drawing.Size(165, 24)
+        Me.BtnBuscarFactura.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnBuscarFactura.Size = New System.Drawing.Size(220, 30)
         Me.BtnBuscarFactura.TabIndex = 2
         Me.BtnBuscarFactura.Text = "Buscar Factura"
         Me.BtnBuscarFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -198,11 +198,11 @@ Partial Class FrmPrincipal
         Me.BtnCancelarFactura.FlatAppearance.BorderSize = 0
         Me.BtnCancelarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelarFactura.ForeColor = System.Drawing.Color.White
-        Me.BtnCancelarFactura.Location = New System.Drawing.Point(0, 24)
-        Me.BtnCancelarFactura.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnCancelarFactura.Location = New System.Drawing.Point(0, 30)
+        Me.BtnCancelarFactura.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnCancelarFactura.Name = "BtnCancelarFactura"
-        Me.BtnCancelarFactura.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnCancelarFactura.Size = New System.Drawing.Size(165, 24)
+        Me.BtnCancelarFactura.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnCancelarFactura.Size = New System.Drawing.Size(220, 30)
         Me.BtnCancelarFactura.TabIndex = 1
         Me.BtnCancelarFactura.Text = "Cancelación de Factura"
         Me.BtnCancelarFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -215,10 +215,10 @@ Partial Class FrmPrincipal
         Me.BtnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnFacturar.ForeColor = System.Drawing.Color.White
         Me.BtnFacturar.Location = New System.Drawing.Point(0, 0)
-        Me.BtnFacturar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnFacturar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnFacturar.Name = "BtnFacturar"
-        Me.BtnFacturar.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnFacturar.Size = New System.Drawing.Size(165, 24)
+        Me.BtnFacturar.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnFacturar.Size = New System.Drawing.Size(220, 30)
         Me.BtnFacturar.TabIndex = 0
         Me.BtnFacturar.Text = "Facturar Orden"
         Me.BtnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -230,11 +230,11 @@ Partial Class FrmPrincipal
         Me.BtnOrdenes.FlatAppearance.BorderSize = 0
         Me.BtnOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnOrdenes.ForeColor = System.Drawing.Color.White
-        Me.BtnOrdenes.Location = New System.Drawing.Point(0, 460)
-        Me.BtnOrdenes.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnOrdenes.Location = New System.Drawing.Point(0, 567)
+        Me.BtnOrdenes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnOrdenes.Name = "BtnOrdenes"
-        Me.BtnOrdenes.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
-        Me.BtnOrdenes.Size = New System.Drawing.Size(165, 37)
+        Me.BtnOrdenes.Padding = New System.Windows.Forms.Padding(11, 0, 0, 0)
+        Me.BtnOrdenes.Size = New System.Drawing.Size(220, 46)
         Me.BtnOrdenes.TabIndex = 7
         Me.BtnOrdenes.Text = "Ordenes"
         Me.BtnOrdenes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -247,10 +247,10 @@ Partial Class FrmPrincipal
         Me.PanelSubPaciente.Controls.Add(Me.BtnActualizarPaciente)
         Me.PanelSubPaciente.Controls.Add(Me.BtnAgregarPaciente)
         Me.PanelSubPaciente.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubPaciente.Location = New System.Drawing.Point(0, 380)
-        Me.PanelSubPaciente.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelSubPaciente.Location = New System.Drawing.Point(0, 469)
+        Me.PanelSubPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelSubPaciente.Name = "PanelSubPaciente"
-        Me.PanelSubPaciente.Size = New System.Drawing.Size(165, 80)
+        Me.PanelSubPaciente.Size = New System.Drawing.Size(220, 98)
         Me.PanelSubPaciente.TabIndex = 6
         '
         'BtnBuscarPaciente
@@ -259,11 +259,11 @@ Partial Class FrmPrincipal
         Me.BtnBuscarPaciente.FlatAppearance.BorderSize = 0
         Me.BtnBuscarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnBuscarPaciente.ForeColor = System.Drawing.Color.White
-        Me.BtnBuscarPaciente.Location = New System.Drawing.Point(0, 48)
-        Me.BtnBuscarPaciente.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnBuscarPaciente.Location = New System.Drawing.Point(0, 60)
+        Me.BtnBuscarPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnBuscarPaciente.Name = "BtnBuscarPaciente"
-        Me.BtnBuscarPaciente.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnBuscarPaciente.Size = New System.Drawing.Size(165, 24)
+        Me.BtnBuscarPaciente.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnBuscarPaciente.Size = New System.Drawing.Size(220, 30)
         Me.BtnBuscarPaciente.TabIndex = 2
         Me.BtnBuscarPaciente.Text = "Buscar Paciente"
         Me.BtnBuscarPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -275,11 +275,11 @@ Partial Class FrmPrincipal
         Me.BtnActualizarPaciente.FlatAppearance.BorderSize = 0
         Me.BtnActualizarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnActualizarPaciente.ForeColor = System.Drawing.Color.White
-        Me.BtnActualizarPaciente.Location = New System.Drawing.Point(0, 24)
-        Me.BtnActualizarPaciente.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnActualizarPaciente.Location = New System.Drawing.Point(0, 30)
+        Me.BtnActualizarPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnActualizarPaciente.Name = "BtnActualizarPaciente"
-        Me.BtnActualizarPaciente.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnActualizarPaciente.Size = New System.Drawing.Size(165, 24)
+        Me.BtnActualizarPaciente.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnActualizarPaciente.Size = New System.Drawing.Size(220, 30)
         Me.BtnActualizarPaciente.TabIndex = 1
         Me.BtnActualizarPaciente.Text = "Actualizar Paciente"
         Me.BtnActualizarPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -292,10 +292,10 @@ Partial Class FrmPrincipal
         Me.BtnAgregarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAgregarPaciente.ForeColor = System.Drawing.Color.White
         Me.BtnAgregarPaciente.Location = New System.Drawing.Point(0, 0)
-        Me.BtnAgregarPaciente.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnAgregarPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnAgregarPaciente.Name = "BtnAgregarPaciente"
-        Me.BtnAgregarPaciente.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnAgregarPaciente.Size = New System.Drawing.Size(165, 24)
+        Me.BtnAgregarPaciente.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnAgregarPaciente.Size = New System.Drawing.Size(220, 30)
         Me.BtnAgregarPaciente.TabIndex = 0
         Me.BtnAgregarPaciente.Text = "Agregar Paciente"
         Me.BtnAgregarPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -307,11 +307,11 @@ Partial Class FrmPrincipal
         Me.BtnPaciente.FlatAppearance.BorderSize = 0
         Me.BtnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnPaciente.ForeColor = System.Drawing.Color.White
-        Me.BtnPaciente.Location = New System.Drawing.Point(0, 343)
-        Me.BtnPaciente.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnPaciente.Location = New System.Drawing.Point(0, 423)
+        Me.BtnPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnPaciente.Name = "BtnPaciente"
-        Me.BtnPaciente.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
-        Me.BtnPaciente.Size = New System.Drawing.Size(165, 37)
+        Me.BtnPaciente.Padding = New System.Windows.Forms.Padding(11, 0, 0, 0)
+        Me.BtnPaciente.Size = New System.Drawing.Size(220, 46)
         Me.BtnPaciente.TabIndex = 5
         Me.BtnPaciente.Text = "Pacientes"
         Me.BtnPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -324,10 +324,10 @@ Partial Class FrmPrincipal
         Me.PanelSubExamenes.Controls.Add(Me.BtnAgregarExamen)
         Me.PanelSubExamenes.Controls.Add(Me.BtnCrearCategoria)
         Me.PanelSubExamenes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubExamenes.Location = New System.Drawing.Point(0, 260)
-        Me.PanelSubExamenes.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelSubExamenes.Location = New System.Drawing.Point(0, 321)
+        Me.PanelSubExamenes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelSubExamenes.Name = "PanelSubExamenes"
-        Me.PanelSubExamenes.Size = New System.Drawing.Size(165, 83)
+        Me.PanelSubExamenes.Size = New System.Drawing.Size(220, 102)
         Me.PanelSubExamenes.TabIndex = 4
         '
         'BtnAgregarEstudio
@@ -336,11 +336,11 @@ Partial Class FrmPrincipal
         Me.BtnAgregarEstudio.FlatAppearance.BorderSize = 0
         Me.BtnAgregarEstudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAgregarEstudio.ForeColor = System.Drawing.Color.White
-        Me.BtnAgregarEstudio.Location = New System.Drawing.Point(0, 48)
-        Me.BtnAgregarEstudio.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnAgregarEstudio.Location = New System.Drawing.Point(0, 60)
+        Me.BtnAgregarEstudio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnAgregarEstudio.Name = "BtnAgregarEstudio"
-        Me.BtnAgregarEstudio.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnAgregarEstudio.Size = New System.Drawing.Size(165, 24)
+        Me.BtnAgregarEstudio.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnAgregarEstudio.Size = New System.Drawing.Size(220, 30)
         Me.BtnAgregarEstudio.TabIndex = 2
         Me.BtnAgregarEstudio.Text = "Agregar Estudios"
         Me.BtnAgregarEstudio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -352,11 +352,11 @@ Partial Class FrmPrincipal
         Me.BtnAgregarExamen.FlatAppearance.BorderSize = 0
         Me.BtnAgregarExamen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAgregarExamen.ForeColor = System.Drawing.Color.White
-        Me.BtnAgregarExamen.Location = New System.Drawing.Point(0, 24)
-        Me.BtnAgregarExamen.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnAgregarExamen.Location = New System.Drawing.Point(0, 30)
+        Me.BtnAgregarExamen.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnAgregarExamen.Name = "BtnAgregarExamen"
-        Me.BtnAgregarExamen.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnAgregarExamen.Size = New System.Drawing.Size(165, 24)
+        Me.BtnAgregarExamen.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnAgregarExamen.Size = New System.Drawing.Size(220, 30)
         Me.BtnAgregarExamen.TabIndex = 1
         Me.BtnAgregarExamen.Text = "Agregar Nuevo Examen"
         Me.BtnAgregarExamen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -369,10 +369,10 @@ Partial Class FrmPrincipal
         Me.BtnCrearCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCrearCategoria.ForeColor = System.Drawing.Color.White
         Me.BtnCrearCategoria.Location = New System.Drawing.Point(0, 0)
-        Me.BtnCrearCategoria.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnCrearCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnCrearCategoria.Name = "BtnCrearCategoria"
-        Me.BtnCrearCategoria.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnCrearCategoria.Size = New System.Drawing.Size(165, 24)
+        Me.BtnCrearCategoria.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnCrearCategoria.Size = New System.Drawing.Size(220, 30)
         Me.BtnCrearCategoria.TabIndex = 0
         Me.BtnCrearCategoria.Text = "Crear Categoria"
         Me.BtnCrearCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -384,11 +384,11 @@ Partial Class FrmPrincipal
         Me.BtnExamenes.FlatAppearance.BorderSize = 0
         Me.BtnExamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnExamenes.ForeColor = System.Drawing.Color.White
-        Me.BtnExamenes.Location = New System.Drawing.Point(0, 223)
-        Me.BtnExamenes.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnExamenes.Location = New System.Drawing.Point(0, 275)
+        Me.BtnExamenes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnExamenes.Name = "BtnExamenes"
-        Me.BtnExamenes.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
-        Me.BtnExamenes.Size = New System.Drawing.Size(165, 37)
+        Me.BtnExamenes.Padding = New System.Windows.Forms.Padding(11, 0, 0, 0)
+        Me.BtnExamenes.Size = New System.Drawing.Size(220, 46)
         Me.BtnExamenes.TabIndex = 3
         Me.BtnExamenes.Text = "Examenes"
         Me.BtnExamenes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -402,10 +402,10 @@ Partial Class FrmPrincipal
         Me.PanelSubUsuario.Controls.Add(Me.BtnCrearRol)
         Me.PanelSubUsuario.Controls.Add(Me.BtnCrearUsuario)
         Me.PanelSubUsuario.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubUsuario.Location = New System.Drawing.Point(0, 118)
-        Me.PanelSubUsuario.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelSubUsuario.Location = New System.Drawing.Point(0, 146)
+        Me.PanelSubUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelSubUsuario.Name = "PanelSubUsuario"
-        Me.PanelSubUsuario.Size = New System.Drawing.Size(165, 105)
+        Me.PanelSubUsuario.Size = New System.Drawing.Size(220, 129)
         Me.PanelSubUsuario.TabIndex = 2
         '
         'BtnEliminarUsuario
@@ -414,11 +414,11 @@ Partial Class FrmPrincipal
         Me.BtnEliminarUsuario.FlatAppearance.BorderSize = 0
         Me.BtnEliminarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEliminarUsuario.ForeColor = System.Drawing.Color.White
-        Me.BtnEliminarUsuario.Location = New System.Drawing.Point(0, 72)
-        Me.BtnEliminarUsuario.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnEliminarUsuario.Location = New System.Drawing.Point(0, 90)
+        Me.BtnEliminarUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEliminarUsuario.Name = "BtnEliminarUsuario"
-        Me.BtnEliminarUsuario.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnEliminarUsuario.Size = New System.Drawing.Size(165, 24)
+        Me.BtnEliminarUsuario.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnEliminarUsuario.Size = New System.Drawing.Size(220, 30)
         Me.BtnEliminarUsuario.TabIndex = 3
         Me.BtnEliminarUsuario.Text = "Eliminar usuario"
         Me.BtnEliminarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -430,11 +430,11 @@ Partial Class FrmPrincipal
         Me.BtnActualizarUsuario.FlatAppearance.BorderSize = 0
         Me.BtnActualizarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnActualizarUsuario.ForeColor = System.Drawing.Color.White
-        Me.BtnActualizarUsuario.Location = New System.Drawing.Point(0, 48)
-        Me.BtnActualizarUsuario.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnActualizarUsuario.Location = New System.Drawing.Point(0, 60)
+        Me.BtnActualizarUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnActualizarUsuario.Name = "BtnActualizarUsuario"
-        Me.BtnActualizarUsuario.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnActualizarUsuario.Size = New System.Drawing.Size(165, 24)
+        Me.BtnActualizarUsuario.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnActualizarUsuario.Size = New System.Drawing.Size(220, 30)
         Me.BtnActualizarUsuario.TabIndex = 2
         Me.BtnActualizarUsuario.Text = "Actualizar Usuario"
         Me.BtnActualizarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -446,11 +446,11 @@ Partial Class FrmPrincipal
         Me.BtnCrearRol.FlatAppearance.BorderSize = 0
         Me.BtnCrearRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCrearRol.ForeColor = System.Drawing.Color.White
-        Me.BtnCrearRol.Location = New System.Drawing.Point(0, 24)
-        Me.BtnCrearRol.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnCrearRol.Location = New System.Drawing.Point(0, 30)
+        Me.BtnCrearRol.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnCrearRol.Name = "BtnCrearRol"
-        Me.BtnCrearRol.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnCrearRol.Size = New System.Drawing.Size(165, 24)
+        Me.BtnCrearRol.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnCrearRol.Size = New System.Drawing.Size(220, 30)
         Me.BtnCrearRol.TabIndex = 1
         Me.BtnCrearRol.Text = "Crear Roles "
         Me.BtnCrearRol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -463,10 +463,10 @@ Partial Class FrmPrincipal
         Me.BtnCrearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCrearUsuario.ForeColor = System.Drawing.Color.White
         Me.BtnCrearUsuario.Location = New System.Drawing.Point(0, 0)
-        Me.BtnCrearUsuario.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnCrearUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnCrearUsuario.Name = "BtnCrearUsuario"
-        Me.BtnCrearUsuario.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnCrearUsuario.Size = New System.Drawing.Size(165, 24)
+        Me.BtnCrearUsuario.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BtnCrearUsuario.Size = New System.Drawing.Size(220, 30)
         Me.BtnCrearUsuario.TabIndex = 0
         Me.BtnCrearUsuario.Text = "Crear Usuario"
         Me.BtnCrearUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -478,11 +478,11 @@ Partial Class FrmPrincipal
         Me.BtnUsuario.FlatAppearance.BorderSize = 0
         Me.BtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnUsuario.ForeColor = System.Drawing.Color.White
-        Me.BtnUsuario.Location = New System.Drawing.Point(0, 81)
-        Me.BtnUsuario.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnUsuario.Location = New System.Drawing.Point(0, 100)
+        Me.BtnUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnUsuario.Name = "BtnUsuario"
-        Me.BtnUsuario.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
-        Me.BtnUsuario.Size = New System.Drawing.Size(165, 37)
+        Me.BtnUsuario.Padding = New System.Windows.Forms.Padding(11, 0, 0, 0)
+        Me.BtnUsuario.Size = New System.Drawing.Size(220, 46)
         Me.BtnUsuario.TabIndex = 1
         Me.BtnUsuario.Text = "Usuarios"
         Me.BtnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -494,9 +494,9 @@ Partial Class FrmPrincipal
         Me.PanelLogo.Controls.Add(Me.PictureBox1)
         Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
-        Me.PanelLogo.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelLogo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelLogo.Name = "PanelLogo"
-        Me.PanelLogo.Size = New System.Drawing.Size(165, 81)
+        Me.PanelLogo.Size = New System.Drawing.Size(220, 100)
         Me.PanelLogo.TabIndex = 0
         '
         'Label1
@@ -504,43 +504,42 @@ Partial Class FrmPrincipal
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(76, 32)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(101, 39)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 20)
+        Me.Label1.Size = New System.Drawing.Size(90, 25)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "DB-LAB"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(9, 10)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(70, 70)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'PanelFrmHijo
         '
         Me.PanelFrmHijo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelFrmHijo.Location = New System.Drawing.Point(165, 0)
-        Me.PanelFrmHijo.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelFrmHijo.Location = New System.Drawing.Point(220, 0)
+        Me.PanelFrmHijo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelFrmHijo.Name = "PanelFrmHijo"
-        Me.PanelFrmHijo.Size = New System.Drawing.Size(651, 724)
+        Me.PanelFrmHijo.Size = New System.Drawing.Size(868, 891)
         Me.PanelFrmHijo.TabIndex = 1
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(70, 70)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'FrmPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(816, 724)
+        Me.ClientSize = New System.Drawing.Size(1088, 891)
         Me.Controls.Add(Me.PanelFrmHijo)
         Me.Controls.Add(Me.PanelMenuLateral)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmPrincipal"
