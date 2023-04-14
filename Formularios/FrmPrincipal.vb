@@ -68,4 +68,8 @@
     Private Sub BtnCrearCategoria_Click(sender As Object, e As EventArgs) Handles BtnCrearCategoria.Click
         abrirFrmHijo(New FrmCategorias())
     End Sub
+
+    Private Sub BtnListaTrabajo_Click(sender As Object, e As EventArgs) Handles BtnListaTrabajo.Click
+        abrirFrmHijo(New FrmListaTrabajo())
+    End Sub
 End Class
