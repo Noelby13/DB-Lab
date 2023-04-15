@@ -52,8 +52,8 @@ Partial Class FrmPrincipal
         Me.BtnUsuario = New System.Windows.Forms.Button()
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PanelFrmHijo = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PanelFrmHijo = New System.Windows.Forms.Panel()
         Me.PanelMenuLateral.SuspendLayout()
         Me.PanelSubResultado.SuspendLayout()
         Me.PanelSubOrdenes.SuspendLayout()
@@ -510,17 +510,6 @@ Partial Class FrmPrincipal
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "DB-LAB"
         '
-        'PanelFrmHijo
-        '
-        Me.PanelFrmHijo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelFrmHijo.Location = New System.Drawing.Point(220, 0)
-        Me.PanelFrmHijo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PanelFrmHijo.Name = "PanelFrmHijo"
-        Me.PanelFrmHijo.Size = New System.Drawing.Size(868, 891)
-        Me.PanelFrmHijo.TabIndex = 1
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
@@ -531,6 +520,17 @@ Partial Class FrmPrincipal
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'PanelFrmHijo
+        '
+        Me.PanelFrmHijo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelFrmHijo.Location = New System.Drawing.Point(220, 0)
+        Me.PanelFrmHijo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PanelFrmHijo.Name = "PanelFrmHijo"
+        Me.PanelFrmHijo.Size = New System.Drawing.Size(868, 891)
+        Me.PanelFrmHijo.TabIndex = 1
         '
         'FrmPrincipal
         '

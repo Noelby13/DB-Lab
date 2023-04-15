@@ -90,4 +90,12 @@
     Private Sub BtnAgregarExamen_Click(sender As Object, e As EventArgs) Handles BtnAgregarExamen.Click
         abrirFrmHijo(New FrmAgregarExamen())
     End Sub
+
+    Private Sub BtnCancelarFactura_Click(sender As Object, e As EventArgs) Handles BtnCancelarFactura.Click
+        abrirFrmHijo(New FrmCancelarFactura())
+    End Sub
+
+    Private Sub BtnActualizacionResultado_Click(sender As Object, e As EventArgs) Handles BtnActualizacionResultado.Click
+        abrirFrmHijo(New FrmActualizacióResultados())
+    End Sub
 End Class

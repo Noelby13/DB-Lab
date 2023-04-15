@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FrmActualizacióResultados.Designer.vb">
+      <DependentUpon>FrmActualizacióResultados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmActualizacióResultados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmAgregarEstudio.Designer.vb">
       <DependentUpon>FrmAgregarEstudio.vb</DependentUpon>
     </Compile>
@@ -83,6 +89,12 @@
       <DependentUpon>FrmAgregarExamen.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmAgregarExamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCancelarFactura.Designer.vb">
+      <DependentUpon>FrmCancelarFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCancelarFactura.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmCategorias.Designer.vb">
@@ -152,11 +164,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FrmActualizacióResultados.resx">
+      <DependentUpon>FrmActualizacióResultados.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmAgregarEstudio.resx">
       <DependentUpon>FrmAgregarEstudio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmAgregarExamen.resx">
       <DependentUpon>FrmAgregarExamen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmCancelarFactura.resx">
+      <DependentUpon>FrmCancelarFactura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCategorias.resx">
       <DependentUpon>FrmCategorias.vb</DependentUpon>
