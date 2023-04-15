@@ -97,10 +97,10 @@
     <Compile Include="Formularios\FrmCrearRol.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmCrearUsuario.Designer.vb">
-      <DependentUpon>FrmCrearUsuario.vb</DependentUpon>
+    <Compile Include="Formularios\FrmUsuario.Designer.vb">
+      <DependentUpon>FrmUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmCrearUsuario.vb">
+    <Compile Include="Formularios\FrmUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmFacturarOrdenes.Designer.vb">
@@ -164,8 +164,8 @@
     <EmbeddedResource Include="Formularios\FrmCrearRol.resx">
       <DependentUpon>FrmCrearRol.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmCrearUsuario.resx">
-      <DependentUpon>FrmCrearUsuario.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmFacturarOrdenes.resx">
       <DependentUpon>FrmFacturarOrdenes.vb</DependentUpon>
@@ -206,6 +206,7 @@
     <None Include="img\searchButton.png" />
     <None Include="img\editButton.png" />
     <None Include="img\addButton24px.png" />
+    <None Include="img\deleteButton.png" />
     <Content Include="img\saveButton.png" />
     <Content Include="img\cleanButton.png" />
   </ItemGroup>
