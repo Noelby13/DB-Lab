@@ -80,6 +80,8 @@
     End Sub
 
     Private Sub BtnAgregarPaciente_Click(sender As Object, e As EventArgs) Handles BtnAgregarPaciente.Click
+        Me.Size = New Size(1106, 940)
+
         abrirFrmHijo(New FrmPaciente())
     End Sub
 
