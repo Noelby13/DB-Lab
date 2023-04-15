@@ -54,7 +54,9 @@
     End Sub
 
     Private Sub BtnCrearUsuario_Click(sender As Object, e As EventArgs) Handles BtnCrearUsuario.Click
-        abrirFrmHijo(New FrmCrearUsuario())
+        Me.Size = New Size(1106, 940)
+
+        abrirFrmHijo(New FrmUsuario())
     End Sub
 
     Private Sub BtnFacturar_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
