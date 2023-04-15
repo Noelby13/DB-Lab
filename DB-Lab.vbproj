@@ -91,10 +91,10 @@
     <Compile Include="Formularios\FrmCategorias.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmCrearRol.Designer.vb">
-      <DependentUpon>FrmCrearRol.vb</DependentUpon>
+    <Compile Include="Formularios\FrmRol.Designer.vb">
+      <DependentUpon>FrmRol.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmCrearRol.vb">
+    <Compile Include="Formularios\FrmRol.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmUsuario.Designer.vb">
@@ -161,8 +161,8 @@
     <EmbeddedResource Include="Formularios\FrmCategorias.resx">
       <DependentUpon>FrmCategorias.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmCrearRol.resx">
-      <DependentUpon>FrmCrearRol.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmRol.resx">
+      <DependentUpon>FrmRol.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
