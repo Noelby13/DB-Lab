@@ -66,7 +66,9 @@
     End Sub
 
     Private Sub BtnCrearRol_Click(sender As Object, e As EventArgs) Handles BtnCrearRol.Click
-        abrirFrmHijo(New FrmCrearRol())
+        Me.Size = New Size(1106, 940)
+
+        abrirFrmHijo(New FrmRol())
     End Sub
 
     Private Sub BtnCrearCategoria_Click(sender As Object, e As EventArgs) Handles BtnCrearCategoria.Click
