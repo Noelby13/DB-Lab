@@ -186,8 +186,7 @@
     End Sub
 
     Private Sub BtnCerrarPestaña_Click(sender As Object, e As EventArgs)
-        TabControl1.TabPages.Remove(TabControl1.SelectedTab
-                                    )
+        TabControl1.TabPages.Remove(TabControl1.SelectedTab)
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
