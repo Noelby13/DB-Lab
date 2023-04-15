@@ -1,7 +1,7 @@
 ﻿Public Class FrmListaTrabajo
 
 
-    Private Function crearPestaña(nombre As String, orden As String) As TabPage
+    Public Function crearPestaña(nombre As String, orden As String) As TabPage
         Dim tabPage As New TabPage With {
             .Name = $"{orden}",
             .Text = $"Resultados {nombre}",
