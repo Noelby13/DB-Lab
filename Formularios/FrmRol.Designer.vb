@@ -28,7 +28,7 @@ Partial Class FrmRol
         Me.PanelBotones = New System.Windows.Forms.Panel()
         Me.BtnBorrar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
-        Me.BtnGuardarIcon = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.PanelDatosRol = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -87,7 +87,7 @@ Partial Class FrmRol
         '
         Me.PanelBotones.Controls.Add(Me.BtnBorrar)
         Me.PanelBotones.Controls.Add(Me.BtnEditar)
-        Me.PanelBotones.Controls.Add(Me.BtnGuardarIcon)
+        Me.PanelBotones.Controls.Add(Me.BtnGuardar)
         Me.PanelBotones.Controls.Add(Me.BtnLimpiar)
         Me.PanelBotones.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelBotones.Location = New System.Drawing.Point(0, 64)
@@ -117,16 +117,16 @@ Partial Class FrmRol
         Me.BtnEditar.TabIndex = 6
         Me.BtnEditar.UseVisualStyleBackColor = True
         '
-        'BtnGuardarIcon
+        'BtnGuardar
         '
-        Me.BtnGuardarIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnGuardarIcon.Image = Global.DB_Lab.My.Resources.Resources.saveButton
-        Me.BtnGuardarIcon.Location = New System.Drawing.Point(455, 7)
-        Me.BtnGuardarIcon.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnGuardarIcon.Name = "BtnGuardarIcon"
-        Me.BtnGuardarIcon.Size = New System.Drawing.Size(108, 56)
-        Me.BtnGuardarIcon.TabIndex = 5
-        Me.BtnGuardarIcon.UseVisualStyleBackColor = True
+        Me.BtnGuardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnGuardar.Image = Global.DB_Lab.My.Resources.Resources.saveButton
+        Me.BtnGuardar.Location = New System.Drawing.Point(455, 7)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(108, 56)
+        Me.BtnGuardar.TabIndex = 5
+        Me.BtnGuardar.UseVisualStyleBackColor = True
         '
         'BtnLimpiar
         '
@@ -263,7 +263,7 @@ Partial Class FrmRol
     Friend WithEvents PanelLeyenda As Panel
     Friend WithEvents PanelBotones As Panel
     Friend WithEvents BtnLimpiar As Button
-    Friend WithEvents BtnGuardarIcon As Button
+    Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnBorrar As Button
     Friend WithEvents PanelDatosRol As Panel
