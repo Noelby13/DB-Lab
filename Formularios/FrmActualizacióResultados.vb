@@ -18,10 +18,12 @@
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Dim orden As String = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString()
-        Dim nombre As String = DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString()
-        'Tiempos desesperados, medidas desesperadas -Josué 2023 22:26
-        Dim frm As New FrmListaTrabajo()
+        Dim orden As String = Nothing
+        Dim nombre As String = Nothing
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+            orden = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString()
+            nombre = DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString()
+        End If
 
 
         Dim tabPage As TabPage = Nothing
@@ -32,8 +34,9 @@
 
         Next
 
+        Dim gestor As New GestorPestaña(TabControl1)
         If tabPage Is Nothing Then
-            tabPage = frm.crearPestaña(nombre, orden)
+            tabPage = gestor.crearPestaña(nombre, orden)
             TabControl1.Controls.Add(tabPage)
         End If
 
