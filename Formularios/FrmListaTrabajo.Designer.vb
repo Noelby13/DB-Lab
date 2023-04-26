@@ -62,6 +62,7 @@ Partial Class FrmListaTrabajo
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Orden, Me.HoraInicio, Me.Nombre, Me.Estado})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Top

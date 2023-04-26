@@ -52,19 +52,21 @@ Partial Class FrmActualizacióResultados
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(850, 844)
+        Me.TabControl1.Size = New System.Drawing.Size(638, 686)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Controls.Add(Me.PanelLeyenda)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(842, 815)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Size = New System.Drawing.Size(630, 660)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Actualización"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -75,22 +77,23 @@ Partial Class FrmActualizacióResultados
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(3, 67)
+        Me.Panel1.Location = New System.Drawing.Point(2, 54)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(836, 752)
+        Me.Panel1.Size = New System.Drawing.Size(626, 611)
         Me.Panel1.TabIndex = 3
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Orden, Me.HoraInicio, Me.Nombre, Me.Estado})
-        Me.DataGridView1.Location = New System.Drawing.Point(9, 255)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView1.Location = New System.Drawing.Point(7, 207)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(821, 342)
+        Me.DataGridView1.Size = New System.Drawing.Size(615, 278)
         Me.DataGridView1.TabIndex = 3
         '
         'Orden
@@ -124,9 +127,10 @@ Partial Class FrmActualizacióResultados
         'Button2
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Button2.Location = New System.Drawing.Point(702, 644)
+        Me.Button2.Location = New System.Drawing.Point(525, 523)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(121, 45)
+        Me.Button2.Size = New System.Drawing.Size(91, 37)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Seleccionar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -140,45 +144,51 @@ Partial Class FrmActualizacióResultados
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.Lbl_nombres)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.28!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(18, 30)
+        Me.GroupBox1.Location = New System.Drawing.Point(14, 24)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(805, 204)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(603, 166)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ordenes de exámenes"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(677, 42)
+        Me.Button1.Location = New System.Drawing.Point(508, 34)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(99, 36)
+        Me.Button1.Size = New System.Drawing.Size(74, 29)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "Buscar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(377, 45)
+        Me.TextBox1.Location = New System.Drawing.Point(283, 37)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(269, 29)
+        Me.TextBox1.Size = New System.Drawing.Size(203, 25)
         Me.TextBox1.TabIndex = 8
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Número de Orden", "Ordenes del día de hoy"})
-        Me.ComboBox1.Location = New System.Drawing.Point(136, 45)
+        Me.ComboBox1.Location = New System.Drawing.Point(102, 37)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(183, 32)
+        Me.ComboBox1.Size = New System.Drawing.Size(138, 26)
         Me.ComboBox1.TabIndex = 7
         '
         'Lbl_nombres
         '
         Me.Lbl_nombres.AutoSize = True
         Me.Lbl_nombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_nombres.Location = New System.Drawing.Point(22, 49)
+        Me.Lbl_nombres.Location = New System.Drawing.Point(16, 40)
+        Me.Lbl_nombres.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbl_nombres.Name = "Lbl_nombres"
-        Me.Lbl_nombres.Size = New System.Drawing.Size(92, 22)
+        Me.Lbl_nombres.Size = New System.Drawing.Size(75, 18)
         Me.Lbl_nombres.TabIndex = 6
         Me.Lbl_nombres.Text = "Filtrar por:"
         '
@@ -188,9 +198,10 @@ Partial Class FrmActualizacióResultados
         Me.PanelLeyenda.Controls.Add(Me.BtnSalir)
         Me.PanelLeyenda.Controls.Add(Me.Label4)
         Me.PanelLeyenda.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelLeyenda.Location = New System.Drawing.Point(3, 3)
+        Me.PanelLeyenda.Location = New System.Drawing.Point(2, 2)
+        Me.PanelLeyenda.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelLeyenda.Name = "PanelLeyenda"
-        Me.PanelLeyenda.Size = New System.Drawing.Size(836, 64)
+        Me.PanelLeyenda.Size = New System.Drawing.Size(626, 52)
         Me.PanelLeyenda.TabIndex = 2
         '
         'BtnSalir
@@ -198,10 +209,9 @@ Partial Class FrmActualizacióResultados
         Me.BtnSalir.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.ForeColor = System.Drawing.Color.White
-        Me.BtnSalir.Location = New System.Drawing.Point(732, 13)
-        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSalir.Location = New System.Drawing.Point(548, 11)
         Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(91, 39)
+        Me.BtnSalir.Size = New System.Drawing.Size(68, 32)
         Me.BtnSalir.TabIndex = 25
         Me.BtnSalir.Text = "Salir"
         Me.BtnSalir.UseVisualStyleBackColor = False
@@ -212,19 +222,19 @@ Partial Class FrmActualizacióResultados
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(13, 20)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(10, 16)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(214, 25)
+        Me.Label4.Size = New System.Drawing.Size(178, 20)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Actualizar resultados"
         '
         'FrmActualizacióResultados
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(850, 844)
+        Me.ClientSize = New System.Drawing.Size(638, 686)
         Me.Controls.Add(Me.TabControl1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmActualizacióResultados"
         Me.Text = "FrmActualizacióResultados"
         Me.TabControl1.ResumeLayout(False)
