@@ -77,4 +77,6 @@
     Private Sub BtnAgregarPaciente_Click(sender As Object, e As EventArgs) Handles BtnAgregarPaciente.Click
 
     End Sub
+
+
 End Class

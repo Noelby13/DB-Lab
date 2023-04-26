@@ -1,6 +1,8 @@
 ﻿Public Class FrmPrincipal
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ocultarSubMenu()
+        Size = Screen.PrimaryScreen.WorkingArea.Size
+        Location = Screen.PrimaryScreen.WorkingArea.Location
     End Sub
 
     Private Sub ocultarSubMenu()
@@ -54,19 +56,19 @@
     End Sub
 
     Private Sub BtnCrearUsuario_Click(sender As Object, e As EventArgs) Handles BtnCrearUsuario.Click
-        Me.Size = New Size(1106, 940)
+        'Me.Size = New Size(1106, 940)
 
         abrirFrmHijo(New FrmUsuario())
     End Sub
 
     Private Sub BtnFacturar_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
-        Me.Size = New Size(1106, 940)
+        'Me.Size = New Size(1106, 940)
 
         abrirFrmHijo(New FrmFacturarOrdenes())
     End Sub
 
     Private Sub BtnCrearRol_Click(sender As Object, e As EventArgs) Handles BtnCrearRol.Click
-        Me.Size = New Size(1106, 940)
+        'Me.Size = New Size(1106, 940)
 
         abrirFrmHijo(New FrmRol())
     End Sub
@@ -80,7 +82,7 @@
     End Sub
 
     Private Sub BtnAgregarPaciente_Click(sender As Object, e As EventArgs) Handles BtnAgregarPaciente.Click
-        Me.Size = New Size(1106, 940)
+        'Me.Size = New Size(1106, 940)
 
         abrirFrmHijo(New FrmPaciente())
     End Sub
