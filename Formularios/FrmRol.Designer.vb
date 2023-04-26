@@ -155,18 +155,19 @@ Partial Class FrmRol
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(571, 37)
+        Me.TextBox1.Location = New System.Drawing.Point(543, 37)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(247, 118)
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox1.Size = New System.Drawing.Size(301, 140)
         Me.TextBox1.TabIndex = 10
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(451, 38)
+        Me.Label1.Location = New System.Drawing.Point(423, 38)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(109, 22)
         Me.Label1.TabIndex = 9
@@ -175,7 +176,7 @@ Partial Class FrmRol
         'TxtNombres
         '
         Me.TxtNombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombres.Location = New System.Drawing.Point(119, 33)
+        Me.TxtNombres.Location = New System.Drawing.Point(112, 33)
         Me.TxtNombres.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtNombres.Name = "TxtNombres"
         Me.TxtNombres.Size = New System.Drawing.Size(247, 27)
@@ -185,7 +186,7 @@ Partial Class FrmRol
         '
         Me.Lbl_nombres.AutoSize = True
         Me.Lbl_nombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_nombres.Location = New System.Drawing.Point(30, 38)
+        Me.Lbl_nombres.Location = New System.Drawing.Point(23, 38)
         Me.Lbl_nombres.Name = "Lbl_nombres"
         Me.Lbl_nombres.Size = New System.Drawing.Size(78, 22)
         Me.Lbl_nombres.TabIndex = 7
@@ -247,7 +248,7 @@ Partial Class FrmRol
         Me.Controls.Add(Me.PanelBotones)
         Me.Controls.Add(Me.PanelLeyenda)
         Me.Name = "FrmRol"
-        Me.Text = "FrmRol"
+        Me.Text = "Gestion de Roles"
         Me.PanelLeyenda.ResumeLayout(False)
         Me.PanelLeyenda.PerformLayout()
         Me.PanelBotones.ResumeLayout(False)

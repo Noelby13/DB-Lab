@@ -31,6 +31,8 @@ Partial Class FrmUsuario
         Me.BtnGuardarIcon = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.PanelDatosUsuario = New System.Windows.Forms.Panel()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -49,6 +51,11 @@ Partial Class FrmUsuario
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.BtnBuscarEstudio = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.PanelLeyenda.SuspendLayout()
         Me.PanelBotones.SuspendLayout()
         Me.PanelDatosUsuario.SuspendLayout()
@@ -152,6 +159,13 @@ Partial Class FrmUsuario
         'PanelDatosUsuario
         '
         Me.PanelDatosUsuario.BackColor = System.Drawing.Color.White
+        Me.PanelDatosUsuario.Controls.Add(Me.ComboBox1)
+        Me.PanelDatosUsuario.Controls.Add(Me.Label9)
+        Me.PanelDatosUsuario.Controls.Add(Me.Label7)
+        Me.PanelDatosUsuario.Controls.Add(Me.TextBox6)
+        Me.PanelDatosUsuario.Controls.Add(Me.Label6)
+        Me.PanelDatosUsuario.Controls.Add(Me.TextBox4)
+        Me.PanelDatosUsuario.Controls.Add(Me.Label5)
         Me.PanelDatosUsuario.Controls.Add(Me.TextBox2)
         Me.PanelDatosUsuario.Controls.Add(Me.Label3)
         Me.PanelDatosUsuario.Controls.Add(Me.DateTimePicker2)
@@ -169,24 +183,42 @@ Partial Class FrmUsuario
         Me.PanelDatosUsuario.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelDatosUsuario.Location = New System.Drawing.Point(0, 138)
         Me.PanelDatosUsuario.Name = "PanelDatosUsuario"
-        Me.PanelDatosUsuario.Size = New System.Drawing.Size(868, 322)
+        Me.PanelDatosUsuario.Size = New System.Drawing.Size(868, 335)
         Me.PanelDatosUsuario.TabIndex = 2
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(210, 97)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(219, 27)
+        Me.TextBox4.TabIndex = 9
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(14, 98)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(174, 22)
+        Me.Label5.TabIndex = 25
+        Me.Label5.Text = "Nombre del Usuario:"
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(144, 264)
+        Me.TextBox2.Location = New System.Drawing.Point(150, 267)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(247, 27)
-        Me.TextBox2.TabIndex = 24
-        Me.TextBox2.UseSystemPasswordChar = True
+        Me.TextBox2.Size = New System.Drawing.Size(279, 27)
+        Me.TextBox2.TabIndex = 15
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(25, 269)
+        Me.Label3.Location = New System.Drawing.Point(25, 272)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(108, 22)
         Me.Label3.TabIndex = 23
@@ -194,17 +226,17 @@ Partial Class FrmUsuario
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(551, 156)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(537, 211)
         Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(257, 22)
-        Me.DateTimePicker2.TabIndex = 22
+        Me.DateTimePicker2.Size = New System.Drawing.Size(296, 22)
+        Me.DateTimePicker2.TabIndex = 14
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(465, 157)
+        Me.Label2.Location = New System.Drawing.Point(451, 211)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(74, 22)
         Me.Label2.TabIndex = 21
@@ -213,18 +245,17 @@ Partial Class FrmUsuario
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(126, 156)
+        Me.TextBox5.Location = New System.Drawing.Point(126, 211)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(299, 64)
-        Me.TextBox5.TabIndex = 20
+        Me.TextBox5.Size = New System.Drawing.Size(303, 27)
+        Me.TextBox5.TabIndex = 13
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(25, 156)
+        Me.Label8.Location = New System.Drawing.Point(25, 212)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(90, 22)
         Me.Label8.TabIndex = 19
@@ -233,17 +264,17 @@ Partial Class FrmUsuario
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(548, 94)
+        Me.TextBox1.Location = New System.Drawing.Point(548, 150)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(247, 27)
-        Me.TextBox1.TabIndex = 17
+        Me.TextBox1.Size = New System.Drawing.Size(285, 27)
+        Me.TextBox1.TabIndex = 12
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(451, 94)
+        Me.Label1.Location = New System.Drawing.Point(451, 155)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(86, 22)
         Me.Label1.TabIndex = 16
@@ -251,17 +282,17 @@ Partial Class FrmUsuario
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(164, 94)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(164, 155)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(257, 22)
-        Me.DateTimePicker1.TabIndex = 15
+        Me.DateTimePicker1.Size = New System.Drawing.Size(265, 22)
+        Me.DateTimePicker1.TabIndex = 11
         '
         'Lbl_fechaNac
         '
         Me.Lbl_fechaNac.AutoSize = True
         Me.Lbl_fechaNac.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_fechaNac.Location = New System.Drawing.Point(25, 94)
+        Me.Lbl_fechaNac.Location = New System.Drawing.Point(25, 155)
         Me.Lbl_fechaNac.Name = "Lbl_fechaNac"
         Me.Lbl_fechaNac.Size = New System.Drawing.Size(127, 22)
         Me.Lbl_fechaNac.TabIndex = 9
@@ -273,7 +304,7 @@ Partial Class FrmUsuario
         Me.TxtApellidos.Location = New System.Drawing.Point(545, 27)
         Me.TxtApellidos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtApellidos.Name = "TxtApellidos"
-        Me.TxtApellidos.Size = New System.Drawing.Size(247, 27)
+        Me.TxtApellidos.Size = New System.Drawing.Size(288, 27)
         Me.TxtApellidos.TabIndex = 8
         '
         'Lbl_apellidos
@@ -292,7 +323,7 @@ Partial Class FrmUsuario
         Me.TxtNombres.Location = New System.Drawing.Point(123, 27)
         Me.TxtNombres.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtNombres.Name = "TxtNombres"
-        Me.TxtNombres.Size = New System.Drawing.Size(247, 27)
+        Me.TxtNombres.Size = New System.Drawing.Size(306, 27)
         Me.TxtNombres.TabIndex = 6
         '
         'Lbl_nombres
@@ -311,7 +342,7 @@ Partial Class FrmUsuario
         Me.PanelRegistros.Controls.Add(Me.BtnBuscarEstudio)
         Me.PanelRegistros.Controls.Add(Me.TextBox3)
         Me.PanelRegistros.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelRegistros.Location = New System.Drawing.Point(0, 460)
+        Me.PanelRegistros.Location = New System.Drawing.Point(0, 473)
         Me.PanelRegistros.Name = "PanelRegistros"
         Me.PanelRegistros.Size = New System.Drawing.Size(868, 430)
         Me.PanelRegistros.TabIndex = 3
@@ -350,6 +381,56 @@ Partial Class FrmUsuario
         Me.TextBox3.Size = New System.Drawing.Size(659, 27)
         Me.TextBox3.TabIndex = 7
         '
+        'TextBox6
+        '
+        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(565, 267)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(268, 27)
+        Me.TextBox6.TabIndex = 16
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(451, 282)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(103, 22)
+        Me.Label6.TabIndex = 27
+        Me.Label6.Text = "Contraseña"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(451, 260)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(88, 22)
+        Me.Label7.TabIndex = 29
+        Me.Label7.Text = "Confirmar"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(451, 102)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(42, 22)
+        Me.Label9.TabIndex = 30
+        Me.Label9.Text = "Rol:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Administrador", "Laboratorista", "Recepcionista"})
+        Me.ComboBox1.Location = New System.Drawing.Point(504, 97)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(329, 28)
+        Me.ComboBox1.TabIndex = 10
+        Me.ComboBox1.Text = "Seleccione el rol..."
+        '
         'FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -361,7 +442,7 @@ Partial Class FrmUsuario
         Me.Controls.Add(Me.PanelBotones)
         Me.Controls.Add(Me.PanelLeyenda)
         Me.Name = "FrmUsuario"
-        Me.Text = "FrmUsuario"
+        Me.Text = "Gestion de Usuarios"
         Me.PanelLeyenda.ResumeLayout(False)
         Me.PanelLeyenda.PerformLayout()
         Me.PanelBotones.ResumeLayout(False)
@@ -401,4 +482,11 @@ Partial Class FrmUsuario
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents BtnSalir As Button
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label9 As Label
 End Class
