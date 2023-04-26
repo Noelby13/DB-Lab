@@ -26,6 +26,7 @@ Partial Class FrmAgregarExamen
         Me.BtnSalir = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelFunciones = New System.Windows.Forms.Panel()
+        Me.BtnBorrar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnGuardarIcon = New System.Windows.Forms.Button()
@@ -74,7 +75,7 @@ Partial Class FrmAgregarExamen
         Me.BtnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.ForeColor = System.Drawing.Color.White
-        Me.BtnSalir.Location = New System.Drawing.Point(743, 9)
+        Me.BtnSalir.Location = New System.Drawing.Point(746, 13)
         Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(91, 39)
@@ -87,7 +88,7 @@ Partial Class FrmAgregarExamen
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(13, 14)
+        Me.Label1.Location = New System.Drawing.Point(13, 18)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(198, 25)
@@ -96,6 +97,8 @@ Partial Class FrmAgregarExamen
         '
         'PanelFunciones
         '
+        Me.PanelFunciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(243, Byte), Integer))
+        Me.PanelFunciones.Controls.Add(Me.BtnBorrar)
         Me.PanelFunciones.Controls.Add(Me.BtnEditar)
         Me.PanelFunciones.Controls.Add(Me.BtnLimpiar)
         Me.PanelFunciones.Controls.Add(Me.BtnGuardarIcon)
@@ -105,22 +108,33 @@ Partial Class FrmAgregarExamen
         Me.PanelFunciones.Size = New System.Drawing.Size(850, 74)
         Me.PanelFunciones.TabIndex = 3
         '
+        'BtnBorrar
+        '
+        Me.BtnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnBorrar.Image = Global.DB_Lab.My.Resources.Resources.deleteButton
+        Me.BtnBorrar.Location = New System.Drawing.Point(729, 8)
+        Me.BtnBorrar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnBorrar.Name = "BtnBorrar"
+        Me.BtnBorrar.Size = New System.Drawing.Size(108, 56)
+        Me.BtnBorrar.TabIndex = 5
+        Me.BtnBorrar.UseVisualStyleBackColor = True
+        '
         'BtnEditar
         '
         Me.BtnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnEditar.Image = Global.DB_Lab.My.Resources.Resources.editButton
-        Me.BtnEditar.Location = New System.Drawing.Point(585, 8)
+        Me.BtnEditar.Location = New System.Drawing.Point(583, 8)
         Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(108, 56)
-        Me.BtnEditar.TabIndex = 3
+        Me.BtnEditar.TabIndex = 4
         Me.BtnEditar.UseVisualStyleBackColor = True
         '
         'BtnLimpiar
         '
         Me.BtnLimpiar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnLimpiar.Image = Global.DB_Lab.My.Resources.Resources.cleanButton
-        Me.BtnLimpiar.Location = New System.Drawing.Point(726, 8)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(290, 8)
         Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(108, 56)
@@ -131,15 +145,16 @@ Partial Class FrmAgregarExamen
         '
         Me.BtnGuardarIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnGuardarIcon.Image = Global.DB_Lab.My.Resources.Resources.saveButton
-        Me.BtnGuardarIcon.Location = New System.Drawing.Point(428, 8)
+        Me.BtnGuardarIcon.Location = New System.Drawing.Point(437, 8)
         Me.BtnGuardarIcon.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardarIcon.Name = "BtnGuardarIcon"
         Me.BtnGuardarIcon.Size = New System.Drawing.Size(108, 56)
-        Me.BtnGuardarIcon.TabIndex = 1
+        Me.BtnGuardarIcon.TabIndex = 3
         Me.BtnGuardarIcon.UseVisualStyleBackColor = True
         '
         'PanelDatos
         '
+        Me.PanelDatos.BackColor = System.Drawing.Color.White
         Me.PanelDatos.Controls.Add(Me.GrbDatosEstudios)
         Me.PanelDatos.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelDatos.Location = New System.Drawing.Point(0, 137)
@@ -174,8 +189,9 @@ Partial Class FrmAgregarExamen
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(285, 68)
-        Me.TextBox1.TabIndex = 18
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox1.Size = New System.Drawing.Size(285, 78)
+        Me.TextBox1.TabIndex = 8
         '
         'Label11
         '
@@ -193,7 +209,7 @@ Partial Class FrmAgregarExamen
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(101, 28)
-        Me.TextBox3.TabIndex = 11
+        Me.TextBox3.TabIndex = 9
         '
         'Label7
         '
@@ -211,7 +227,7 @@ Partial Class FrmAgregarExamen
         Me.ComboBox1.Location = New System.Drawing.Point(555, 32)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(203, 30)
-        Me.ComboBox1.TabIndex = 9
+        Me.ComboBox1.TabIndex = 7
         '
         'Label4
         '
@@ -229,7 +245,7 @@ Partial Class FrmAgregarExamen
         Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(285, 28)
-        Me.TxtNombre.TabIndex = 2
+        Me.TxtNombre.TabIndex = 6
         '
         'Label3
         '
@@ -243,6 +259,7 @@ Partial Class FrmAgregarExamen
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -256,6 +273,7 @@ Partial Class FrmAgregarExamen
         Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.BackColor = System.Drawing.Color.White
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.TextBox2)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -273,7 +291,7 @@ Partial Class FrmAgregarExamen
         Me.Button1.Location = New System.Drawing.Point(459, 38)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(123, 39)
-        Me.Button1.TabIndex = 4
+        Me.Button1.TabIndex = 14
         Me.Button1.Text = "Agregar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -284,13 +302,14 @@ Partial Class FrmAgregarExamen
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(410, 35)
-        Me.TextBox2.TabIndex = 3
+        Me.TextBox2.TabIndex = 13
         '
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Controls.Add(Me.BtnAgregar)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
@@ -312,7 +331,7 @@ Partial Class FrmAgregarExamen
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(804, 197)
-        Me.DataGridView1.TabIndex = 4
+        Me.DataGridView1.TabIndex = 12
         '
         'BtnAgregar
         '
@@ -322,7 +341,7 @@ Partial Class FrmAgregarExamen
         Me.BtnAgregar.Location = New System.Drawing.Point(459, 31)
         Me.BtnAgregar.Name = "BtnAgregar"
         Me.BtnAgregar.Size = New System.Drawing.Size(123, 39)
-        Me.BtnAgregar.TabIndex = 3
+        Me.BtnAgregar.TabIndex = 11
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnAgregar.UseVisualStyleBackColor = True
@@ -334,7 +353,7 @@ Partial Class FrmAgregarExamen
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(410, 35)
-        Me.TextBox5.TabIndex = 2
+        Me.TextBox5.TabIndex = 10
         '
         'FrmAgregarExamen
         '
@@ -346,7 +365,7 @@ Partial Class FrmAgregarExamen
         Me.Controls.Add(Me.PanelFunciones)
         Me.Controls.Add(Me.PanelLeyenda)
         Me.Name = "FrmAgregarExamen"
-        Me.Text = "FrmAgregarExamen"
+        Me.Text = "Registro de Examenes"
         Me.PanelLeyenda.ResumeLayout(False)
         Me.PanelLeyenda.PerformLayout()
         Me.PanelFunciones.ResumeLayout(False)
@@ -388,4 +407,5 @@ Partial Class FrmAgregarExamen
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents BtnBorrar As Button
 End Class
