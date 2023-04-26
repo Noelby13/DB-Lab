@@ -26,28 +26,31 @@ Partial Class FrmCancelarFactura
         Me.BtnSalir = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelBotones = New System.Windows.Forms.Panel()
-        Me.PanelDatosUsuario = New System.Windows.Forms.Panel()
-        Me.TxtNombres = New System.Windows.Forms.TextBox()
-        Me.Lbl_nombres = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.BtnBorrar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.PanelDatosUsuario = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtNombres = New System.Windows.Forms.TextBox()
+        Me.Lbl_nombres = New System.Windows.Forms.Label()
+        Me.BtnBuscarEstudio = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.PanelLeyenda.SuspendLayout()
         Me.PanelBotones.SuspendLayout()
         Me.PanelDatosUsuario.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelLeyenda
@@ -57,8 +60,9 @@ Partial Class FrmCancelarFactura
         Me.PanelLeyenda.Controls.Add(Me.Label4)
         Me.PanelLeyenda.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLeyenda.Location = New System.Drawing.Point(0, 0)
+        Me.PanelLeyenda.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelLeyenda.Name = "PanelLeyenda"
-        Me.PanelLeyenda.Size = New System.Drawing.Size(850, 64)
+        Me.PanelLeyenda.Size = New System.Drawing.Size(638, 52)
         Me.PanelLeyenda.TabIndex = 1
         '
         'BtnSalir
@@ -66,10 +70,9 @@ Partial Class FrmCancelarFactura
         Me.BtnSalir.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.ForeColor = System.Drawing.Color.White
-        Me.BtnSalir.Location = New System.Drawing.Point(746, 13)
-        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSalir.Location = New System.Drawing.Point(560, 11)
         Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(91, 39)
+        Me.BtnSalir.Size = New System.Drawing.Size(68, 32)
         Me.BtnSalir.TabIndex = 25
         Me.BtnSalir.Text = "Salir"
         Me.BtnSalir.UseVisualStyleBackColor = False
@@ -80,10 +83,9 @@ Partial Class FrmCancelarFactura
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(13, 20)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(10, 16)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(178, 25)
+        Me.Label4.Size = New System.Drawing.Size(147, 20)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Cancelar Factura"
         '
@@ -92,14 +94,36 @@ Partial Class FrmCancelarFactura
         Me.PanelBotones.Controls.Add(Me.BtnBorrar)
         Me.PanelBotones.Controls.Add(Me.BtnLimpiar)
         Me.PanelBotones.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelBotones.Location = New System.Drawing.Point(0, 64)
+        Me.PanelBotones.Location = New System.Drawing.Point(0, 52)
+        Me.PanelBotones.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelBotones.Name = "PanelBotones"
-        Me.PanelBotones.Size = New System.Drawing.Size(850, 74)
+        Me.PanelBotones.Size = New System.Drawing.Size(638, 60)
         Me.PanelBotones.TabIndex = 2
+        '
+        'BtnBorrar
+        '
+        Me.BtnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnBorrar.Image = Global.DB_Lab.My.Resources.Resources.deleteButton
+        Me.BtnBorrar.Location = New System.Drawing.Point(547, 7)
+        Me.BtnBorrar.Name = "BtnBorrar"
+        Me.BtnBorrar.Size = New System.Drawing.Size(81, 46)
+        Me.BtnBorrar.TabIndex = 6
+        Me.BtnBorrar.UseVisualStyleBackColor = True
+        '
+        'BtnLimpiar
+        '
+        Me.BtnLimpiar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnLimpiar.Image = Global.DB_Lab.My.Resources.Resources.cleanButton
+        Me.BtnLimpiar.Location = New System.Drawing.Point(434, 7)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(81, 46)
+        Me.BtnLimpiar.TabIndex = 3
+        Me.BtnLimpiar.UseVisualStyleBackColor = True
         '
         'PanelDatosUsuario
         '
         Me.PanelDatosUsuario.BackColor = System.Drawing.Color.White
+        Me.PanelDatosUsuario.Controls.Add(Me.BtnBuscarEstudio)
         Me.PanelDatosUsuario.Controls.Add(Me.Button2)
         Me.PanelDatosUsuario.Controls.Add(Me.Button1)
         Me.PanelDatosUsuario.Controls.Add(Me.GroupBox2)
@@ -108,29 +132,63 @@ Partial Class FrmCancelarFactura
         Me.PanelDatosUsuario.Controls.Add(Me.Lbl_nombres)
         Me.PanelDatosUsuario.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelDatosUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PanelDatosUsuario.Location = New System.Drawing.Point(0, 138)
+        Me.PanelDatosUsuario.Location = New System.Drawing.Point(0, 112)
+        Me.PanelDatosUsuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelDatosUsuario.Name = "PanelDatosUsuario"
-        Me.PanelDatosUsuario.Size = New System.Drawing.Size(850, 707)
+        Me.PanelDatosUsuario.Size = New System.Drawing.Size(638, 574)
         Me.PanelDatosUsuario.TabIndex = 3
         '
-        'TxtNombres
+        'Button2
         '
-        Me.TxtNombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombres.Location = New System.Drawing.Point(123, 27)
-        Me.TxtNombres.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TxtNombres.Name = "TxtNombres"
-        Me.TxtNombres.Size = New System.Drawing.Size(247, 27)
-        Me.TxtNombres.TabIndex = 6
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.Location = New System.Drawing.Point(463, 505)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(154, 33)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "Cancelar Operación"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'Lbl_nombres
+        'Button1
         '
-        Me.Lbl_nombres.AutoSize = True
-        Me.Lbl_nombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_nombres.Location = New System.Drawing.Point(25, 32)
-        Me.Lbl_nombres.Name = "Lbl_nombres"
-        Me.Lbl_nombres.Size = New System.Drawing.Size(98, 22)
-        Me.Lbl_nombres.TabIndex = 5
-        Me.Lbl_nombres.Text = "ID Factura:"
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Location = New System.Drawing.Point(307, 505)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(132, 33)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Eliminar Factura"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.DataGridView1)
+        Me.GroupBox2.Location = New System.Drawing.Point(9, 260)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(619, 225)
+        Me.GroupBox2.TabIndex = 10
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Exámenes Facturados"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(13, 43)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(595, 122)
+        Me.DataGridView1.TabIndex = 0
         '
         'GroupBox1
         '
@@ -143,143 +201,138 @@ Partial Class FrmCancelarFactura
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 107)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 87)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(826, 189)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(620, 154)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de la Factura"
         '
-        'Label1
+        'DateTimePicker1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(13, 70)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 22)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Nombre:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(392, 70)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 22)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Apellido:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(97, 67)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(247, 27)
-        Me.TextBox1.TabIndex = 8
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(487, 69)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(247, 27)
-        Me.TextBox2.TabIndex = 9
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Controls.Add(Me.DataGridView1)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 320)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(825, 257)
-        Me.GroupBox2.TabIndex = 10
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Exámenes Facturados"
+        Me.DateTimePicker1.Location = New System.Drawing.Point(163, 104)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(268, 24)
+        Me.DateTimePicker1.TabIndex = 11
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(13, 133)
+        Me.Label3.Location = New System.Drawing.Point(10, 108)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(183, 22)
+        Me.Label3.Size = New System.Drawing.Size(150, 18)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Fecha de facturación:"
         '
-        'DateTimePicker1
+        'TextBox2
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(217, 128)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(356, 29)
-        Me.DateTimePicker1.TabIndex = 11
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(365, 56)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(186, 23)
+        Me.TextBox2.TabIndex = 9
         '
-        'Button1
+        'TextBox1
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(409, 622)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(176, 41)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Eliminar Factura"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(73, 54)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(186, 23)
+        Me.TextBox1.TabIndex = 8
         '
-        'Button2
+        'Label2
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(617, 622)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(205, 41)
-        Me.Button2.TabIndex = 12
-        Me.Button2.Text = "Cancelar Operación"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(294, 57)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(63, 18)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Apellido:"
         '
-        'DataGridView1
+        'Label1
         '
-        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(17, 60)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(793, 150)
-        Me.DataGridView1.TabIndex = 0
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(10, 57)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(66, 18)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Nombre:"
         '
-        'BtnBorrar
+        'TxtNombres
         '
-        Me.BtnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnBorrar.Image = Global.DB_Lab.My.Resources.Resources.deleteButton
-        Me.BtnBorrar.Location = New System.Drawing.Point(729, 9)
-        Me.BtnBorrar.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnBorrar.Name = "BtnBorrar"
-        Me.BtnBorrar.Size = New System.Drawing.Size(108, 56)
-        Me.BtnBorrar.TabIndex = 6
-        Me.BtnBorrar.UseVisualStyleBackColor = True
+        Me.TxtNombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombres.Location = New System.Drawing.Point(103, 23)
+        Me.TxtNombres.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtNombres.Name = "TxtNombres"
+        Me.TxtNombres.Size = New System.Drawing.Size(186, 23)
+        Me.TxtNombres.TabIndex = 1
         '
-        'BtnLimpiar
+        'Lbl_nombres
         '
-        Me.BtnLimpiar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnLimpiar.Image = Global.DB_Lab.My.Resources.Resources.cleanButton
-        Me.BtnLimpiar.Location = New System.Drawing.Point(579, 9)
-        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(108, 56)
-        Me.BtnLimpiar.TabIndex = 3
-        Me.BtnLimpiar.UseVisualStyleBackColor = True
+        Me.Lbl_nombres.AutoSize = True
+        Me.Lbl_nombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_nombres.Location = New System.Drawing.Point(19, 26)
+        Me.Lbl_nombres.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Lbl_nombres.Name = "Lbl_nombres"
+        Me.Lbl_nombres.Size = New System.Drawing.Size(80, 18)
+        Me.Lbl_nombres.TabIndex = 5
+        Me.Lbl_nombres.Text = "ID Factura:"
+        '
+        'BtnBuscarEstudio
+        '
+        Me.BtnBuscarEstudio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscarEstudio.Image = Global.DB_Lab.My.Resources.Resources.searchButton
+        Me.BtnBuscarEstudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBuscarEstudio.Location = New System.Drawing.Point(306, 11)
+        Me.BtnBuscarEstudio.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnBuscarEstudio.Name = "BtnBuscarEstudio"
+        Me.BtnBuscarEstudio.Size = New System.Drawing.Size(81, 46)
+        Me.BtnBuscarEstudio.TabIndex = 2
+        Me.BtnBuscarEstudio.Text = "Buscar"
+        Me.BtnBuscarEstudio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBuscarEstudio.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(461, 193)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(45, 18)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "Total:"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(528, 190)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.Size = New System.Drawing.Size(80, 23)
+        Me.TextBox3.TabIndex = 9
         '
         'FrmCancelarFactura
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(850, 844)
+        Me.ClientSize = New System.Drawing.Size(638, 686)
         Me.Controls.Add(Me.PanelDatosUsuario)
         Me.Controls.Add(Me.PanelBotones)
         Me.Controls.Add(Me.PanelLeyenda)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmCancelarFactura"
         Me.Text = "FrmCancelarFactura"
         Me.PanelLeyenda.ResumeLayout(False)
@@ -287,10 +340,11 @@ Partial Class FrmCancelarFactura
         Me.PanelBotones.ResumeLayout(False)
         Me.PanelDatosUsuario.ResumeLayout(False)
         Me.PanelDatosUsuario.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -315,4 +369,7 @@ Partial Class FrmCancelarFactura
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtNombres As TextBox
     Friend WithEvents Lbl_nombres As Label
+    Friend WithEvents BtnBuscarEstudio As Button
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label5 As Label
 End Class
