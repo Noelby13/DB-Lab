@@ -1,4 +1,5 @@
 ﻿Public Class FrmPrincipal
+    Friend Property usuario As Usuario
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ocultarSubMenu()
         Size = Screen.PrimaryScreen.WorkingArea.Size
@@ -78,6 +79,7 @@
     End Sub
 
     Private Sub BtnListaTrabajo_Click(sender As Object, e As EventArgs) Handles BtnListaTrabajo.Click
+
         abrirFrmHijo(New FrmListaTrabajo())
     End Sub
 

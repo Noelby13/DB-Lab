@@ -53,17 +53,24 @@
 
             Dim dArqueo As New DArqueo
             If Not dArqueo.chequearTurno() Then
-                Me.Hide()
+                Me.Close()
                 'Le pasamos el usuario al formulario de apertura de caja
                 FrmAperturaCaja.usuario = user
                 'ShowDialog sirve para detener la ejecucion del codigo hasta que se cierre el formulario
                 FrmAperturaCaja.ShowDialog()
-                If FrmAperturaCaja.AperturaExitosa Then
-                    FrmPrincipal.Show()
+
+                'Si la apertura de caja no fue exitosa, cerramos el formulario
+                If Not FrmAperturaCaja.AperturaExitosa Then
+                    Me.Close()
+                    Return
                 End If
+                FrmPrincipal.usuario = user
+                FrmPrincipal.Show()
+
                 'MsgBox("Ocurrio un error al abrir el turno. Contacta al Soporte 8888-8888", MsgBoxStyle.Critical)
             Else
                 'Este codigo se ejecuta si ya hay un turno abierto
+                FrmPrincipal.usuario = user
                 FrmPrincipal.Show()
                 Me.Close()
             End If

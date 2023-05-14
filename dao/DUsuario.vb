@@ -22,7 +22,7 @@ Public Class DUsuario
         End Try
         Return resultado
     End Function
-
+    'Funcion para obtener un objeto usuario con todos los datos
     Public Function obtenerUsuario(ByVal username As String) As Usuario
         Try
             Dim user As New Usuario()
@@ -51,4 +51,28 @@ Public Class DUsuario
             MsgBox("Ocurrio un error al obtener el usuario", MsgBoxStyle.Information, "Inicio de Sesión")
         End Try
     End Function
+
+    Public Function obtenerListaPermisos(ByVal usuario As Usuario) As List(Of Integer)
+        Dim listaPermisos As New List(Of Integer)
+        Try
+            Dim ds As New DataTable
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "select Tbl_Funcion.idFuncion
+                                    from Tbl_Rol 
+                                    inner join Tbl_RolFuncion ON Tbl_Rol.idRol = Tbl_RolFuncion.idRol 
+                                    inner join Tbl_Usuario ON Tbl_Rol.idRol = Tbl_Usuario.idRol 
+                                    inner join Tbl_Funcion ON Tbl_RolFuncion.idFuncion = Tbl_Funcion.idFuncion 
+                                    where Tbl_Usuario.idUsuario = @idUsuario"
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.SelectCommand.Parameters.AddWithValue("@idUsuario", usuario.IdUsuario)
+            da.Fill(ds)
+            For Each row As DataRow In ds.Rows
+                listaPermisos.Add(row.Item("idFuncion"))
+            Next
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al obtener los permisos", MsgBoxStyle.Information, "Inicio de Sesión")
+        End Try
+        Return listaPermisos
+    End Function
+
 End Class
