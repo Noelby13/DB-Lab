@@ -88,19 +88,17 @@ Partial Class FrmLogin
         'TxbUsuario
         '
         Me.TxbUsuario.Location = New System.Drawing.Point(43, 184)
-        Me.TxbUsuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TxbUsuario.Multiline = True
+        Me.TxbUsuario.Margin = New System.Windows.Forms.Padding(2)
         Me.TxbUsuario.Name = "TxbUsuario"
-        Me.TxbUsuario.Size = New System.Drawing.Size(228, 24)
+        Me.TxbUsuario.Size = New System.Drawing.Size(228, 20)
         Me.TxbUsuario.TabIndex = 4
         '
         'TxbContraseña
         '
         Me.TxbContraseña.Location = New System.Drawing.Point(43, 258)
-        Me.TxbContraseña.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TxbContraseña.Multiline = True
+        Me.TxbContraseña.Margin = New System.Windows.Forms.Padding(2)
         Me.TxbContraseña.Name = "TxbContraseña"
-        Me.TxbContraseña.Size = New System.Drawing.Size(228, 24)
+        Me.TxbContraseña.Size = New System.Drawing.Size(228, 20)
         Me.TxbContraseña.TabIndex = 5
         Me.TxbContraseña.UseSystemPasswordChar = True
         '
@@ -110,7 +108,7 @@ Partial Class FrmLogin
         Me.BtnEntrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEntrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnEntrar.Location = New System.Drawing.Point(43, 317)
-        Me.BtnEntrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnEntrar.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnEntrar.Name = "BtnEntrar"
         Me.BtnEntrar.Size = New System.Drawing.Size(227, 35)
         Me.BtnEntrar.TabIndex = 6
@@ -121,7 +119,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(200, 41)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -142,7 +140,7 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmLogin"
