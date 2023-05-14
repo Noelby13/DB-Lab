@@ -73,6 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DsDBLab.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsDBLab.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmActualizacióResultados.Designer.vb">
       <DependentUpon>FrmActualizacióResultados.vb</DependentUpon>
     </Compile>
@@ -209,6 +214,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DsDBLab.xsc">
+      <DependentUpon>DsDBLab.xsd</DependentUpon>
+    </None>
+    <None Include="DsDBLab.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsDBLab.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DsDBLab.xss">
+      <DependentUpon>DsDBLab.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -220,7 +236,10 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="dao\" />
+    <Folder Include="entidades\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="img\searchButton.png" />
     <None Include="img\editButton.png" />

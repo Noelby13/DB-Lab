@@ -4,6 +4,7 @@
     End Sub
 
     Private Sub BtnEntrar_Click(sender As Object, e As EventArgs) Handles BtnEntrar.Click
+
         FrmPrincipal.Show()
         Me.Close()
     End Sub
