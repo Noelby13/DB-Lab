@@ -31,14 +31,14 @@ Partial Class FrmRol
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.PanelDatosRol = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TbxDescripcion = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtNombres = New System.Windows.Forms.TextBox()
         Me.Lbl_nombres = New System.Windows.Forms.Label()
         Me.PanelRegistros = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnBuscarEstudio = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.BtnBuscarRol = New System.Windows.Forms.Button()
+        Me.TxtRol = New System.Windows.Forms.TextBox()
         Me.PanelLeyenda.SuspendLayout()
         Me.PanelBotones.SuspendLayout()
         Me.PanelDatosRol.SuspendLayout()
@@ -142,7 +142,7 @@ Partial Class FrmRol
         'PanelDatosRol
         '
         Me.PanelDatosRol.BackColor = System.Drawing.Color.White
-        Me.PanelDatosRol.Controls.Add(Me.TextBox1)
+        Me.PanelDatosRol.Controls.Add(Me.TbxDescripcion)
         Me.PanelDatosRol.Controls.Add(Me.Label1)
         Me.PanelDatosRol.Controls.Add(Me.TxtNombres)
         Me.PanelDatosRol.Controls.Add(Me.Lbl_nombres)
@@ -152,16 +152,16 @@ Partial Class FrmRol
         Me.PanelDatosRol.Size = New System.Drawing.Size(868, 200)
         Me.PanelDatosRol.TabIndex = 2
         '
-        'TextBox1
+        'TbxDescripcion
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(543, 37)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(301, 140)
-        Me.TextBox1.TabIndex = 10
+        Me.TbxDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbxDescripcion.Location = New System.Drawing.Point(543, 37)
+        Me.TbxDescripcion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TbxDescripcion.Multiline = True
+        Me.TbxDescripcion.Name = "TbxDescripcion"
+        Me.TbxDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TbxDescripcion.Size = New System.Drawing.Size(301, 140)
+        Me.TbxDescripcion.TabIndex = 10
         '
         'Label1
         '
@@ -195,8 +195,8 @@ Partial Class FrmRol
         'PanelRegistros
         '
         Me.PanelRegistros.Controls.Add(Me.DataGridView1)
-        Me.PanelRegistros.Controls.Add(Me.BtnBuscarEstudio)
-        Me.PanelRegistros.Controls.Add(Me.TextBox3)
+        Me.PanelRegistros.Controls.Add(Me.BtnBuscarRol)
+        Me.PanelRegistros.Controls.Add(Me.TxtRol)
         Me.PanelRegistros.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelRegistros.Location = New System.Drawing.Point(0, 338)
         Me.PanelRegistros.Name = "PanelRegistros"
@@ -216,26 +216,26 @@ Partial Class FrmRol
         Me.DataGridView1.Size = New System.Drawing.Size(781, 292)
         Me.DataGridView1.TabIndex = 10
         '
-        'BtnBuscarEstudio
+        'BtnBuscarRol
         '
-        Me.BtnBuscarEstudio.Image = Global.DB_Lab.My.Resources.Resources.searchButton
-        Me.BtnBuscarEstudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarEstudio.Location = New System.Drawing.Point(718, 23)
-        Me.BtnBuscarEstudio.Name = "BtnBuscarEstudio"
-        Me.BtnBuscarEstudio.Size = New System.Drawing.Size(108, 56)
-        Me.BtnBuscarEstudio.TabIndex = 9
-        Me.BtnBuscarEstudio.Text = "Buscar"
-        Me.BtnBuscarEstudio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnBuscarEstudio.UseVisualStyleBackColor = True
+        Me.BtnBuscarRol.Image = Global.DB_Lab.My.Resources.Resources.searchButton
+        Me.BtnBuscarRol.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBuscarRol.Location = New System.Drawing.Point(718, 23)
+        Me.BtnBuscarRol.Name = "BtnBuscarRol"
+        Me.BtnBuscarRol.Size = New System.Drawing.Size(108, 56)
+        Me.BtnBuscarRol.TabIndex = 9
+        Me.BtnBuscarRol.Text = "Buscar"
+        Me.BtnBuscarRol.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBuscarRol.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'TxtRol
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(45, 37)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(662, 27)
-        Me.TextBox3.TabIndex = 8
+        Me.TxtRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtRol.Location = New System.Drawing.Point(45, 37)
+        Me.TxtRol.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtRol.Name = "TxtRol"
+        Me.TxtRol.Size = New System.Drawing.Size(662, 27)
+        Me.TxtRol.TabIndex = 8
         '
         'FrmRol
         '
@@ -268,13 +268,13 @@ Partial Class FrmRol
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnBorrar As Button
     Friend WithEvents PanelDatosRol As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TbxDescripcion As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtNombres As TextBox
     Friend WithEvents Lbl_nombres As Label
     Friend WithEvents PanelRegistros As Panel
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents BtnBuscarEstudio As Button
+    Friend WithEvents TxtRol As TextBox
+    Friend WithEvents BtnBuscarRol As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents BtnSalir As Button
