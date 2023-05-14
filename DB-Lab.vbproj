@@ -73,11 +73,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\DUsuario.vb" />
     <Compile Include="DsDBLab.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsDBLab.xsd</DependentUpon>
     </Compile>
+    <Compile Include="entidades\Usuario.vb" />
     <Compile Include="Formularios\FrmActualizacióResultados.Designer.vb">
       <DependentUpon>FrmActualizacióResultados.vb</DependentUpon>
     </Compile>
@@ -236,10 +238,7 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="dao\" />
-    <Folder Include="entidades\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="img\searchButton.png" />
     <None Include="img\editButton.png" />
