@@ -5,11 +5,11 @@
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         If (TxtNombres.Text = "") Then
-            MsgBox("Debe ingresar un nombre")
+            MsgBox("Debe ingresar un nombre al campo")
         End If
 
         If (TbxDescripcion.Text = "") Then
-            MsgBox("Debe ingresar una descripción")
+            MsgBox("Debe ingresar una descripción al campo")
         End If
     End Sub
 
