@@ -1,4 +1,6 @@
 ﻿Public Class Usuario
+
+    'Atributos de la clase'
     Dim _idUsuario As Integer
     Dim _primerNombre As String
     Dim _segundoNombre As String
@@ -13,10 +15,14 @@
     Dim _estado As Boolean
     Dim _idRol As Integer
 
+
+    'Constructor vacio'
     Public Sub New()
 
     End Sub
 
+
+    'Constructor con parametros'
     Public Sub New(idUsuario As Integer, primerNombre As String, segundoNombre As String, primerApellido As String, segundoApellido As String, username As String, telefono As String, correo As String, fechaIngreso As Date, cedula As String, pwd As String, estado As Boolean, idRol As Integer)
         _idUsuario = idUsuario
         _primerNombre = primerNombre
@@ -33,6 +39,9 @@
         _idRol = idRol
     End Sub
 
+
+    'Propiedades'
+    'Getters y Setters'
     Public Property IdUsuario As Integer
         Get
             Return _idUsuario
@@ -149,4 +158,5 @@
             _idRol = value
         End Set
     End Property
+
 End Class
