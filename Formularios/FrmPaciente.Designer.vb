@@ -31,8 +31,8 @@ Partial Class FrmPaciente
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnGuardarIcon = New System.Windows.Forms.Button()
         Me.PanelDatosPaciente = New System.Windows.Forms.Panel()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RbFemenino = New System.Windows.Forms.RadioButton()
+        Me.RbMasculino = New System.Windows.Forms.RadioButton()
         Me.TxtCorreo = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TxtTelefono = New System.Windows.Forms.TextBox()
@@ -66,7 +66,7 @@ Partial Class FrmPaciente
         Me.PanelLeyenda.Controls.Add(Me.Label1)
         Me.PanelLeyenda.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLeyenda.Location = New System.Drawing.Point(0, 0)
-        Me.PanelLeyenda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelLeyenda.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelLeyenda.Name = "PanelLeyenda"
         Me.PanelLeyenda.Size = New System.Drawing.Size(868, 63)
         Me.PanelLeyenda.TabIndex = 1
@@ -77,7 +77,7 @@ Partial Class FrmPaciente
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.ForeColor = System.Drawing.Color.White
         Me.BtnSalir.Location = New System.Drawing.Point(764, 14)
-        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(91, 39)
         Me.BtnSalir.TabIndex = 1
@@ -104,7 +104,7 @@ Partial Class FrmPaciente
         Me.PanelOpciones.Controls.Add(Me.BtnGuardarIcon)
         Me.PanelOpciones.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelOpciones.Location = New System.Drawing.Point(0, 63)
-        Me.PanelOpciones.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelOpciones.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelOpciones.Name = "PanelOpciones"
         Me.PanelOpciones.Size = New System.Drawing.Size(868, 74)
         Me.PanelOpciones.TabIndex = 2
@@ -114,7 +114,7 @@ Partial Class FrmPaciente
         Me.BtnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnBorrar.Image = Global.DB_Lab.My.Resources.Resources.deleteButton
         Me.BtnBorrar.Location = New System.Drawing.Point(747, 10)
-        Me.BtnBorrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnBorrar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnBorrar.Name = "BtnBorrar"
         Me.BtnBorrar.Size = New System.Drawing.Size(108, 57)
         Me.BtnBorrar.TabIndex = 4
@@ -125,7 +125,7 @@ Partial Class FrmPaciente
         Me.BtnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnEditar.Image = Global.DB_Lab.My.Resources.Resources.editButton
         Me.BtnEditar.Location = New System.Drawing.Point(601, 10)
-        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(108, 57)
         Me.BtnEditar.TabIndex = 3
@@ -136,7 +136,7 @@ Partial Class FrmPaciente
         Me.BtnLimpiar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnLimpiar.Image = Global.DB_Lab.My.Resources.Resources.cleanButton
         Me.BtnLimpiar.Location = New System.Drawing.Point(309, 10)
-        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(108, 57)
         Me.BtnLimpiar.TabIndex = 1
@@ -147,7 +147,7 @@ Partial Class FrmPaciente
         Me.BtnGuardarIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnGuardarIcon.Image = Global.DB_Lab.My.Resources.Resources.saveButton
         Me.BtnGuardarIcon.Location = New System.Drawing.Point(455, 7)
-        Me.BtnGuardarIcon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnGuardarIcon.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardarIcon.Name = "BtnGuardarIcon"
         Me.BtnGuardarIcon.Size = New System.Drawing.Size(108, 57)
         Me.BtnGuardarIcon.TabIndex = 2
@@ -156,8 +156,8 @@ Partial Class FrmPaciente
         'PanelDatosPaciente
         '
         Me.PanelDatosPaciente.BackColor = System.Drawing.Color.White
-        Me.PanelDatosPaciente.Controls.Add(Me.RadioButton2)
-        Me.PanelDatosPaciente.Controls.Add(Me.RadioButton1)
+        Me.PanelDatosPaciente.Controls.Add(Me.RbFemenino)
+        Me.PanelDatosPaciente.Controls.Add(Me.RbMasculino)
         Me.PanelDatosPaciente.Controls.Add(Me.TxtCorreo)
         Me.PanelDatosPaciente.Controls.Add(Me.Label10)
         Me.PanelDatosPaciente.Controls.Add(Me.TxtTelefono)
@@ -175,34 +175,34 @@ Partial Class FrmPaciente
         Me.PanelDatosPaciente.Controls.Add(Me.Lbl_nombre)
         Me.PanelDatosPaciente.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelDatosPaciente.Location = New System.Drawing.Point(0, 137)
-        Me.PanelDatosPaciente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelDatosPaciente.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelDatosPaciente.Name = "PanelDatosPaciente"
         Me.PanelDatosPaciente.Size = New System.Drawing.Size(868, 345)
         Me.PanelDatosPaciente.TabIndex = 3
         '
-        'RadioButton2
+        'RbFemenino
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(241, 85)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(88, 20)
-        Me.RadioButton2.TabIndex = 4
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Femenino"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.RbFemenino.AutoSize = True
+        Me.RbFemenino.Location = New System.Drawing.Point(241, 85)
+        Me.RbFemenino.Margin = New System.Windows.Forms.Padding(4)
+        Me.RbFemenino.Name = "RbFemenino"
+        Me.RbFemenino.Size = New System.Drawing.Size(88, 20)
+        Me.RbFemenino.TabIndex = 4
+        Me.RbFemenino.TabStop = True
+        Me.RbFemenino.Text = "Femenino"
+        Me.RbFemenino.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'RbMasculino
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(120, 85)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(89, 20)
-        Me.RadioButton1.TabIndex = 3
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Masculino"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.RbMasculino.AutoSize = True
+        Me.RbMasculino.Location = New System.Drawing.Point(120, 85)
+        Me.RbMasculino.Margin = New System.Windows.Forms.Padding(4)
+        Me.RbMasculino.Name = "RbMasculino"
+        Me.RbMasculino.Size = New System.Drawing.Size(89, 20)
+        Me.RbMasculino.TabIndex = 3
+        Me.RbMasculino.TabStop = True
+        Me.RbMasculino.Text = "Masculino"
+        Me.RbMasculino.UseVisualStyleBackColor = True
         '
         'TxtCorreo
         '
@@ -285,7 +285,7 @@ Partial Class FrmPaciente
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(583, 85)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(257, 22)
         Me.DateTimePicker1.TabIndex = 5
@@ -406,7 +406,7 @@ Partial Class FrmPaciente
         Me.Controls.Add(Me.PanelDatosPaciente)
         Me.Controls.Add(Me.PanelOpciones)
         Me.Controls.Add(Me.PanelLeyenda)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmPaciente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmPaciente"
@@ -450,6 +450,6 @@ Partial Class FrmPaciente
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents BtnBuscarEstudio As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RbFemenino As RadioButton
+    Friend WithEvents RbMasculino As RadioButton
 End Class
