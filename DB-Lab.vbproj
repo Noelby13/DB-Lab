@@ -82,6 +82,8 @@
       <DependentUpon>DsDBLab.xsd</DependentUpon>
     </Compile>
     <Compile Include="entidades\ArqueoCaja.vb" />
+    <Compile Include="entidades\Cliente.vb" />
+    <Compile Include="entidades\Doctor.vb" />
     <Compile Include="entidades\Rol.vb" />
     <Compile Include="entidades\Usuario.vb" />
     <Compile Include="Formularios\FrmActualizacióResultados.Designer.vb">
