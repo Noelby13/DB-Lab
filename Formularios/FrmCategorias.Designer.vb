@@ -23,22 +23,22 @@ Partial Class FrmCategorias
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelBotones = New System.Windows.Forms.Panel()
         Me.BtnBorrar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.PanelDatosCategoria = New System.Windows.Forms.Panel()
-        Me.TxtNombres = New System.Windows.Forms.TextBox()
-        Me.Lbl_nombres = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtIdentificador = New System.Windows.Forms.TextBox()
+        Me.Lbl_nombres = New System.Windows.Forms.Label()
         Me.PanelRegistros = New System.Windows.Forms.Panel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.BtnBuscarEstudio = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.BtnBuscarEstudio = New System.Windows.Forms.Button()
+        Me.TxtCategoria = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.PanelBotones.SuspendLayout()
         Me.PanelDatosCategoria.SuspendLayout()
@@ -56,6 +56,32 @@ Partial Class FrmCategorias
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(868, 64)
         Me.Panel1.TabIndex = 0
+        '
+        'BtnSalir
+        '
+        Me.BtnSalir.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.ForeColor = System.Drawing.Color.White
+        Me.BtnSalir.Location = New System.Drawing.Point(764, 13)
+        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(91, 39)
+        Me.BtnSalir.TabIndex = 27
+        Me.BtnSalir.Text = "Salir"
+        Me.BtnSalir.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(13, 19)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(364, 25)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Gestion de Categorias de Examenes"
         '
         'PanelBotones
         '
@@ -116,9 +142,9 @@ Partial Class FrmCategorias
         'PanelDatosCategoria
         '
         Me.PanelDatosCategoria.BackColor = System.Drawing.Color.White
-        Me.PanelDatosCategoria.Controls.Add(Me.TextBox1)
+        Me.PanelDatosCategoria.Controls.Add(Me.TxtNombre)
         Me.PanelDatosCategoria.Controls.Add(Me.Label1)
-        Me.PanelDatosCategoria.Controls.Add(Me.TxtNombres)
+        Me.PanelDatosCategoria.Controls.Add(Me.TxtIdentificador)
         Me.PanelDatosCategoria.Controls.Add(Me.Lbl_nombres)
         Me.PanelDatosCategoria.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelDatosCategoria.Location = New System.Drawing.Point(0, 138)
@@ -126,34 +152,14 @@ Partial Class FrmCategorias
         Me.PanelDatosCategoria.Size = New System.Drawing.Size(868, 101)
         Me.PanelDatosCategoria.TabIndex = 2
         '
-        'TxtNombres
+        'TxtNombre
         '
-        Me.TxtNombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombres.Location = New System.Drawing.Point(162, 31)
-        Me.TxtNombres.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TxtNombres.Name = "TxtNombres"
-        Me.TxtNombres.ReadOnly = True
-        Me.TxtNombres.Size = New System.Drawing.Size(247, 27)
-        Me.TxtNombres.TabIndex = 10
-        '
-        'Lbl_nombres
-        '
-        Me.Lbl_nombres.AutoSize = True
-        Me.Lbl_nombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_nombres.Location = New System.Drawing.Point(39, 36)
-        Me.Lbl_nombres.Name = "Lbl_nombres"
-        Me.Lbl_nombres.Size = New System.Drawing.Size(112, 22)
-        Me.Lbl_nombres.TabIndex = 9
-        Me.Lbl_nombres.Text = "Identificador:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(537, 31)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(247, 27)
-        Me.TextBox1.TabIndex = 12
+        Me.TxtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombre.Location = New System.Drawing.Point(537, 31)
+        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(247, 27)
+        Me.TxtNombre.TabIndex = 12
         '
         'Label1
         '
@@ -165,37 +171,36 @@ Partial Class FrmCategorias
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Nombre:"
         '
+        'TxtIdentificador
+        '
+        Me.TxtIdentificador.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtIdentificador.Location = New System.Drawing.Point(162, 31)
+        Me.TxtIdentificador.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtIdentificador.Name = "TxtIdentificador"
+        Me.TxtIdentificador.ReadOnly = True
+        Me.TxtIdentificador.Size = New System.Drawing.Size(247, 27)
+        Me.TxtIdentificador.TabIndex = 10
+        '
+        'Lbl_nombres
+        '
+        Me.Lbl_nombres.AutoSize = True
+        Me.Lbl_nombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_nombres.Location = New System.Drawing.Point(39, 36)
+        Me.Lbl_nombres.Name = "Lbl_nombres"
+        Me.Lbl_nombres.Size = New System.Drawing.Size(112, 22)
+        Me.Lbl_nombres.TabIndex = 9
+        Me.Lbl_nombres.Text = "Identificador:"
+        '
         'PanelRegistros
         '
         Me.PanelRegistros.Controls.Add(Me.DataGridView1)
         Me.PanelRegistros.Controls.Add(Me.BtnBuscarEstudio)
-        Me.PanelRegistros.Controls.Add(Me.TextBox3)
+        Me.PanelRegistros.Controls.Add(Me.TxtCategoria)
         Me.PanelRegistros.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelRegistros.Location = New System.Drawing.Point(0, 239)
         Me.PanelRegistros.Name = "PanelRegistros"
         Me.PanelRegistros.Size = New System.Drawing.Size(868, 650)
         Me.PanelRegistros.TabIndex = 3
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(43, 37)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(657, 27)
-        Me.TextBox3.TabIndex = 9
-        '
-        'BtnBuscarEstudio
-        '
-        Me.BtnBuscarEstudio.Image = Global.DB_Lab.My.Resources.Resources.searchButton
-        Me.BtnBuscarEstudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarEstudio.Location = New System.Drawing.Point(711, 23)
-        Me.BtnBuscarEstudio.Name = "BtnBuscarEstudio"
-        Me.BtnBuscarEstudio.Size = New System.Drawing.Size(108, 56)
-        Me.BtnBuscarEstudio.TabIndex = 10
-        Me.BtnBuscarEstudio.Text = "Buscar"
-        Me.BtnBuscarEstudio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnBuscarEstudio.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -210,31 +215,26 @@ Partial Class FrmCategorias
         Me.DataGridView1.Size = New System.Drawing.Size(776, 292)
         Me.DataGridView1.TabIndex = 11
         '
-        'Label4
+        'BtnBuscarEstudio
         '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(13, 19)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(364, 25)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Gestion de Categorias de Examenes"
+        Me.BtnBuscarEstudio.Image = Global.DB_Lab.My.Resources.Resources.searchButton
+        Me.BtnBuscarEstudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBuscarEstudio.Location = New System.Drawing.Point(711, 23)
+        Me.BtnBuscarEstudio.Name = "BtnBuscarEstudio"
+        Me.BtnBuscarEstudio.Size = New System.Drawing.Size(108, 56)
+        Me.BtnBuscarEstudio.TabIndex = 10
+        Me.BtnBuscarEstudio.Text = "Buscar"
+        Me.BtnBuscarEstudio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBuscarEstudio.UseVisualStyleBackColor = True
         '
-        'BtnSalir
+        'TxtCategoria
         '
-        Me.BtnSalir.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSalir.ForeColor = System.Drawing.Color.White
-        Me.BtnSalir.Location = New System.Drawing.Point(764, 13)
-        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(91, 39)
-        Me.BtnSalir.TabIndex = 27
-        Me.BtnSalir.Text = "Salir"
-        Me.BtnSalir.UseVisualStyleBackColor = False
+        Me.TxtCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCategoria.Location = New System.Drawing.Point(43, 37)
+        Me.TxtCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtCategoria.Name = "TxtCategoria"
+        Me.TxtCategoria.Size = New System.Drawing.Size(657, 27)
+        Me.TxtCategoria.TabIndex = 9
         '
         'FrmCategorias
         '
@@ -266,12 +266,12 @@ Partial Class FrmCategorias
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnBorrar As Button
     Friend WithEvents PanelDatosCategoria As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtNombre As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TxtNombres As TextBox
+    Friend WithEvents TxtIdentificador As TextBox
     Friend WithEvents Lbl_nombres As Label
     Friend WithEvents PanelRegistros As Panel
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TxtCategoria As TextBox
     Friend WithEvents BtnBuscarEstudio As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label4 As Label
