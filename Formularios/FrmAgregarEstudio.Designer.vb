@@ -26,27 +26,28 @@ Partial Class FrmAgregarEstudio
         Me.BtnSalir = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelFunciones = New System.Windows.Forms.Panel()
+        Me.BtnBorrar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnGuardarIcon = New System.Windows.Forms.Button()
         Me.PanelDatos = New System.Windows.Forms.Panel()
         Me.GrbDatosEstudios = New System.Windows.Forms.GroupBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TxtValorTextoM = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.CbxUnidad2 = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TxtValorSuperiorM = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TxtValorInferiorM = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TxtValorTextoH = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CbxUnidad1 = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtValorSuperiorH = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TxtValorInferiorH = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
@@ -54,14 +55,19 @@ Partial Class FrmAgregarEstudio
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.BtnBuscarEstudio = New System.Windows.Forms.Button()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.BtnBorrar = New System.Windows.Forms.Button()
+        Me.TxtBuscar = New System.Windows.Forms.TextBox()
+        Me.GbCrearNuevaUnidad = New System.Windows.Forms.GroupBox()
+        Me.lblNuevaUnidad = New System.Windows.Forms.Label()
+        Me.TxtBoxNuevaUnidad = New System.Windows.Forms.TextBox()
+        Me.BtnGuardarUnidad = New System.Windows.Forms.Button()
+        Me.BtnCancelarUnidad = New System.Windows.Forms.Button()
         Me.PanelLeyenda.SuspendLayout()
         Me.PanelFunciones.SuspendLayout()
         Me.PanelDatos.SuspendLayout()
         Me.GrbDatosEstudios.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GbCrearNuevaUnidad.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelLeyenda
@@ -72,7 +78,7 @@ Partial Class FrmAgregarEstudio
         Me.PanelLeyenda.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLeyenda.Location = New System.Drawing.Point(0, 0)
         Me.PanelLeyenda.Name = "PanelLeyenda"
-        Me.PanelLeyenda.Size = New System.Drawing.Size(651, 51)
+        Me.PanelLeyenda.Size = New System.Drawing.Size(930, 51)
         Me.PanelLeyenda.TabIndex = 1
         '
         'BtnSalir
@@ -80,7 +86,7 @@ Partial Class FrmAgregarEstudio
         Me.BtnSalir.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.ForeColor = System.Drawing.Color.White
-        Me.BtnSalir.Location = New System.Drawing.Point(571, 7)
+        Me.BtnSalir.Location = New System.Drawing.Point(850, 7)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(68, 32)
         Me.BtnSalir.TabIndex = 1
@@ -107,16 +113,26 @@ Partial Class FrmAgregarEstudio
         Me.PanelFunciones.Controls.Add(Me.BtnGuardarIcon)
         Me.PanelFunciones.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelFunciones.Location = New System.Drawing.Point(0, 51)
-        Me.PanelFunciones.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelFunciones.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelFunciones.Name = "PanelFunciones"
-        Me.PanelFunciones.Size = New System.Drawing.Size(651, 60)
+        Me.PanelFunciones.Size = New System.Drawing.Size(930, 60)
         Me.PanelFunciones.TabIndex = 2
+        '
+        'BtnBorrar
+        '
+        Me.BtnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnBorrar.Image = Global.DB_Lab.My.Resources.Resources.deleteButton
+        Me.BtnBorrar.Location = New System.Drawing.Point(837, 9)
+        Me.BtnBorrar.Name = "BtnBorrar"
+        Me.BtnBorrar.Size = New System.Drawing.Size(81, 46)
+        Me.BtnBorrar.TabIndex = 4
+        Me.BtnBorrar.UseVisualStyleBackColor = True
         '
         'BtnEditar
         '
         Me.BtnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnEditar.Image = Global.DB_Lab.My.Resources.Resources.editButton
-        Me.BtnEditar.Location = New System.Drawing.Point(449, 9)
+        Me.BtnEditar.Location = New System.Drawing.Point(728, 9)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(81, 46)
         Me.BtnEditar.TabIndex = 3
@@ -126,7 +142,7 @@ Partial Class FrmAgregarEstudio
         '
         Me.BtnLimpiar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnLimpiar.Image = Global.DB_Lab.My.Resources.Resources.cleanButton
-        Me.BtnLimpiar.Location = New System.Drawing.Point(231, 9)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(510, 9)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(81, 46)
         Me.BtnLimpiar.TabIndex = 1
@@ -136,7 +152,7 @@ Partial Class FrmAgregarEstudio
         '
         Me.BtnGuardarIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnGuardarIcon.Image = Global.DB_Lab.My.Resources.Resources.saveButton
-        Me.BtnGuardarIcon.Location = New System.Drawing.Point(340, 9)
+        Me.BtnGuardarIcon.Location = New System.Drawing.Point(619, 9)
         Me.BtnGuardarIcon.Name = "BtnGuardarIcon"
         Me.BtnGuardarIcon.Size = New System.Drawing.Size(81, 46)
         Me.BtnGuardarIcon.TabIndex = 2
@@ -147,9 +163,9 @@ Partial Class FrmAgregarEstudio
         Me.PanelDatos.Controls.Add(Me.GrbDatosEstudios)
         Me.PanelDatos.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelDatos.Location = New System.Drawing.Point(0, 111)
-        Me.PanelDatos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelDatos.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelDatos.Name = "PanelDatos"
-        Me.PanelDatos.Size = New System.Drawing.Size(651, 307)
+        Me.PanelDatos.Size = New System.Drawing.Size(930, 307)
         Me.PanelDatos.TabIndex = 3
         '
         'GrbDatosEstudios
@@ -157,42 +173,43 @@ Partial Class FrmAgregarEstudio
         Me.GrbDatosEstudios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GrbDatosEstudios.Controls.Add(Me.TextBox6)
+        Me.GrbDatosEstudios.Controls.Add(Me.GbCrearNuevaUnidad)
+        Me.GrbDatosEstudios.Controls.Add(Me.TxtValorTextoM)
         Me.GrbDatosEstudios.Controls.Add(Me.Label12)
-        Me.GrbDatosEstudios.Controls.Add(Me.ComboBox2)
+        Me.GrbDatosEstudios.Controls.Add(Me.CbxUnidad2)
         Me.GrbDatosEstudios.Controls.Add(Me.Label11)
-        Me.GrbDatosEstudios.Controls.Add(Me.TextBox5)
+        Me.GrbDatosEstudios.Controls.Add(Me.TxtValorSuperiorM)
         Me.GrbDatosEstudios.Controls.Add(Me.Label10)
-        Me.GrbDatosEstudios.Controls.Add(Me.TextBox4)
+        Me.GrbDatosEstudios.Controls.Add(Me.TxtValorInferiorM)
         Me.GrbDatosEstudios.Controls.Add(Me.Label9)
         Me.GrbDatosEstudios.Controls.Add(Me.Label8)
-        Me.GrbDatosEstudios.Controls.Add(Me.TextBox3)
+        Me.GrbDatosEstudios.Controls.Add(Me.TxtValorTextoH)
         Me.GrbDatosEstudios.Controls.Add(Me.Label7)
-        Me.GrbDatosEstudios.Controls.Add(Me.ComboBox1)
+        Me.GrbDatosEstudios.Controls.Add(Me.CbxUnidad1)
         Me.GrbDatosEstudios.Controls.Add(Me.Label6)
-        Me.GrbDatosEstudios.Controls.Add(Me.TextBox2)
+        Me.GrbDatosEstudios.Controls.Add(Me.TxtValorSuperiorH)
         Me.GrbDatosEstudios.Controls.Add(Me.Label5)
-        Me.GrbDatosEstudios.Controls.Add(Me.TextBox1)
+        Me.GrbDatosEstudios.Controls.Add(Me.TxtValorInferiorH)
         Me.GrbDatosEstudios.Controls.Add(Me.Label4)
         Me.GrbDatosEstudios.Controls.Add(Me.Label2)
         Me.GrbDatosEstudios.Controls.Add(Me.TxtNombre)
         Me.GrbDatosEstudios.Controls.Add(Me.Label3)
         Me.GrbDatosEstudios.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrbDatosEstudios.Location = New System.Drawing.Point(14, 17)
-        Me.GrbDatosEstudios.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrbDatosEstudios.Margin = New System.Windows.Forms.Padding(2)
         Me.GrbDatosEstudios.Name = "GrbDatosEstudios"
-        Me.GrbDatosEstudios.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GrbDatosEstudios.Size = New System.Drawing.Size(612, 273)
+        Me.GrbDatosEstudios.Padding = New System.Windows.Forms.Padding(2)
+        Me.GrbDatosEstudios.Size = New System.Drawing.Size(891, 273)
         Me.GrbDatosEstudios.TabIndex = 0
         Me.GrbDatosEstudios.TabStop = False
         Me.GrbDatosEstudios.Text = "Datos del estudio"
         '
-        'TextBox6
+        'TxtValorTextoM
         '
-        Me.TextBox6.Location = New System.Drawing.Point(99, 241)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(65, 24)
-        Me.TextBox6.TabIndex = 20
+        Me.TxtValorTextoM.Location = New System.Drawing.Point(99, 241)
+        Me.TxtValorTextoM.Name = "TxtValorTextoM"
+        Me.TxtValorTextoM.Size = New System.Drawing.Size(65, 24)
+        Me.TxtValorTextoM.TabIndex = 20
         '
         'Label12
         '
@@ -203,14 +220,14 @@ Partial Class FrmAgregarEstudio
         Me.Label12.TabIndex = 19
         Me.Label12.Text = "Valor texto:"
         '
-        'ComboBox2
+        'CbxUnidad2
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(452, 203)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(103, 25)
-        Me.ComboBox2.TabIndex = 18
+        Me.CbxUnidad2.FormattingEnabled = True
+        Me.CbxUnidad2.Location = New System.Drawing.Point(452, 203)
+        Me.CbxUnidad2.Margin = New System.Windows.Forms.Padding(2)
+        Me.CbxUnidad2.Name = "CbxUnidad2"
+        Me.CbxUnidad2.Size = New System.Drawing.Size(156, 25)
+        Me.CbxUnidad2.TabIndex = 18
         '
         'Label11
         '
@@ -221,12 +238,12 @@ Partial Class FrmAgregarEstudio
         Me.Label11.TabIndex = 17
         Me.Label11.Text = "Unidad:"
         '
-        'TextBox5
+        'TxtValorSuperiorM
         '
-        Me.TextBox5.Location = New System.Drawing.Point(307, 203)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(65, 24)
-        Me.TextBox5.TabIndex = 16
+        Me.TxtValorSuperiorM.Location = New System.Drawing.Point(307, 203)
+        Me.TxtValorSuperiorM.Name = "TxtValorSuperiorM"
+        Me.TxtValorSuperiorM.Size = New System.Drawing.Size(65, 24)
+        Me.TxtValorSuperiorM.TabIndex = 16
         '
         'Label10
         '
@@ -237,12 +254,12 @@ Partial Class FrmAgregarEstudio
         Me.Label10.TabIndex = 15
         Me.Label10.Text = "Valor superior:"
         '
-        'TextBox4
+        'TxtValorInferiorM
         '
-        Me.TextBox4.Location = New System.Drawing.Point(99, 202)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(65, 24)
-        Me.TextBox4.TabIndex = 14
+        Me.TxtValorInferiorM.Location = New System.Drawing.Point(99, 202)
+        Me.TxtValorInferiorM.Name = "TxtValorInferiorM"
+        Me.TxtValorInferiorM.Size = New System.Drawing.Size(65, 24)
+        Me.TxtValorInferiorM.TabIndex = 14
         '
         'Label9
         '
@@ -262,12 +279,12 @@ Partial Class FrmAgregarEstudio
         Me.Label8.TabIndex = 12
         Me.Label8.Text = "Valores normales para mujeres"
         '
-        'TextBox3
+        'TxtValorTextoH
         '
-        Me.TextBox3.Location = New System.Drawing.Point(99, 136)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(65, 24)
-        Me.TextBox3.TabIndex = 11
+        Me.TxtValorTextoH.Location = New System.Drawing.Point(99, 136)
+        Me.TxtValorTextoH.Name = "TxtValorTextoH"
+        Me.TxtValorTextoH.Size = New System.Drawing.Size(65, 24)
+        Me.TxtValorTextoH.TabIndex = 11
         '
         'Label7
         '
@@ -278,14 +295,14 @@ Partial Class FrmAgregarEstudio
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Valor texto:"
         '
-        'ComboBox1
+        'CbxUnidad1
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(452, 94)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(103, 25)
-        Me.ComboBox1.TabIndex = 9
+        Me.CbxUnidad1.FormattingEnabled = True
+        Me.CbxUnidad1.Location = New System.Drawing.Point(452, 94)
+        Me.CbxUnidad1.Margin = New System.Windows.Forms.Padding(2)
+        Me.CbxUnidad1.Name = "CbxUnidad1"
+        Me.CbxUnidad1.Size = New System.Drawing.Size(156, 25)
+        Me.CbxUnidad1.TabIndex = 9
         '
         'Label6
         '
@@ -296,12 +313,12 @@ Partial Class FrmAgregarEstudio
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Unidad:"
         '
-        'TextBox2
+        'TxtValorSuperiorH
         '
-        Me.TextBox2.Location = New System.Drawing.Point(307, 95)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(65, 24)
-        Me.TextBox2.TabIndex = 7
+        Me.TxtValorSuperiorH.Location = New System.Drawing.Point(307, 95)
+        Me.TxtValorSuperiorH.Name = "TxtValorSuperiorH"
+        Me.TxtValorSuperiorH.Size = New System.Drawing.Size(65, 24)
+        Me.TxtValorSuperiorH.TabIndex = 7
         '
         'Label5
         '
@@ -312,12 +329,12 @@ Partial Class FrmAgregarEstudio
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Valor superior:"
         '
-        'TextBox1
+        'TxtValorInferiorH
         '
-        Me.TextBox1.Location = New System.Drawing.Point(99, 98)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(65, 24)
-        Me.TextBox1.TabIndex = 5
+        Me.TxtValorInferiorH.Location = New System.Drawing.Point(99, 98)
+        Me.TxtValorInferiorH.Name = "TxtValorInferiorH"
+        Me.TxtValorInferiorH.Size = New System.Drawing.Size(65, 24)
+        Me.TxtValorInferiorH.TabIndex = 5
         '
         'Label4
         '
@@ -357,12 +374,12 @@ Partial Class FrmAgregarEstudio
         '
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.BtnBuscarEstudio)
-        Me.Panel1.Controls.Add(Me.TextBox7)
+        Me.Panel1.Controls.Add(Me.TxtBuscar)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 418)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(651, 267)
+        Me.Panel1.Size = New System.Drawing.Size(930, 267)
         Me.Panel1.TabIndex = 4
         '
         'DataGridView1
@@ -372,11 +389,11 @@ Partial Class FrmAgregarEstudio
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(14, 71)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(612, 182)
+        Me.DataGridView1.Size = New System.Drawing.Size(891, 182)
         Me.DataGridView1.TabIndex = 5
         '
         'BtnBuscarEstudio
@@ -384,7 +401,7 @@ Partial Class FrmAgregarEstudio
         Me.BtnBuscarEstudio.Image = Global.DB_Lab.My.Resources.Resources.searchButton
         Me.BtnBuscarEstudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnBuscarEstudio.Location = New System.Drawing.Point(305, 11)
-        Me.BtnBuscarEstudio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnBuscarEstudio.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnBuscarEstudio.Name = "BtnBuscarEstudio"
         Me.BtnBuscarEstudio.Size = New System.Drawing.Size(81, 46)
         Me.BtnBuscarEstudio.TabIndex = 4
@@ -392,34 +409,80 @@ Partial Class FrmAgregarEstudio
         Me.BtnBuscarEstudio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBuscarEstudio.UseVisualStyleBackColor = True
         '
-        'TextBox7
+        'TxtBuscar
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(22, 23)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(277, 22)
-        Me.TextBox7.TabIndex = 3
+        Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBuscar.Location = New System.Drawing.Point(22, 23)
+        Me.TxtBuscar.Name = "TxtBuscar"
+        Me.TxtBuscar.Size = New System.Drawing.Size(277, 22)
+        Me.TxtBuscar.TabIndex = 3
         '
-        'BtnBorrar
+        'GbCrearNuevaUnidad
         '
-        Me.BtnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnBorrar.Image = Global.DB_Lab.My.Resources.Resources.deleteButton
-        Me.BtnBorrar.Location = New System.Drawing.Point(558, 9)
-        Me.BtnBorrar.Name = "BtnBorrar"
-        Me.BtnBorrar.Size = New System.Drawing.Size(81, 46)
-        Me.BtnBorrar.TabIndex = 4
-        Me.BtnBorrar.UseVisualStyleBackColor = True
+        Me.GbCrearNuevaUnidad.Controls.Add(Me.BtnCancelarUnidad)
+        Me.GbCrearNuevaUnidad.Controls.Add(Me.BtnGuardarUnidad)
+        Me.GbCrearNuevaUnidad.Controls.Add(Me.TxtBoxNuevaUnidad)
+        Me.GbCrearNuevaUnidad.Controls.Add(Me.lblNuevaUnidad)
+        Me.GbCrearNuevaUnidad.Location = New System.Drawing.Point(638, 90)
+        Me.GbCrearNuevaUnidad.Name = "GbCrearNuevaUnidad"
+        Me.GbCrearNuevaUnidad.Size = New System.Drawing.Size(236, 138)
+        Me.GbCrearNuevaUnidad.TabIndex = 21
+        Me.GbCrearNuevaUnidad.TabStop = False
+        Me.GbCrearNuevaUnidad.Text = "Crear Nueva unidad"
+        Me.GbCrearNuevaUnidad.Visible = False
+        '
+        'lblNuevaUnidad
+        '
+        Me.lblNuevaUnidad.AutoSize = True
+        Me.lblNuevaUnidad.Location = New System.Drawing.Point(6, 30)
+        Me.lblNuevaUnidad.Name = "lblNuevaUnidad"
+        Me.lblNuevaUnidad.Size = New System.Drawing.Size(58, 18)
+        Me.lblNuevaUnidad.TabIndex = 9
+        Me.lblNuevaUnidad.Text = "Unidad:"
+        '
+        'TxtBoxNuevaUnidad
+        '
+        Me.TxtBoxNuevaUnidad.Location = New System.Drawing.Point(70, 30)
+        Me.TxtBoxNuevaUnidad.Name = "TxtBoxNuevaUnidad"
+        Me.TxtBoxNuevaUnidad.Size = New System.Drawing.Size(154, 24)
+        Me.TxtBoxNuevaUnidad.TabIndex = 10
+        '
+        'BtnGuardarUnidad
+        '
+        Me.BtnGuardarUnidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardarUnidad.Image = Global.DB_Lab.My.Resources.Resources.okButton24
+        Me.BtnGuardarUnidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGuardarUnidad.Location = New System.Drawing.Point(56, 75)
+        Me.BtnGuardarUnidad.Name = "BtnGuardarUnidad"
+        Me.BtnGuardarUnidad.Size = New System.Drawing.Size(75, 31)
+        Me.BtnGuardarUnidad.TabIndex = 11
+        Me.BtnGuardarUnidad.Text = "Guardar"
+        Me.BtnGuardarUnidad.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnGuardarUnidad.UseVisualStyleBackColor = True
+        '
+        'BtnCancelarUnidad
+        '
+        Me.BtnCancelarUnidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelarUnidad.Image = Global.DB_Lab.My.Resources.Resources.cancelarButton24
+        Me.BtnCancelarUnidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnCancelarUnidad.Location = New System.Drawing.Point(145, 75)
+        Me.BtnCancelarUnidad.Name = "BtnCancelarUnidad"
+        Me.BtnCancelarUnidad.Size = New System.Drawing.Size(79, 31)
+        Me.BtnCancelarUnidad.TabIndex = 12
+        Me.BtnCancelarUnidad.Text = "Cancelar"
+        Me.BtnCancelarUnidad.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnCancelarUnidad.UseVisualStyleBackColor = True
         '
         'FrmAgregarEstudio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(651, 724)
+        Me.ClientSize = New System.Drawing.Size(930, 724)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelDatos)
         Me.Controls.Add(Me.PanelFunciones)
         Me.Controls.Add(Me.PanelLeyenda)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmAgregarEstudio"
         Me.Text = "FrmAgregarEstudio"
         Me.PanelLeyenda.ResumeLayout(False)
@@ -431,6 +494,8 @@ Partial Class FrmAgregarEstudio
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GbCrearNuevaUnidad.ResumeLayout(False)
+        Me.GbCrearNuevaUnidad.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -443,30 +508,35 @@ Partial Class FrmAgregarEstudio
     Friend WithEvents GrbDatosEstudios As GroupBox
     Friend WithEvents Label3 As Label
     Friend WithEvents TxtNombre As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TxtValorTextoM As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents CbxUnidad2 As ComboBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TxtValorSuperiorM As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TxtValorInferiorM As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TxtValorTextoH As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CbxUnidad1 As ComboBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtValorSuperiorH As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtValorInferiorH As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents BtnGuardarIcon As Button
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnLimpiar As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents BtnBuscarEstudio As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BtnBorrar As Button
+    Friend WithEvents GbCrearNuevaUnidad As GroupBox
+    Friend WithEvents BtnCancelarUnidad As Button
+    Friend WithEvents BtnGuardarUnidad As Button
+    Friend WithEvents TxtBoxNuevaUnidad As TextBox
+    Friend WithEvents lblNuevaUnidad As Label
 End Class
