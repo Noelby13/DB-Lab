@@ -21,18 +21,15 @@ Public Class FrmUsuario
 
 
     'Comprueba la validez de los campos al momento de realizar una accion en el formulario'
-    Private Function validarCampos(ByVal opcion As Integer) As Boolean
+    Private Function validarCampos() As Boolean
         Dim B = False
 
-        'Opcion 1: Guardar y Editar'
-        If opcion = 1 Then
-            If (TxtPrimerNombre.Text <> "" And TxtPrimerApellido.Text <> "" And TxtNombreUsuario.Text <> "" And CbxRol.SelectedIndex <> -1 And TxtTelefono.Text <> "" And TxtCedula.Text <> "" And TxtPw.Text <> "" And TxtConfirmarPw.Text <> "") Then
-                If Not (TxtPw.Text.Equals(TxtConfirmarPw.Text) = True) Then
-                    MsgBox("Las claves no coinciden", MsgBoxStyle.Exclamation, "ADVERTENCIA")
-                    Return False
-                End If
-                B = True
+        If (TxtPrimerNombre.Text <> "" And TxtPrimerApellido.Text <> "" And TxtNombreUsuario.Text <> "" And CbxRol.SelectedIndex <> -1 And TxtTelefono.Text <> "" And TxtCedula.Text <> "" And TxtPw.Text <> "" And TxtConfirmarPw.Text <> "") Then
+            If Not (TxtPw.Text.Equals(TxtConfirmarPw.Text) = True) Then
+                MsgBox("Las claves no coinciden", MsgBoxStyle.Exclamation, "ADVERTENCIA")
+                Return False
             End If
+            B = True
         End If
 
         Return B
@@ -45,7 +42,8 @@ Public Class FrmUsuario
     End Sub
 
 
-    'Boton Limpiar: Borra todo lo escrito/seleccionado en los campos del formulario, dejandolos vacios'
+    'Boton Limpiar: Borra todo lo escrito/seleccionado en los campos del formulario, dejandolos vacios
+    'Tambien habilita el boton Guardar en caso de que estuviese inabilitado anteriormente'
     Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles BtnLimpiar.Click
         TxtPrimerNombre.Clear()
         TxtSegundoNombre.Clear()
@@ -59,13 +57,14 @@ Public Class FrmUsuario
         TxtCedula.Clear()
         TxtPw.Clear()
         TxtConfirmarPw.Clear()
+        BtnGuardar.Enabled = True
     End Sub
 
 
     'Boton Guardar: Guarda un nuevo registro de usuario en la tabla Tbl_Usuario'
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
-            If Not validarCampos(1) Then
+            If Not validarCampos() Then
                 MsgBox("La información está incompleta", MsgBoxStyle.Exclamation, "ADVERTENCIA")
                 Exit Sub
             End If
@@ -107,7 +106,7 @@ Public Class FrmUsuario
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         Try
             Dim fila As Integer = DgvRegistrosUsuario.CurrentRow.Index
-            If Not validarCampos(1) Then
+            If Not validarCampos() Then
                 MsgBox("La información está incompleta", MsgBoxStyle.Exclamation, "ADVERTENCIA")
                 Exit Sub
             End If
@@ -130,7 +129,7 @@ Public Class FrmUsuario
 
             'Pregunta al usuario si esta seguro de realizar la accion'
             Dim resp As VariantType
-            resp = (MsgBox("Desea editar este registro? Código: " & usuario.IdUsuario, MsgBoxStyle.Question +
+            resp = (MsgBox("Desea editar los datos de este usuario? Usuario: " & usuario.Username, MsgBoxStyle.Question +
                        MsgBoxStyle.YesNo, "CONFIRMACIÓN"))
             If (resp = vbNo) Then
                 MsgBox("Operación cancelada",
@@ -139,12 +138,12 @@ Public Class FrmUsuario
             End If
 
             If dUsuario.editarRegistro(usuario) Then
-                MsgBox("Registro editado correctamente", MsgBoxStyle.Information, "Gestión de Usuarios")
+                MsgBox("Usuario editado correctamente", MsgBoxStyle.Information, "Gestión de Usuarios")
 
             End If
 
         Catch ex As Exception
-            MsgBox("No se pudo editar el registro", MsgBoxStyle.Critical, "ERROR")
+            MsgBox("No se pudo editar al usuario", MsgBoxStyle.Critical, "ERROR")
         End Try
         llenarRegistros()
         BtnLimpiar.PerformClick()
@@ -153,19 +152,18 @@ Public Class FrmUsuario
 
     'Boton Borrar: Se borra un registro (En este caso de manera logica) dentro de la tabla'
     Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click
-        Dim fila As Integer = DgvRegistrosUsuario.CurrentRow.Index
         Dim usuario As New Usuario
         Dim dUsuario As New DUsuario
 
-        usuario.IdUsuario = DgvRegistrosUsuario.Rows(fila).Cells(0).Value
-        If (usuario.IdUsuario = Nothing) Then
-            MsgBox("El registro no existe",
-                       MsgBoxStyle.Exclamation, "ADVERTENCIA")
+        If Not validarCampos() Then
+            MsgBox("La información está incompleta", MsgBoxStyle.Exclamation, "ADVERTENCIA")
             Exit Sub
         End If
 
+        usuario.Username = TxtNombreUsuario.Text
+
         Dim resp As VariantType
-        resp = (MsgBox("Desea eliminar este registro? Código: " & usuario.IdUsuario, MsgBoxStyle.Question +
+        resp = (MsgBox("Desea eliminar este usuario? Usuario: " & usuario.Username, MsgBoxStyle.Question +
                        MsgBoxStyle.YesNo, "CONFIRMACION"))
         If (resp = vbNo) Then
             MsgBox("Operación cancelada",
@@ -173,12 +171,12 @@ Public Class FrmUsuario
             Exit Sub
         End If
 
-        Dim eliminado = dUsuario.eliminarRegistro(usuario.IdUsuario)
+        Dim eliminado = dUsuario.eliminarRegistro(usuario.Username)
         If (eliminado) Then
-            MsgBox("Registro eliminado exitosamente",
+            MsgBox("Usuario eliminado exitosamente",
                        MsgBoxStyle.Information, "Gestión de Usuarios")
         Else
-            MsgBox("No se pudo eliminar el registro",
+            MsgBox("No se pudo eliminar al usuario",
                    MsgBoxStyle.Critical, "ERROR")
         End If
         llenarRegistros()
@@ -186,7 +184,16 @@ Public Class FrmUsuario
     End Sub
 
 
-    'Funcion para rellenar el combo box de Roles a elegir'
+
+    'Boton Buscar: Muestra los registros que coincidan parcialmente o totalmente al usuario ingresado
+    'en la barra de buscar
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Dim dUsuario As New DUsuario
+        DgvRegistrosUsuario.DataSource = dUsuario.buscarXNombre(TxtBuscar.Text.ToString()).Tables(0)
+        DgvRegistrosUsuario.Refresh()
+    End Sub
+
+    'Funcion para rellenar el ComboBox de Roles a elegir'
     Sub rellenarComboBox()
         Dim dRol As New DRol
 
@@ -204,6 +211,7 @@ Public Class FrmUsuario
 
 
     'Obtiene los datos de un registro del DataGridView e inserta los valores de los atributos en sus respectivos campos'
+    'Tambien se inhabilita el boton de guardar registro, para evitar que se guarde un duplicado de cambios minimos'
     Private Sub DgvRegistrosUsuario_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvRegistrosUsuario.CellClick
         Dim fila As Integer = DgvRegistrosUsuario.CurrentRow.Index
         TxtPrimerNombre.Text = DgvRegistrosUsuario.Rows(fila).Cells(1).Value
@@ -218,6 +226,7 @@ Public Class FrmUsuario
         TxtCedula.Text = DgvRegistrosUsuario.Rows(fila).Cells(9).Value
         TxtPw.Text = DgvRegistrosUsuario.Rows(fila).Cells(10).Value
         TxtConfirmarPw.Text = DgvRegistrosUsuario.Rows(fila).Cells(10).Value
+        BtnGuardar.Enabled = False
     End Sub
 
 

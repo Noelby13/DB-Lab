@@ -22,7 +22,7 @@ Partial Class FrmUsuario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelLeyenda = New System.Windows.Forms.Panel()
         Me.BtnSalir = New System.Windows.Forms.Button()
         Me.LblEncabezado = New System.Windows.Forms.Label()
@@ -64,6 +64,7 @@ Partial Class FrmUsuario
         Me.DgvRegistrosUsuario = New System.Windows.Forms.DataGridView()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
+        Me.LblAviso = New System.Windows.Forms.Label()
         Me.PanelLeyenda.SuspendLayout()
         Me.PanelBotones.SuspendLayout()
         Me.PanelDatosUsuario.SuspendLayout()
@@ -245,7 +246,7 @@ Partial Class FrmUsuario
         '
         Me.LblSegundoApellido.AutoSize = True
         Me.LblSegundoApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSegundoApellido.Location = New System.Drawing.Point(701, 21)
+        Me.LblSegundoApellido.Location = New System.Drawing.Point(701, 68)
         Me.LblSegundoApellido.Name = "LblSegundoApellido"
         Me.LblSegundoApellido.Size = New System.Drawing.Size(69, 16)
         Me.LblSegundoApellido.TabIndex = 13
@@ -273,7 +274,7 @@ Partial Class FrmUsuario
         '
         Me.LblPrimerApellido.AutoSize = True
         Me.LblPrimerApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPrimerApellido.Location = New System.Drawing.Point(542, 21)
+        Me.LblPrimerApellido.Location = New System.Drawing.Point(542, 68)
         Me.LblPrimerApellido.Name = "LblPrimerApellido"
         Me.LblPrimerApellido.Size = New System.Drawing.Size(52, 16)
         Me.LblPrimerApellido.TabIndex = 11
@@ -283,7 +284,7 @@ Partial Class FrmUsuario
         '
         Me.LblSegundoNombre.AutoSize = True
         Me.LblSegundoNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSegundoNombre.Location = New System.Drawing.Point(280, 21)
+        Me.LblSegundoNombre.Location = New System.Drawing.Point(280, 68)
         Me.LblSegundoNombre.Name = "LblSegundoNombre"
         Me.LblSegundoNombre.Size = New System.Drawing.Size(69, 16)
         Me.LblSegundoNombre.TabIndex = 8
@@ -471,7 +472,7 @@ Partial Class FrmUsuario
         '
         Me.LblPrimerNombre.AutoSize = True
         Me.LblPrimerNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPrimerNombre.Location = New System.Drawing.Point(121, 21)
+        Me.LblPrimerNombre.Location = New System.Drawing.Point(121, 68)
         Me.LblPrimerNombre.Name = "LblPrimerNombre"
         Me.LblPrimerNombre.Size = New System.Drawing.Size(52, 16)
         Me.LblPrimerNombre.TabIndex = 6
@@ -479,6 +480,7 @@ Partial Class FrmUsuario
         '
         'PanelRegistros
         '
+        Me.PanelRegistros.Controls.Add(Me.LblAviso)
         Me.PanelRegistros.Controls.Add(Me.DgvRegistrosUsuario)
         Me.PanelRegistros.Controls.Add(Me.BtnBuscar)
         Me.PanelRegistros.Controls.Add(Me.TxtBuscar)
@@ -492,8 +494,8 @@ Partial Class FrmUsuario
         '
         Me.DgvRegistrosUsuario.AllowUserToAddRows = False
         Me.DgvRegistrosUsuario.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.DgvRegistrosUsuario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.DgvRegistrosUsuario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DgvRegistrosUsuario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -530,6 +532,16 @@ Partial Class FrmUsuario
         Me.TxtBuscar.Name = "TxtBuscar"
         Me.TxtBuscar.Size = New System.Drawing.Size(680, 27)
         Me.TxtBuscar.TabIndex = 32
+        '
+        'LblAviso
+        '
+        Me.LblAviso.AutoSize = True
+        Me.LblAviso.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAviso.Location = New System.Drawing.Point(27, 69)
+        Me.LblAviso.Name = "LblAviso"
+        Me.LblAviso.Size = New System.Drawing.Size(398, 16)
+        Me.LblAviso.TabIndex = 35
+        Me.LblAviso.Text = "Puede insertar el nombre del usuario que esta buscando"
         '
         'FrmUsuario
         '
@@ -596,4 +608,5 @@ Partial Class FrmUsuario
     Friend WithEvents TxtCedula As TextBox
     Friend WithEvents LblCedula As Label
     Friend WithEvents LblAdvertencia As Label
+    Friend WithEvents LblAviso As Label
 End Class
