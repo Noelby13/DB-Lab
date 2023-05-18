@@ -111,31 +111,14 @@ Public Class DUsuario
                                   values (@primerNombre, @segundoNombre, @primerApellido, @segundoApellido, @username, @pwd, @telefono, @cedula, @correo, @fechaIngreso, @estado, @idRol)"
             Dim cmd As New SqlCommand(tsql, conn)
             cmd.Parameters.AddWithValue("@primerNombre", usuario.PrimerNombre)
-            'Si el atributo del objeto tiene un valor Nothing(Null), entonces en esa casilla del registro agregado'
-            'se guardara un valor NULL usando DBNull, de lo contrario se guardara el valor del atributo que tiene el objeto'
-            If (usuario.SegundoNombre Is Nothing) Then
-                cmd.Parameters.AddWithValue("@segundoNombre", DBNull.Value)
-            Else
-                cmd.Parameters.AddWithValue("@segundoNombre", usuario.SegundoNombre)
-            End If
-            'cmd.Parameters.AddWithValue("@segundoNombre", usuario.SegundoNombre)
+            cmd.Parameters.AddWithValue("@segundoNombre", comprobarValorNull(usuario.SegundoNombre))
             cmd.Parameters.AddWithValue("@primerApellido", usuario.PrimerApellido)
-            If (usuario.SegundoApellido Is Nothing) Then
-                cmd.Parameters.AddWithValue("@segundoApellido", DBNull.Value)
-            Else
-                cmd.Parameters.AddWithValue("@segundoApellido", usuario.SegundoApellido)
-            End If
-            'cmd.Parameters.AddWithValue("@segundoApellido", usuario.SegundoApellido)
+            cmd.Parameters.AddWithValue("@segundoApellido", comprobarValorNull(usuario.SegundoApellido))
             cmd.Parameters.AddWithValue("@username", usuario.Username)
             cmd.Parameters.AddWithValue("@pwd", usuario.Pwd)
             cmd.Parameters.AddWithValue("@telefono", usuario.Telefono)
             cmd.Parameters.AddWithValue("@cedula", usuario.Cedula)
-            If (usuario.Correo Is Nothing) Then
-                cmd.Parameters.AddWithValue("@correo", DBNull.Value)
-            Else
-                cmd.Parameters.AddWithValue("@correo", usuario.Correo)
-            End If
-            'cmd.Parameters.AddWithValue("@correo", usuario.Correo)
+            cmd.Parameters.AddWithValue("@correo", comprobarValorNull(usuario.Correo))
             cmd.Parameters.AddWithValue("@fechaIngreso", usuario.FechaIngreso)
             cmd.Parameters.AddWithValue("@estado", usuario.Estado)
             cmd.Parameters.AddWithValue("@idRol", usuario.IdRol)
@@ -162,26 +145,14 @@ Public Class DUsuario
                                   telefono = @telefono, cedula = @cedula, correo = @correo, fechaIngreso = @fechaIngreso, idRol = @idRol where idUsuario = @idUsuario"
             Dim cmd As New SqlCommand(tsql, conn)
             cmd.Parameters.AddWithValue("@primerNombre", usuario.PrimerNombre)
-            If (usuario.SegundoNombre Is Nothing) Then
-                cmd.Parameters.AddWithValue("@segundoNombre", DBNull.Value)
-            Else
-                cmd.Parameters.AddWithValue("@segundoNombre", usuario.SegundoNombre)
-            End If
+            cmd.Parameters.AddWithValue("@segundoNombre", comprobarValorNull(usuario.SegundoNombre))
             cmd.Parameters.AddWithValue("@primerApellido", usuario.PrimerApellido)
-            If (usuario.SegundoApellido Is Nothing) Then
-                cmd.Parameters.AddWithValue("@segundoApellido", DBNull.Value)
-            Else
-                cmd.Parameters.AddWithValue("@segundoApellido", usuario.SegundoApellido)
-            End If
+            cmd.Parameters.AddWithValue("@segundoApellido", comprobarValorNull(usuario.SegundoApellido))
             cmd.Parameters.AddWithValue("@username", usuario.Username)
             cmd.Parameters.AddWithValue("@pwd", usuario.Pwd)
             cmd.Parameters.AddWithValue("@telefono", usuario.Telefono)
             cmd.Parameters.AddWithValue("@cedula", usuario.Cedula)
-            If (usuario.Correo Is Nothing) Then
-                cmd.Parameters.AddWithValue("@correo", DBNull.Value)
-            Else
-                cmd.Parameters.AddWithValue("@correo", usuario.Correo)
-            End If
+            cmd.Parameters.AddWithValue("@correo", comprobarValorNull(usuario.Correo))
             cmd.Parameters.AddWithValue("@fechaIngreso", usuario.FechaIngreso)
             cmd.Parameters.AddWithValue("@idRol", usuario.IdRol)
             cmd.Parameters.AddWithValue("@idUsuario", usuario.IdUsuario)
@@ -199,48 +170,14 @@ Public Class DUsuario
     End Function
 
 
-    'Funcion para buscar un registro de la tabla Tbl_Usuario'
-    'Considerando su uso necesario...'
-    Public Function buscarRegistro(ByVal username As String) As Usuario
-        Dim user As New Usuario
-        Try
-            Dim ds As New DataTable
-            Dim conn As New SqlConnection(strConexion)
-            Dim tsql As String = "select * from Tbl_Usuario where username = @username"
-            Dim da As New SqlDataAdapter(tsql, conn)
-            da.SelectCommand.Parameters.AddWithValue("@username", username)
-            da.Fill(ds)
-            user.IdUsuario = ds.Rows(0).Item("idUsuario")
-            user.PrimerNombre = ds.Rows(0).Item("primerNombre")
-            user.SegundoNombre = ds.Rows(0).Item("segundoNombre")
-            user.PrimerApellido = ds.Rows(0).Item("primerApellido")
-            user.SegundoApellido = ds.Rows(0).Item("segundoApellido")
-            user.Username = ds.Rows(0).Item("username")
-            user.Pwd = ds.Rows(0).Item("pwd")
-            user.IdUsuario = ds.Rows(0).Item("idUsuario")
-            user.Telefono = ds.Rows(0).Item("telefono")
-            user.Cedula = ds.Rows(0).Item("cedula")
-            user.Correo = ds.Rows(0).Item("correo")
-            user.FechaIngreso = ds.Rows(0).Item("fechaIngreso")
-            user.Estado = ds.Rows(0).Item("estado")
-            user.IdRol = ds.Rows(0).Item("idRol")
-
-        Catch ex As Exception
-            MsgBox("Ocurrio un error al obtener el usuario", MsgBoxStyle.Information, "Inicio de Sesión")
-        End Try
-
-        Return user
-    End Function
-
-
     'Funcion para eliminar un registro de la tabla Tbl_Usuario'
-    Public Function eliminarRegistro(ByVal idUsuario As Integer) As Boolean
+    Public Function eliminarRegistro(ByVal nombreUsuario As String) As Boolean
         Dim resultado = False
         Try
             Dim conn As New SqlConnection(strConexion)
-            Dim tsql As String = "update Tbl_Usuario set estado = 'False' where idUsuario = @idUsuario"
+            Dim tsql As String = "update Tbl_Usuario set estado = 'False' where username = @username"
             Dim cmd As New SqlCommand(tsql, conn)
-            cmd.Parameters.AddWithValue("@idUsuario", idUsuario)
+            cmd.Parameters.AddWithValue("@username", nombreUsuario)
 
             conn.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
@@ -273,4 +210,35 @@ Public Class DUsuario
     End Function
 
 
+    'Funcion para comprobar si el atributo del objeto tiene un valor de Nothing o no'
+    'Si es Nothing devuelve un valor NULL a la base de datos'
+    'De lo contrario, devuelve el valor que ya tenia el atributo'
+    Public Function comprobarValorNull(ByVal valor As Object) As Object
+        If valor Is Nothing Then
+            Return DBNull.Value
+        Else
+            Return valor
+        End If
+    End Function
+
+
+    'Funcion para buscar un registro de la tabla Tbl_Usuario mediante el nombre'
+    'Con el que se estan buscando coincidencias en la base de datos'
+    Public Function buscarXNombre(ByVal nombre As String) As DataSet
+        Dim ds As New DataSet
+        nombre = nombre + "%"
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "SELECT Tbl_Usuario.idUsuario AS Código, Tbl_Usuario.primerNombre AS [Primer Nombre], Tbl_Usuario.segundoNombre AS [Segundo Nombre], Tbl_Usuario.primerApellido AS [Primer Apellido], Tbl_Usuario.segundoApellido AS [Segundo Apellido], 
+                                    Tbl_Usuario.username AS Usuario, Tbl_Usuario.telefono AS Teléfono, Tbl_Usuario.correo AS Correo, Tbl_Usuario.fechaIngreso AS Ingreso, Tbl_Usuario.cedula AS Cédula, Tbl_Usuario.pwd AS Clave, Tbl_Rol.nombre AS Rol
+                                        FROM     Tbl_Usuario INNER JOIN
+                                                    Tbl_Rol ON Tbl_Usuario.idRol = Tbl_Rol.idRol where Tbl_Usuario.username like @nombre and Tbl_Usuario.estado = 'True'"
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.SelectCommand.Parameters.AddWithValue("@nombre", nombre)
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al buscar el registro", MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return ds
+    End Function
 End Class
