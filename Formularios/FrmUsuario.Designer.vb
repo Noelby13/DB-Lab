@@ -311,8 +311,10 @@ Partial Class FrmUsuario
         '
         'CbxRol
         '
-        Me.CbxRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CbxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CbxRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxRol.FormattingEnabled = True
+        Me.CbxRol.Items.AddRange(New Object() {"Seleccione el rol..."})
         Me.CbxRol.Location = New System.Drawing.Point(545, 107)
         Me.CbxRol.Name = "CbxRol"
         Me.CbxRol.Size = New System.Drawing.Size(302, 28)
@@ -389,10 +391,13 @@ Partial Class FrmUsuario
         '
         'DtpFechaIngreso
         '
+        Me.DtpFechaIngreso.CustomFormat = "yyyy-MM-dd"
+        Me.DtpFechaIngreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DtpFechaIngreso.Location = New System.Drawing.Point(124, 232)
         Me.DtpFechaIngreso.Margin = New System.Windows.Forms.Padding(4)
         Me.DtpFechaIngreso.Name = "DtpFechaIngreso"
-        Me.DtpFechaIngreso.Size = New System.Drawing.Size(269, 22)
+        Me.DtpFechaIngreso.Size = New System.Drawing.Size(157, 27)
         Me.DtpFechaIngreso.TabIndex = 24
         '
         'LblFechaIngreso
@@ -494,12 +499,13 @@ Partial Class FrmUsuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DgvRegistrosUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvRegistrosUsuario.Location = New System.Drawing.Point(29, 92)
+        Me.DgvRegistrosUsuario.MultiSelect = False
         Me.DgvRegistrosUsuario.Name = "DgvRegistrosUsuario"
         Me.DgvRegistrosUsuario.ReadOnly = True
         Me.DgvRegistrosUsuario.RowHeadersWidth = 51
         Me.DgvRegistrosUsuario.RowTemplate.Height = 24
         Me.DgvRegistrosUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvRegistrosUsuario.Size = New System.Drawing.Size(801, 316)
+        Me.DgvRegistrosUsuario.Size = New System.Drawing.Size(801, 330)
         Me.DgvRegistrosUsuario.StandardTab = True
         Me.DgvRegistrosUsuario.TabIndex = 34
         '

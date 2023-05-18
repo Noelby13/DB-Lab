@@ -4,7 +4,7 @@ Imports System.Runtime.InteropServices
 
 Public Class FrmUsuario
 
-    'Rutina para llenar el DataGridView del formulario con los registros de Tbl_Usuario'
+    'Llena el DataGridView del formulario con los registros de Tbl_Usuario'
     Sub llenarRegistros()
         Dim dUsuario As New DUsuario
         DgvRegistrosUsuario.DataSource = dUsuario.mostrarRegistros().Tables(0)
@@ -12,19 +12,38 @@ Public Class FrmUsuario
     End Sub
 
 
+    'Instrucciones que ocurren cuando el formulario es cargado'
     Private Sub FrmUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Prueba para rellenar combobox'
         rellenarComboBox()
         llenarRegistros()
-        CbxRol.Text = "Seleccione el rol..."
         LblAdvertencia.Text = ""
     End Sub
 
 
-    ''
+    'Comprueba la validez de los campos al momento de realizar una accion en el formulario'
+    Private Function validarCampos(ByVal opcion As Integer) As Boolean
+        Dim B = False
+
+        'Opcion 1: Guardar y Editar'
+        If opcion = 1 Then
+            If (TxtPrimerNombre.Text <> "" And TxtPrimerApellido.Text <> "" And TxtNombreUsuario.Text <> "" And CbxRol.SelectedIndex <> -1 And TxtTelefono.Text <> "" And TxtCedula.Text <> "" And TxtPw.Text <> "" And TxtConfirmarPw.Text <> "") Then
+                If Not (TxtPw.Text.Equals(TxtConfirmarPw.Text) = True) Then
+                    MsgBox("Las claves no coinciden", MsgBoxStyle.Exclamation, "ADVERTENCIA")
+                    Return False
+                End If
+                B = True
+            End If
+        End If
+
+        Return B
+    End Function
+
+
+    'Boton Salir: Cierra el formulario cargado'
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
         Me.Close()
     End Sub
+
 
     'Boton Limpiar: Borra todo lo escrito/seleccionado en los campos del formulario, dejandolos vacios'
     Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles BtnLimpiar.Click
@@ -34,7 +53,6 @@ Public Class FrmUsuario
         TxtSegundoApellido.Clear()
         TxtNombreUsuario.Clear()
         LblAdvertencia.Text = ""
-        CbxRol.Text = "Seleccione el rol..."
         TxtTelefono.Clear()
         TxtCorreo.Clear()
         DtpFechaIngreso.ResetText()
@@ -44,85 +62,175 @@ Public Class FrmUsuario
     End Sub
 
 
+    'Boton Guardar: Guarda un nuevo registro de usuario en la tabla Tbl_Usuario'
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
+            If Not validarCampos(1) Then
+                MsgBox("La información está incompleta", MsgBoxStyle.Exclamation, "ADVERTENCIA")
+                Exit Sub
+            End If
 
+            Dim usuario As New Usuario()
+            Dim dUsuario As New DUsuario()
+
+            usuario.PrimerNombre = TxtPrimerNombre.Text
+            usuario.SegundoNombre = comprobarNull(usuario.SegundoNombre, TxtSegundoNombre)
+            usuario.PrimerApellido = TxtPrimerApellido.Text
+            usuario.SegundoApellido = comprobarNull(usuario.SegundoApellido, TxtSegundoApellido)
+            usuario.Username = TxtNombreUsuario.Text
+            'SelectedValue permite obtener el id correcto del item(el rol) seleccionado en el combobox'
+            usuario.IdRol = CbxRol.SelectedValue
+            usuario.Telefono = TxtTelefono.Text
+            usuario.Correo = comprobarNull(usuario.Correo, TxtCorreo)
+            usuario.FechaIngreso = DtpFechaIngreso.Text
+            usuario.Cedula = TxtCedula.Text
+            usuario.Pwd = TxtPw.Text
+            usuario.Estado = True
+
+            If dUsuario.comprobarUsuario(usuario) Then
+                LblAdvertencia.Text = "Este usuario ya existe"
+                Exit Sub
+            End If
+
+            If dUsuario.guardarRegistro(usuario) Then
+                MsgBox("Registro guardado correctamente", MsgBoxStyle.Information, "Gestión de Usuarios")
+                llenarRegistros()
+            End If
         Catch ex As Exception
-
+            MsgBox("No se pudo guardar el registro", MsgBoxStyle.Critical, "ERROR")
         End Try
+        BtnLimpiar.PerformClick()
     End Sub
 
 
+    'Boton Editar: Modifica un registro existente dentro de la tabla'
+    Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
+        Try
+            Dim fila As Integer = DgvRegistrosUsuario.CurrentRow.Index
+            If Not validarCampos(1) Then
+                MsgBox("La información está incompleta", MsgBoxStyle.Exclamation, "ADVERTENCIA")
+                Exit Sub
+            End If
 
-    'Private Sub BtnGuardarIcon_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
-    '    If (TxtPrimerNombre.Text = "") Then
-    '        MsgBox("Debe ingresar un nombre al campo")
-    '    End If
+            Dim usuario As New Usuario()
+            Dim dUsuario As New DUsuario()
 
-    '    If (TxtApellidos.Text = "") Then
-    '        MsgBox("Debe ingresar un apellido al campo")
-    '    End If
+            usuario.IdUsuario = DgvRegistrosUsuario.Rows(fila).Cells(0).Value
+            usuario.PrimerNombre = TxtPrimerNombre.Text
+            usuario.SegundoNombre = comprobarNull(usuario.SegundoNombre, TxtSegundoNombre)
+            usuario.PrimerApellido = TxtPrimerApellido.Text
+            usuario.SegundoApellido = comprobarNull(usuario.SegundoApellido, TxtSegundoApellido)
+            usuario.Username = TxtNombreUsuario.Text
+            usuario.IdRol = CbxRol.SelectedValue
+            usuario.Telefono = TxtTelefono.Text
+            usuario.Correo = comprobarNull(usuario.Correo, TxtCorreo)
+            usuario.FechaIngreso = DtpFechaIngreso.Text
+            usuario.Cedula = TxtCedula.Text
+            usuario.Pwd = TxtPw.Text
 
-    '    If (TxtNombreUsuario.Text = "") Then
-    '        MsgBox("Debe ingresar un nombre de usuario al campo")
-    '    End If
+            'Pregunta al usuario si esta seguro de realizar la accion'
+            Dim resp As VariantType
+            resp = (MsgBox("Desea editar este registro? Código: " & usuario.IdUsuario, MsgBoxStyle.Question +
+                       MsgBoxStyle.YesNo, "CONFIRMACIÓN"))
+            If (resp = vbNo) Then
+                MsgBox("Operación cancelada",
+                       MsgBoxStyle.Information, "Gestión de Usuarios")
+                Exit Sub
+            End If
 
-    '    If (CbxRol.SelectedItem = "") Then
-    '        MsgBox("Debe seleccionar un rol")
-    '    End If
+            If dUsuario.editarRegistro(usuario) Then
+                MsgBox("Registro editado correctamente", MsgBoxStyle.Information, "Gestión de Usuarios")
 
-    '    If (TxtTelefono.Text = "") Then
-    '        MsgBox("Debe ingresar un numero de teléfono al campo")
-    '    End If
+            End If
 
-    '    If (TxtCorreo.Text = "") Then
-    '        MsgBox("Debe ingresar una dirección de correo electrónico")
-    '    End If
-
-    '    If (TxtPw.Text = "") Then
-    '        MsgBox("Debe ingresar una contraseña")
-    '    End If
-
-    '    ValidarContraseña()
-    'End Sub
-
-
-    'Private Sub TxtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefono.KeyPress
-    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
-    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
-    '        MsgBox("Por favor digite un numero de telefono")
-    '    End If
-    'End Sub
-
-    'Private Sub ValidarContraseña()
-    '    If String.Equals(TxtPw.Text, TxtConfirmarPw.Text) Then
-    '    Else
-    '        MsgBox("Las contraseñas no coinciden")
-    '    End If
-    'End Sub
-
-    'Private Sub BtnBuscarEstudio_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
-    '    If (TxtBuscar.Text = "") Then
-    '        MsgBox("Ingrese un usuario para buscar")
-    '    End If
-    'End Sub
+        Catch ex As Exception
+            MsgBox("No se pudo editar el registro", MsgBoxStyle.Critical, "ERROR")
+        End Try
+        llenarRegistros()
+        BtnLimpiar.PerformClick()
+    End Sub
 
 
+    'Boton Borrar: Se borra un registro (En este caso de manera logica) dentro de la tabla'
+    Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click
+        Dim fila As Integer = DgvRegistrosUsuario.CurrentRow.Index
+        Dim usuario As New Usuario
+        Dim dUsuario As New DUsuario
+
+        usuario.IdUsuario = DgvRegistrosUsuario.Rows(fila).Cells(0).Value
+        If (usuario.IdUsuario = Nothing) Then
+            MsgBox("El registro no existe",
+                       MsgBoxStyle.Exclamation, "ADVERTENCIA")
+            Exit Sub
+        End If
+
+        Dim resp As VariantType
+        resp = (MsgBox("Desea eliminar este registro? Código: " & usuario.IdUsuario, MsgBoxStyle.Question +
+                       MsgBoxStyle.YesNo, "CONFIRMACION"))
+        If (resp = vbNo) Then
+            MsgBox("Operación cancelada",
+                       MsgBoxStyle.Information, "Gestión de Usuarios")
+            Exit Sub
+        End If
+
+        Dim eliminado = dUsuario.eliminarRegistro(usuario.IdUsuario)
+        If (eliminado) Then
+            MsgBox("Registro eliminado exitosamente",
+                       MsgBoxStyle.Information, "Gestión de Usuarios")
+        Else
+            MsgBox("No se pudo eliminar el registro",
+                   MsgBoxStyle.Critical, "ERROR")
+        End If
+        llenarRegistros()
+        BtnLimpiar.PerformClick()
+    End Sub
+
+
+    'Funcion para rellenar el combo box de Roles a elegir'
     Sub rellenarComboBox()
-        'REFINAR CODIGO'
-        Dim conn As New SqlConnection("Data Source=localhost;Initial Catalog=DBLab;Persist Security Info=True;User ID=sa;Password=1234")
-        Dim tsql As String = "SELECT * FROM Tbl_Rol"
-        Dim cmd As New SqlCommand(tsql, conn)
-        Dim da As New SqlDataAdapter(cmd)
-        Dim ds As New DataTable
-        da.Fill(ds)
+        Dim dRol As New DRol
 
-        CbxRol.DataSource = ds
+        CbxRol.DataSource = dRol.listarRoles.Tables(0)
         CbxRol.DisplayMember = "nombre"
         CbxRol.ValueMember = "idRol"
     End Sub
 
-    Private Sub TxtNombreUsuario_ParentChanged(sender As Object, e As EventArgs) Handles TxtNombreUsuario.ParentChanged
+
+    'En caso de recibir la advertencia de que un nombre de usuario ya existe'
+    'Si se empieza a cambiar el nombre ingresado, la advertencia desaparecera'
+    Private Sub TxtNombreUsuario_TextChanged(sender As Object, e As EventArgs) Handles TxtNombreUsuario.TextChanged
         LblAdvertencia.Text = ""
     End Sub
+
+
+    'Obtiene los datos de un registro del DataGridView e inserta los valores de los atributos en sus respectivos campos'
+    Private Sub DgvRegistrosUsuario_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvRegistrosUsuario.CellClick
+        Dim fila As Integer = DgvRegistrosUsuario.CurrentRow.Index
+        TxtPrimerNombre.Text = DgvRegistrosUsuario.Rows(fila).Cells(1).Value
+        TxtSegundoNombre.Text = DgvRegistrosUsuario.Rows(fila).Cells(2).Value.ToString()
+        TxtPrimerApellido.Text = DgvRegistrosUsuario.Rows(fila).Cells(3).Value
+        TxtSegundoApellido.Text = DgvRegistrosUsuario.Rows(fila).Cells(4).Value.ToString()
+        TxtNombreUsuario.Text = DgvRegistrosUsuario.Rows(fila).Cells(5).Value
+        CbxRol.Text = DgvRegistrosUsuario.Rows(fila).Cells(11).Value
+        TxtTelefono.Text = DgvRegistrosUsuario.Rows(fila).Cells(6).Value
+        TxtCorreo.Text = DgvRegistrosUsuario.Rows(fila).Cells(7).Value.ToString()
+        DtpFechaIngreso.Value = DgvRegistrosUsuario.Rows(fila).Cells(8).Value
+        TxtCedula.Text = DgvRegistrosUsuario.Rows(fila).Cells(9).Value
+        TxtPw.Text = DgvRegistrosUsuario.Rows(fila).Cells(10).Value
+        TxtConfirmarPw.Text = DgvRegistrosUsuario.Rows(fila).Cells(10).Value
+    End Sub
+
+
+    'Funcion para comprobar si un campo que puede estar vacio, lo esta o no'
+    Private Function comprobarNull(ByVal campo As String, txt As TextBox) As String
+        'Si el campo del atributo esta vacio, el objeto creado recibe un valor Nothing(Null) en ese atributo'
+        'De lo contrario, el objeto asigna al atributo correspondiente el valor del campo'
+        If String.IsNullOrEmpty(txt.Text.ToString().Trim) = True Then
+            campo = Nothing
+        Else
+            campo = txt.Text
+        End If
+        Return campo
+    End Function
+
 End Class

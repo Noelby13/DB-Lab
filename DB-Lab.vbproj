@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="dao\DArqueo.vb" />
     <Compile Include="dao\DUnidad.vb" />
+    <Compile Include="dao\DRol.vb" />
     <Compile Include="dao\DUsuario.vb" />
     <Compile Include="DsDBLab.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -83,6 +84,9 @@
     </Compile>
     <Compile Include="entidades\ArqueoCaja.vb" />
     <Compile Include="entidades\Unidad.vb" />
+    <Compile Include="entidades\Cliente.vb" />
+    <Compile Include="entidades\Doctor.vb" />
+    <Compile Include="entidades\Rol.vb" />
     <Compile Include="entidades\Usuario.vb" />
     <Compile Include="Formularios\FrmActualizacióResultados.Designer.vb">
       <DependentUpon>FrmActualizacióResultados.vb</DependentUpon>
