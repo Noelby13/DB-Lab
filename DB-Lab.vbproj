@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dao\DArqueo.vb" />
+    <Compile Include="dao\DFuncion.vb" />
     <Compile Include="dao\DUnidad.vb" />
     <Compile Include="dao\DRol.vb" />
     <Compile Include="dao\DUsuario.vb" />
@@ -83,6 +84,7 @@
       <DependentUpon>DsDBLab.xsd</DependentUpon>
     </Compile>
     <Compile Include="entidades\ArqueoCaja.vb" />
+    <Compile Include="entidades\Funcion.vb" />
     <Compile Include="entidades\Unidad.vb" />
     <Compile Include="entidades\Cliente.vb" />
     <Compile Include="entidades\Doctor.vb" />
