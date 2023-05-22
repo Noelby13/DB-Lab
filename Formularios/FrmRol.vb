@@ -47,6 +47,8 @@
 
             Dim rol As New Rol()
             Dim dRol As New DRol
+            Dim rolFuncion As New RolFuncion
+            Dim dRolFuncion As New DRolFuncion
 
             rol.Nombre = TxtNombre.Text
             rol.Descripcion = comprobarNull(rol.Descripcion, TxtDescripcion)
@@ -58,6 +60,12 @@
 
             If dRol.guardarRegistro(rol) Then
                 MsgBox("Rol registrado correctamente", MsgBoxStyle.Information, "Gestión de Roles")
+
+                rolFuncion.IdRol = dRol.obtenerIdCreado()
+                For Each item As Object In ClbPermisosRol.CheckedItems
+                    rolFuncion.IdFuncion = item(0)
+                    dRolFuncion.guardarPermiso(rolFuncion)
+                Next
                 llenarRegistros()
                 BtnLimpiar.PerformClick()
             End If

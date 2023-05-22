@@ -77,6 +77,7 @@
     <Compile Include="dao\DCliente.vb" />
     <Compile Include="dao\DFactura.vb" />
     <Compile Include="dao\DFuncion.vb" />
+    <Compile Include="dao\DRolFuncion.vb" />
     <Compile Include="dao\D_DetalleFactura.vb" />
     <Compile Include="dao\DUnidad.vb" />
     <Compile Include="dao\DRol.vb" />
@@ -89,6 +90,8 @@
     <Compile Include="entidades\ArqueoCaja.vb" />
     <Compile Include="entidades\DetalleFactura.vb" />
     <Compile Include="entidades\Factura.vb" />
+    <Compile Include="entidades\Funcion.vb" />
+    <Compile Include="entidades\RolFuncion.vb" />
     <Compile Include="entidades\Unidad.vb" />
     <Compile Include="entidades\Cliente.vb" />
     <Compile Include="entidades\Doctor.vb" />
