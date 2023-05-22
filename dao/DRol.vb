@@ -54,6 +54,24 @@ Public Class DRol
         Return resultado
     End Function
 
+
+    Public Function obtenerIdCreado() As Integer
+        Dim id As Integer = 0
+        Try
+            'Obtiene el id del ultimo registro creado'
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "SELECT MAX(idRol) FROM Tbl_Rol"
+            Dim cmd As New SqlCommand(tsql, conn)
+
+            conn.Open()
+            id = cmd.ExecuteScalar()
+            conn.Close()
+
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al obtener el id del registro", MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return id
+    End Function
     Public Function editarRegistro(ByVal rol As Rol) As Boolean
         Dim resultado = False
         Try
