@@ -36,7 +36,7 @@ Partial Class FrmCancelarFactura
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DgvExamenesFacturados = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DtpFacturacion = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TxtApellido = New System.Windows.Forms.TextBox()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
@@ -204,14 +204,23 @@ Partial Class FrmCancelarFactura
         '
         'DgvExamenesFacturados
         '
+        Me.DgvExamenesFacturados.AllowUserToAddRows = False
+        Me.DgvExamenesFacturados.AllowUserToDeleteRows = False
+        Me.DgvExamenesFacturados.AllowUserToOrderColumns = True
         Me.DgvExamenesFacturados.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DgvExamenesFacturados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvExamenesFacturados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DgvExamenesFacturados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvExamenesFacturados.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.DgvExamenesFacturados.Location = New System.Drawing.Point(17, 53)
         Me.DgvExamenesFacturados.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DgvExamenesFacturados.MultiSelect = False
         Me.DgvExamenesFacturados.Name = "DgvExamenesFacturados"
+        Me.DgvExamenesFacturados.ReadOnly = True
         Me.DgvExamenesFacturados.RowHeadersWidth = 51
         Me.DgvExamenesFacturados.RowTemplate.Height = 24
+        Me.DgvExamenesFacturados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvExamenesFacturados.Size = New System.Drawing.Size(793, 150)
         Me.DgvExamenesFacturados.TabIndex = 0
         '
@@ -220,7 +229,7 @@ Partial Class FrmCancelarFactura
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.DtpFacturacion)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.TxtApellido)
         Me.GroupBox1.Controls.Add(Me.TxtNombre)
@@ -235,13 +244,14 @@ Partial Class FrmCancelarFactura
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de la Factura"
         '
-        'DateTimePicker1
+        'DtpFacturacion
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(217, 128)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(356, 29)
-        Me.DateTimePicker1.TabIndex = 11
+        Me.DtpFacturacion.Enabled = False
+        Me.DtpFacturacion.Location = New System.Drawing.Point(217, 128)
+        Me.DtpFacturacion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DtpFacturacion.Name = "DtpFacturacion"
+        Me.DtpFacturacion.Size = New System.Drawing.Size(356, 29)
+        Me.DtpFacturacion.TabIndex = 11
         '
         'Label3
         '
@@ -259,6 +269,7 @@ Partial Class FrmCancelarFactura
         Me.TxtApellido.Location = New System.Drawing.Point(487, 69)
         Me.TxtApellido.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtApellido.Name = "TxtApellido"
+        Me.TxtApellido.ReadOnly = True
         Me.TxtApellido.Size = New System.Drawing.Size(247, 27)
         Me.TxtApellido.TabIndex = 9
         '
@@ -268,6 +279,7 @@ Partial Class FrmCancelarFactura
         Me.TxtNombre.Location = New System.Drawing.Point(97, 66)
         Me.TxtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.ReadOnly = True
         Me.TxtNombre.Size = New System.Drawing.Size(247, 27)
         Me.TxtNombre.TabIndex = 8
         '
@@ -346,7 +358,7 @@ Partial Class FrmCancelarFactura
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DgvExamenesFacturados As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DtpFacturacion As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents TxtApellido As TextBox
     Friend WithEvents TxtNombre As TextBox

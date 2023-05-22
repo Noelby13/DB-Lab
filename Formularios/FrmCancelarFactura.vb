@@ -8,15 +8,15 @@ Public Class FrmCancelarFactura
         Me.Close()
     End Sub
 
-    Sub llenarRegistros()
-        Dim dDetalleFactura As New D_DetalleFactura
-        DgvExamenesFacturados.DataSource = dDetalleFactura.mostrarDetalles().Tables(0)
-        DgvExamenesFacturados.Refresh()
-    End Sub
+    'Sub llenarRegistros()
+    '    Dim dDetalleFactura As New D_DetalleFactura
+    '    DgvExamenesFacturados.DataSource = dDetalleFactura.mostrarDetalles().Tables(0)
+    '    DgvExamenesFacturados.Refresh()
+    'End Sub
 
-    Private Sub FrmCancelarFactura_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        llenarRegistros()
-    End Sub
+    'Private Sub FrmCancelarFactura_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    '    llenarRegistros()
+    'End Sub
 
     Public Function validarCampos() As Boolean
         Dim B = False
@@ -31,8 +31,8 @@ Public Class FrmCancelarFactura
         TxtFactura.Clear()
         TxtNombre.Clear()
         TxtApellido.Clear()
-        'DgvExamenesFacturados.Rows.Clear()
         TxtTotal.Clear()
+        DgvExamenesFacturados.DataSource = Nothing
     End Sub
 
     Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click
@@ -46,11 +46,35 @@ Public Class FrmCancelarFactura
             Exit Sub
         End If
 
+        Dim factura As New Factura()
+        Dim dDetalles As New D_DetalleFactura
+        Dim dFactura As New DFactura
+        factura.IdFactura = TxtFactura.Text
+        If Not dFactura.validarNumeroFactura(factura) Then
+            MsgBox("El numero de factura no existe")
+            Exit Sub
+        End If
 
+        Dim dDetalleFactura As New D_DetalleFactura
+        DgvExamenesFacturados.DataSource = dDetalleFactura.buscarPorFactura(TxtFactura.Text).Tables(0)
+        DgvExamenesFacturados.Refresh()
 
-        'Dim dDetalleFactura As New D_DetalleFactura
-        'DgvExamenesFacturados.DataSource = dDetalleFactura.buscarPorFactura(TxtFactura.Text.ToString()).Tables(0)
-        'DgvExamenesFacturados.Refresh()
+        Dim t = dFactura.obtenerDatosCliente(factura)
+        TxtNombre.Text = t.Rows(0).Item(0)
+        TxtApellido.Text = t.Rows(0).Item(1)
+        DtpFacturacion.Text = t.Rows(0).Item(2)
+
+        calcularTotal()
+    End Sub
+
+    Private Sub calcularTotal()
+        Dim suma = 0.00
+
+        For Each row As DataGridViewRow In DgvExamenesFacturados.Rows
+            suma = suma + row.Cells(2).Value
+        Next
+
+        TxtTotal.Text = suma.ToString()
     End Sub
 
 End Class
