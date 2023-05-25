@@ -57,8 +57,27 @@ Public Class DFactura
             da.Fill(dt)
         Catch ex As Exception
             MsgBox(ex.ToString())
-            MsgBox("Ocurrio un error al validar el detalle de factura", MsgBoxStyle.Critical, "ERROR")
+            MsgBox("Ocurrió  un error al validar el detalle de factura", MsgBoxStyle.Critical, "ERROR")
         End Try
         Return dt
+    End Function
+
+    Public Function eliminarFactura(ByVal idFactura As String) As Boolean
+        Dim resultado = False
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "DELETE FROM Tbl_Factura WHERE idFactura = @idFactura"
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@idFactura", idFactura)
+
+            conn.Open()
+            If (cmd.ExecuteNonQuery <> 0) Then
+                resultado = True
+            End If
+            conn.Close()
+        Catch ex As Exception
+            MsgBox("Ocurrió un error al eliminar el registro" & ex.Message, MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return resultado
     End Function
 End Class
