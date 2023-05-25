@@ -30,7 +30,6 @@ Partial Class FrmCancelarFactura
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.PanelDatosUsuario = New System.Windows.Forms.Panel()
         Me.BtnBuscarFactura = New System.Windows.Forms.Button()
-        Me.BtnCancelarOp = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TxtTotal = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -127,7 +126,6 @@ Partial Class FrmCancelarFactura
         '
         Me.PanelDatosUsuario.BackColor = System.Drawing.Color.White
         Me.PanelDatosUsuario.Controls.Add(Me.BtnBuscarFactura)
-        Me.PanelDatosUsuario.Controls.Add(Me.BtnCancelarOp)
         Me.PanelDatosUsuario.Controls.Add(Me.GroupBox2)
         Me.PanelDatosUsuario.Controls.Add(Me.GroupBox1)
         Me.PanelDatosUsuario.Controls.Add(Me.TxtFactura)
@@ -153,17 +151,6 @@ Partial Class FrmCancelarFactura
         Me.BtnBuscarFactura.Text = "Buscar"
         Me.BtnBuscarFactura.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBuscarFactura.UseVisualStyleBackColor = True
-        '
-        'BtnCancelarOp
-        '
-        Me.BtnCancelarOp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCancelarOp.Location = New System.Drawing.Point(617, 622)
-        Me.BtnCancelarOp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BtnCancelarOp.Name = "BtnCancelarOp"
-        Me.BtnCancelarOp.Size = New System.Drawing.Size(205, 41)
-        Me.BtnCancelarOp.TabIndex = 12
-        Me.BtnCancelarOp.Text = "Cancelar Operación"
-        Me.BtnCancelarOp.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -354,7 +341,6 @@ Partial Class FrmCancelarFactura
     Friend WithEvents BtnBorrar As Button
     Friend WithEvents BtnLimpiar As Button
     Friend WithEvents PanelDatosUsuario As Panel
-    Friend WithEvents BtnCancelarOp As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DgvExamenesFacturados As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
