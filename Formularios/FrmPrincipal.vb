@@ -8,9 +8,6 @@ Public Class FrmPrincipal
         cargarMenuSegunPermisos()
         cargarBotones()
         ocultarSubMenu()
-
-        Size = Screen.PrimaryScreen.WorkingArea.Size
-        Location = Screen.PrimaryScreen.WorkingArea.Location
     End Sub
 
     Private Sub FrmPrincipal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -141,6 +138,8 @@ Public Class FrmPrincipal
         PanelSubExamenes.Hide()
         PanelSubOrdenes.Hide()
         PanelSubResultado.Hide()
+        PanelSubDoctor.Hide()
+        PanelSubReportes.Hide()
 
     End Sub
 
@@ -277,5 +276,19 @@ Public Class FrmPrincipal
         abrirFrmHijo(New FrmActualizacióResultados())
     End Sub
 
+    Private Sub BtnGestionarUnidad_Click(sender As Object, e As EventArgs) Handles BtnGestionarUnidad.Click
+        abrirFrmHijo(New FrmUnidad())
+    End Sub
 
+    Private Sub BtnDoctor_Click(sender As Object, e As EventArgs) Handles BtnDoctor.Click
+        mostrarSubMenu(PanelSubDoctor)
+    End Sub
+
+    Private Sub BtnAbrirDr_Click(sender As Object, e As EventArgs) Handles BtnAbrirDr.Click
+        abrirFrmHijo(New FrmDoctor())
+    End Sub
+
+    Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
+        mostrarSubMenu(PanelSubReportes)
+    End Sub
 End Class

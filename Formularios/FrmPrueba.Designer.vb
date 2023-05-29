@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmPrincipal
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FrmPrueba
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,10 @@ Partial Class FrmPrincipal
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrueba))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.PanelSubReportes = New System.Windows.Forms.Panel()
-        Me.BtnMostrarDoctores = New System.Windows.Forms.Button()
-        Me.BtnReporteExamenes = New System.Windows.Forms.Button()
-        Me.BtnReportes = New System.Windows.Forms.Button()
-        Me.BtnDoctor = New System.Windows.Forms.Button()
-        Me.PanelSubDoctor = New System.Windows.Forms.Panel()
-        Me.BtnAbrirDr = New System.Windows.Forms.Button()
         Me.PanelSubResultado = New System.Windows.Forms.Panel()
         Me.BtnActualizacionResultado = New System.Windows.Forms.Button()
         Me.BtnListaTrabajo = New System.Windows.Forms.Button()
@@ -45,7 +38,6 @@ Partial Class FrmPrincipal
         Me.PanelSubExamenes = New System.Windows.Forms.Panel()
         Me.BtnAgregarEstudio = New System.Windows.Forms.Button()
         Me.BtnAgregarExamen = New System.Windows.Forms.Button()
-        Me.BtnGestionarUnidad = New System.Windows.Forms.Button()
         Me.BtnCrearCategoria = New System.Windows.Forms.Button()
         Me.PanelSubUsuario = New System.Windows.Forms.Panel()
         Me.BtnCrearRol = New System.Windows.Forms.Button()
@@ -55,11 +47,7 @@ Partial Class FrmPrincipal
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnExamenes = New System.Windows.Forms.Button()
-        Me.PanelFrmHijo = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.PanelSubReportes.SuspendLayout()
-        Me.PanelSubDoctor.SuspendLayout()
         Me.PanelSubResultado.SuspendLayout()
         Me.PanelSubOrdenes.SuspendLayout()
         Me.PanelSubPaciente.SuspendLayout()
@@ -67,7 +55,6 @@ Partial Class FrmPrincipal
         Me.PanelSubUsuario.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -75,14 +62,10 @@ Partial Class FrmPrincipal
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.PanelSubReportes, 0, 16)
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnReportes, 0, 15)
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnDoctor, 0, 8)
-        Me.TableLayoutPanel1.Controls.Add(Me.PanelSubDoctor, 0, 9)
         Me.TableLayoutPanel1.Controls.Add(Me.PanelSubResultado, 0, 12)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnResultados, 0, 11)
         Me.TableLayoutPanel1.Controls.Add(Me.PanelSubOrdenes, 0, 10)
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnOrdenes, 0, 9)
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnOrdenes, 0, 8)
         Me.TableLayoutPanel1.Controls.Add(Me.PanelSubPaciente, 0, 7)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnPaciente, 0, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.PanelSubExamenes, 0, 4)
@@ -93,7 +76,7 @@ Partial Class FrmPrincipal
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 16
+        Me.TableLayoutPanel1.RowCount = 12
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
@@ -107,116 +90,8 @@ Partial Class FrmPrincipal
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(200, 847)
-        Me.TableLayoutPanel1.TabIndex = 2
-        '
-        'PanelSubReportes
-        '
-        Me.PanelSubReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.PanelSubReportes.Controls.Add(Me.BtnMostrarDoctores)
-        Me.PanelSubReportes.Controls.Add(Me.BtnReporteExamenes)
-        Me.PanelSubReportes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubReportes.Location = New System.Drawing.Point(2, 742)
-        Me.PanelSubReportes.Margin = New System.Windows.Forms.Padding(2)
-        Me.PanelSubReportes.Name = "PanelSubReportes"
-        Me.PanelSubReportes.Size = New System.Drawing.Size(196, 49)
-        Me.PanelSubReportes.TabIndex = 18
-        '
-        'BtnMostrarDoctores
-        '
-        Me.BtnMostrarDoctores.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnMostrarDoctores.FlatAppearance.BorderSize = 0
-        Me.BtnMostrarDoctores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMostrarDoctores.ForeColor = System.Drawing.Color.White
-        Me.BtnMostrarDoctores.Location = New System.Drawing.Point(0, 24)
-        Me.BtnMostrarDoctores.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnMostrarDoctores.Name = "BtnMostrarDoctores"
-        Me.BtnMostrarDoctores.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnMostrarDoctores.Size = New System.Drawing.Size(196, 24)
-        Me.BtnMostrarDoctores.TabIndex = 2
-        Me.BtnMostrarDoctores.Text = "Doctores"
-        Me.BtnMostrarDoctores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnMostrarDoctores.UseVisualStyleBackColor = True
-        '
-        'BtnReporteExamenes
-        '
-        Me.BtnReporteExamenes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnReporteExamenes.FlatAppearance.BorderSize = 0
-        Me.BtnReporteExamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnReporteExamenes.ForeColor = System.Drawing.Color.White
-        Me.BtnReporteExamenes.Location = New System.Drawing.Point(0, 0)
-        Me.BtnReporteExamenes.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnReporteExamenes.Name = "BtnReporteExamenes"
-        Me.BtnReporteExamenes.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnReporteExamenes.Size = New System.Drawing.Size(196, 24)
-        Me.BtnReporteExamenes.TabIndex = 0
-        Me.BtnReporteExamenes.Text = "Examenes"
-        Me.BtnReporteExamenes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnReporteExamenes.UseVisualStyleBackColor = True
-        '
-        'BtnReportes
-        '
-        Me.BtnReportes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnReportes.FlatAppearance.BorderSize = 0
-        Me.BtnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnReportes.ForeColor = System.Drawing.Color.White
-        Me.BtnReportes.Location = New System.Drawing.Point(2, 701)
-        Me.BtnReportes.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnReportes.Name = "BtnReportes"
-        Me.BtnReportes.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
-        Me.BtnReportes.Size = New System.Drawing.Size(196, 37)
-        Me.BtnReportes.TabIndex = 17
-        Me.BtnReportes.Text = "Reportes"
-        Me.BtnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnReportes.UseVisualStyleBackColor = True
-        '
-        'BtnDoctor
-        '
-        Me.BtnDoctor.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnDoctor.FlatAppearance.BorderSize = 0
-        Me.BtnDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDoctor.ForeColor = System.Drawing.Color.White
-        Me.BtnDoctor.Location = New System.Drawing.Point(2, 435)
-        Me.BtnDoctor.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnDoctor.Name = "BtnDoctor"
-        Me.BtnDoctor.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
-        Me.BtnDoctor.Size = New System.Drawing.Size(196, 27)
-        Me.BtnDoctor.TabIndex = 15
-        Me.BtnDoctor.Text = "Doctor"
-        Me.BtnDoctor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnDoctor.UseVisualStyleBackColor = True
-        '
-        'PanelSubDoctor
-        '
-        Me.PanelSubDoctor.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.PanelSubDoctor.Controls.Add(Me.BtnAbrirDr)
-        Me.PanelSubDoctor.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubDoctor.Location = New System.Drawing.Point(2, 466)
-        Me.PanelSubDoctor.Margin = New System.Windows.Forms.Padding(2)
-        Me.PanelSubDoctor.Name = "PanelSubDoctor"
-        Me.PanelSubDoctor.Size = New System.Drawing.Size(196, 30)
-        Me.PanelSubDoctor.TabIndex = 16
-        '
-        'BtnAbrirDr
-        '
-        Me.BtnAbrirDr.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnAbrirDr.FlatAppearance.BorderSize = 0
-        Me.BtnAbrirDr.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAbrirDr.ForeColor = System.Drawing.Color.White
-        Me.BtnAbrirDr.Location = New System.Drawing.Point(0, 0)
-        Me.BtnAbrirDr.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnAbrirDr.Name = "BtnAbrirDr"
-        Me.BtnAbrirDr.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnAbrirDr.Size = New System.Drawing.Size(196, 24)
-        Me.BtnAbrirDr.TabIndex = 0
-        Me.BtnAbrirDr.Text = "Gestion de Doctores"
-        Me.BtnAbrirDr.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAbrirDr.UseVisualStyleBackColor = True
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(200, 706)
+        Me.TableLayoutPanel1.TabIndex = 3
         '
         'PanelSubResultado
         '
@@ -224,7 +99,7 @@ Partial Class FrmPrincipal
         Me.PanelSubResultado.Controls.Add(Me.BtnActualizacionResultado)
         Me.PanelSubResultado.Controls.Add(Me.BtnListaTrabajo)
         Me.PanelSubResultado.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubResultado.Location = New System.Drawing.Point(2, 642)
+        Me.PanelSubResultado.Location = New System.Drawing.Point(2, 553)
         Me.PanelSubResultado.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelSubResultado.Name = "PanelSubResultado"
         Me.PanelSubResultado.Size = New System.Drawing.Size(196, 55)
@@ -268,7 +143,7 @@ Partial Class FrmPrincipal
         Me.BtnResultados.FlatAppearance.BorderSize = 0
         Me.BtnResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnResultados.ForeColor = System.Drawing.Color.White
-        Me.BtnResultados.Location = New System.Drawing.Point(2, 601)
+        Me.BtnResultados.Location = New System.Drawing.Point(2, 512)
         Me.BtnResultados.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnResultados.Name = "BtnResultados"
         Me.BtnResultados.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
@@ -284,7 +159,7 @@ Partial Class FrmPrincipal
         Me.PanelSubOrdenes.Controls.Add(Me.BtnCancelarFactura)
         Me.PanelSubOrdenes.Controls.Add(Me.BtnFacturar)
         Me.PanelSubOrdenes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubOrdenes.Location = New System.Drawing.Point(2, 541)
+        Me.PanelSubOrdenes.Location = New System.Drawing.Point(2, 452)
         Me.PanelSubOrdenes.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelSubOrdenes.Name = "PanelSubOrdenes"
         Me.PanelSubOrdenes.Size = New System.Drawing.Size(196, 56)
@@ -328,7 +203,7 @@ Partial Class FrmPrincipal
         Me.BtnOrdenes.FlatAppearance.BorderSize = 0
         Me.BtnOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnOrdenes.ForeColor = System.Drawing.Color.White
-        Me.BtnOrdenes.Location = New System.Drawing.Point(2, 500)
+        Me.BtnOrdenes.Location = New System.Drawing.Point(2, 411)
         Me.BtnOrdenes.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnOrdenes.Name = "BtnOrdenes"
         Me.BtnOrdenes.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
@@ -343,7 +218,7 @@ Partial Class FrmPrincipal
         Me.PanelSubPaciente.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.PanelSubPaciente.Controls.Add(Me.BtnAgregarPaciente)
         Me.PanelSubPaciente.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubPaciente.Location = New System.Drawing.Point(2, 402)
+        Me.PanelSubPaciente.Location = New System.Drawing.Point(2, 378)
         Me.PanelSubPaciente.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelSubPaciente.Name = "PanelSubPaciente"
         Me.PanelSubPaciente.Size = New System.Drawing.Size(196, 29)
@@ -371,7 +246,7 @@ Partial Class FrmPrincipal
         Me.BtnPaciente.FlatAppearance.BorderSize = 0
         Me.BtnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnPaciente.ForeColor = System.Drawing.Color.White
-        Me.BtnPaciente.Location = New System.Drawing.Point(2, 364)
+        Me.BtnPaciente.Location = New System.Drawing.Point(2, 340)
         Me.BtnPaciente.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnPaciente.Name = "BtnPaciente"
         Me.BtnPaciente.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
@@ -387,14 +262,13 @@ Partial Class FrmPrincipal
         Me.PanelSubExamenes.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.PanelSubExamenes.Controls.Add(Me.BtnAgregarEstudio)
         Me.PanelSubExamenes.Controls.Add(Me.BtnAgregarExamen)
-        Me.PanelSubExamenes.Controls.Add(Me.BtnGestionarUnidad)
         Me.PanelSubExamenes.Controls.Add(Me.BtnCrearCategoria)
         Me.PanelSubExamenes.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSubExamenes.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.PanelSubExamenes.Location = New System.Drawing.Point(2, 264)
         Me.PanelSubExamenes.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelSubExamenes.Name = "PanelSubExamenes"
-        Me.PanelSubExamenes.Size = New System.Drawing.Size(196, 96)
+        Me.PanelSubExamenes.Size = New System.Drawing.Size(196, 72)
         Me.PanelSubExamenes.TabIndex = 8
         '
         'BtnAgregarEstudio
@@ -403,7 +277,7 @@ Partial Class FrmPrincipal
         Me.BtnAgregarEstudio.FlatAppearance.BorderSize = 0
         Me.BtnAgregarEstudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAgregarEstudio.ForeColor = System.Drawing.Color.White
-        Me.BtnAgregarEstudio.Location = New System.Drawing.Point(0, 72)
+        Me.BtnAgregarEstudio.Location = New System.Drawing.Point(0, 48)
         Me.BtnAgregarEstudio.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnAgregarEstudio.Name = "BtnAgregarEstudio"
         Me.BtnAgregarEstudio.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
@@ -419,7 +293,7 @@ Partial Class FrmPrincipal
         Me.BtnAgregarExamen.FlatAppearance.BorderSize = 0
         Me.BtnAgregarExamen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAgregarExamen.ForeColor = System.Drawing.Color.White
-        Me.BtnAgregarExamen.Location = New System.Drawing.Point(0, 48)
+        Me.BtnAgregarExamen.Location = New System.Drawing.Point(0, 24)
         Me.BtnAgregarExamen.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnAgregarExamen.Name = "BtnAgregarExamen"
         Me.BtnAgregarExamen.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
@@ -428,22 +302,6 @@ Partial Class FrmPrincipal
         Me.BtnAgregarExamen.Text = "Gestion de Examenes"
         Me.BtnAgregarExamen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnAgregarExamen.UseVisualStyleBackColor = True
-        '
-        'BtnGestionarUnidad
-        '
-        Me.BtnGestionarUnidad.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnGestionarUnidad.FlatAppearance.BorderSize = 0
-        Me.BtnGestionarUnidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGestionarUnidad.ForeColor = System.Drawing.Color.White
-        Me.BtnGestionarUnidad.Location = New System.Drawing.Point(0, 24)
-        Me.BtnGestionarUnidad.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnGestionarUnidad.Name = "BtnGestionarUnidad"
-        Me.BtnGestionarUnidad.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnGestionarUnidad.Size = New System.Drawing.Size(196, 24)
-        Me.BtnGestionarUnidad.TabIndex = 15
-        Me.BtnGestionarUnidad.Text = "Gestion de Unidad"
-        Me.BtnGestionarUnidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGestionarUnidad.UseVisualStyleBackColor = True
         '
         'BtnCrearCategoria
         '
@@ -570,46 +428,16 @@ Partial Class FrmPrincipal
         Me.BtnExamenes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnExamenes.UseVisualStyleBackColor = True
         '
-        'PanelFrmHijo
-        '
-        Me.PanelFrmHijo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelFrmHijo.Location = New System.Drawing.Point(2, 2)
-        Me.PanelFrmHijo.Margin = New System.Windows.Forms.Padding(2)
-        Me.PanelFrmHijo.Name = "PanelFrmHijo"
-        Me.PanelFrmHijo.Size = New System.Drawing.Size(614, 821)
-        Me.PanelFrmHijo.TabIndex = 1
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.PanelFrmHijo, 0, 0)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(200, 0)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(618, 845)
-        Me.TableLayoutPanel2.TabIndex = 3
-        '
-        'FrmPrincipal
+        'FrmPrueba
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(818, 847)
-        Me.Controls.Add(Me.TableLayoutPanel2)
+        Me.ClientSize = New System.Drawing.Size(800, 706)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MinimumSize = New System.Drawing.Size(834, 771)
-        Me.Name = "FrmPrincipal"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Database Laboratory"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Name = "FrmPrueba"
+        Me.Text = "FrmPrueba"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        Me.PanelSubReportes.ResumeLayout(False)
-        Me.PanelSubDoctor.ResumeLayout(False)
         Me.PanelSubResultado.ResumeLayout(False)
         Me.PanelSubOrdenes.ResumeLayout(False)
         Me.PanelSubPaciente.ResumeLayout(False)
@@ -618,10 +446,10 @@ Partial Class FrmPrincipal
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
+
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents PanelSubResultado As Panel
     Friend WithEvents BtnActualizacionResultado As Button
@@ -635,6 +463,7 @@ Partial Class FrmPrincipal
     Friend WithEvents BtnAgregarPaciente As Button
     Friend WithEvents BtnPaciente As Button
     Friend WithEvents PanelSubExamenes As Panel
+    Friend WithEvents BtnAgregarEstudio As Button
     Friend WithEvents BtnAgregarExamen As Button
     Friend WithEvents BtnCrearCategoria As Button
     Friend WithEvents PanelSubUsuario As Panel
@@ -645,15 +474,4 @@ Partial Class FrmPrincipal
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BtnExamenes As Button
-    Friend WithEvents PanelFrmHijo As Panel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents BtnGestionarUnidad As Button
-    Friend WithEvents BtnAgregarEstudio As Button
-    Friend WithEvents BtnDoctor As Button
-    Friend WithEvents PanelSubDoctor As Panel
-    Friend WithEvents BtnAbrirDr As Button
-    Friend WithEvents BtnReportes As Button
-    Friend WithEvents PanelSubReportes As Panel
-    Friend WithEvents BtnMostrarDoctores As Button
-    Friend WithEvents BtnReporteExamenes As Button
 End Class
