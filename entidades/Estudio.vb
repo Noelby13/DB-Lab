@@ -1,5 +1,4 @@
 ﻿Public Class Estudio
-
     Dim _idEstudio As Integer
     Dim _nombreEstudio As String
     Dim _valorInferiorH As Decimal
@@ -24,6 +23,9 @@
         _valorInferiorM = valorInferiorM
         _valorSuperiorM = valorSuperiorM
         _valorTextoM = valorTextoM
+        _estado = estado
+        _idUnidad = idUnidad
+    End Sub
 
     Public Property IdEstudio As Integer
         Get
@@ -102,5 +104,16 @@
             Return _estado
         End Get
         Set(value As Integer)
+            _estado = value
+        End Set
+    End Property
 
+    Public Property IdUnidad As Integer
+        Get
+            Return _idUnidad
+        End Get
+        Set(value As Integer)
+            _idUnidad = value
+        End Set
+    End Property
 End Class
