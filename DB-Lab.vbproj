@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="dao\DArqueo.vb" />
     <Compile Include="dao\DCliente.vb" />
+    <Compile Include="dao\DEstudio.vb" />
     <Compile Include="dao\DFactura.vb" />
     <Compile Include="dao\DFuncion.vb" />
     <Compile Include="dao\DRolFuncion.vb" />
@@ -89,6 +90,7 @@
     </Compile>
     <Compile Include="entidades\ArqueoCaja.vb" />
     <Compile Include="entidades\DetalleFactura.vb" />
+    <Compile Include="entidades\Estudio.vb" />
     <Compile Include="entidades\Factura.vb" />
     <Compile Include="entidades\Funcion.vb" />
     <Compile Include="entidades\RolFuncion.vb" />
@@ -139,10 +141,28 @@
     <Compile Include="Formularios\FrmCerrarTurno.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmDoctor.Designer.vb">
+      <DependentUpon>FrmDoctor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmDoctor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPrueba.Designer.vb">
+      <DependentUpon>FrmPrueba.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPrueba.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmRol.Designer.vb">
       <DependentUpon>FrmRol.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmUnidad.Designer.vb">
+      <DependentUpon>FrmUnidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmUnidad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmUsuario.Designer.vb">
@@ -222,8 +242,17 @@
     <EmbeddedResource Include="Formularios\FrmCerrarTurno.resx">
       <DependentUpon>FrmCerrarTurno.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmDoctor.resx">
+      <DependentUpon>FrmDoctor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPrueba.resx">
+      <DependentUpon>FrmPrueba.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmRol.resx">
       <DependentUpon>FrmRol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmUnidad.resx">
+      <DependentUpon>FrmUnidad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.vb</DependentUpon>

@@ -1,32 +1,30 @@
 ﻿Public Class Estudio
 
-    'Atributos de la clase'
     Dim _idEstudio As Integer
     Dim _nombreEstudio As String
-    Dim _valorInferior As Double
-    Dim _valorSuperior As Double
-    Dim _valorTexto As String
-    Dim _estado As Boolean
+    Dim _valorInferiorH As Decimal
+    Dim _valorSuperiorH As Decimal
+    Dim _valorTextoH As String
+    Dim _valorInferiorM As Decimal
+    Dim _valorSuperiorM As Decimal
+    Dim _valorTextoM As String
+    Dim _estado As Integer
     Dim _idUnidad As Integer
 
-    'Constructor vacio'
     Public Sub New()
 
     End Sub
 
-    'Constructor con parametros'
-    Public Sub New(idEstudio As Integer, nombreEstudio As String, valorInferior As Double, valorSuperior As Double, valorTexto As String, estado As Boolean, idUnidad As Integer)
+    Public Sub New(idEstudio As Integer, nombreEstudio As String, valorInferiorH As Decimal, valorSuperiorH As Decimal, valorTextoH As String, valorInferiorM As Decimal, valorSuperiorM As Decimal, valorTextoM As String, estado As Integer, idUnidad As Integer)
         _idEstudio = idEstudio
         _nombreEstudio = nombreEstudio
-        _valorInferior = valorInferior
-        _valorSuperior = valorSuperior
-        _valorTexto = valorTexto
-        _estado = estado
-        _idUnidad = idUnidad
-    End Sub
+        _valorInferiorH = valorInferiorH
+        _valorSuperiorH = valorSuperiorH
+        _valorTextoH = valorTextoH
+        _valorInferiorM = valorInferiorM
+        _valorSuperiorM = valorSuperiorM
+        _valorTextoM = valorTextoM
 
-    'Propiedades'
-    'Getter y Setter'
     Public Property IdEstudio As Integer
         Get
             Return _idEstudio
@@ -45,50 +43,64 @@
         End Set
     End Property
 
-    Public Property ValorInferior As Double
+    Public Property ValorInferiorH As Decimal
         Get
-            Return _valorInferior
+            Return _valorInferiorH
         End Get
-        Set(value As Double)
-            _valorInferior = value
+        Set(value As Decimal)
+            _valorInferiorH = value
         End Set
     End Property
 
-    Public Property ValorSuperior As Double
+    Public Property ValorSuperiorH As Decimal
         Get
-            Return _valorSuperior
+            Return _valorSuperiorH
         End Get
-        Set(value As Double)
-            _valorSuperior = value
+        Set(value As Decimal)
+            _valorSuperiorH = value
         End Set
     End Property
 
-    Public Property ValorTexto As String
+    Public Property ValorTextoH As String
         Get
-            Return _valorTexto
+            Return _valorTextoH
         End Get
         Set(value As String)
-            _valorTexto = value
+            _valorTextoH = value
         End Set
     End Property
 
-    Public Property Estado As Boolean
+    Public Property ValorInferiorM As Decimal
+        Get
+            Return _valorInferiorM
+        End Get
+        Set(value As Decimal)
+            _valorInferiorM = value
+        End Set
+    End Property
+
+    Public Property ValorSuperiorM As Decimal
+        Get
+            Return _valorSuperiorM
+        End Get
+        Set(value As Decimal)
+            _valorSuperiorM = value
+        End Set
+    End Property
+
+    Public Property ValorTextoM As String
+        Get
+            Return _valorTextoM
+        End Get
+        Set(value As String)
+            _valorTextoM = value
+        End Set
+    End Property
+
+    Public Property Estado As Integer
         Get
             Return _estado
         End Get
-        Set(value As Boolean)
-            _estado = value
-        End Set
-    End Property
-
-    Public Property IdUnidad As Integer
-        Get
-            Return _idUnidad
-        End Get
         Set(value As Integer)
-            _idUnidad = value
-        End Set
-    End Property
-
 
 End Class
