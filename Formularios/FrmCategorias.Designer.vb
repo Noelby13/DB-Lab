@@ -31,19 +31,20 @@ Partial Class FrmCategorias
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.PanelDatosCategoria = New System.Windows.Forms.Panel()
+        Me.TxtDescripcion = New System.Windows.Forms.TextBox()
+        Me.LblDescripcion = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TxtIdentificador = New System.Windows.Forms.TextBox()
-        Me.Lbl_nombres = New System.Windows.Forms.Label()
         Me.PanelRegistros = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DgvCategorias = New System.Windows.Forms.DataGridView()
         Me.BtnBuscarEstudio = New System.Windows.Forms.Button()
         Me.TxtCategoria = New System.Windows.Forms.TextBox()
+        Me.LblAdvertenciaCat = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.PanelBotones.SuspendLayout()
         Me.PanelDatosCategoria.SuspendLayout()
         Me.PanelRegistros.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvCategorias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -142,20 +143,38 @@ Partial Class FrmCategorias
         'PanelDatosCategoria
         '
         Me.PanelDatosCategoria.BackColor = System.Drawing.Color.White
+        Me.PanelDatosCategoria.Controls.Add(Me.LblAdvertenciaCat)
+        Me.PanelDatosCategoria.Controls.Add(Me.TxtDescripcion)
+        Me.PanelDatosCategoria.Controls.Add(Me.LblDescripcion)
         Me.PanelDatosCategoria.Controls.Add(Me.TxtNombre)
         Me.PanelDatosCategoria.Controls.Add(Me.Label1)
-        Me.PanelDatosCategoria.Controls.Add(Me.TxtIdentificador)
-        Me.PanelDatosCategoria.Controls.Add(Me.Lbl_nombres)
         Me.PanelDatosCategoria.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelDatosCategoria.Location = New System.Drawing.Point(0, 138)
         Me.PanelDatosCategoria.Name = "PanelDatosCategoria"
         Me.PanelDatosCategoria.Size = New System.Drawing.Size(868, 101)
         Me.PanelDatosCategoria.TabIndex = 2
         '
+        'TxtDescripcion
+        '
+        Me.TxtDescripcion.Location = New System.Drawing.Point(537, 39)
+        Me.TxtDescripcion.Name = "TxtDescripcion"
+        Me.TxtDescripcion.Size = New System.Drawing.Size(247, 22)
+        Me.TxtDescripcion.TabIndex = 14
+        '
+        'LblDescripcion
+        '
+        Me.LblDescripcion.AutoSize = True
+        Me.LblDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
+        Me.LblDescripcion.Location = New System.Drawing.Point(422, 37)
+        Me.LblDescripcion.Name = "LblDescripcion"
+        Me.LblDescripcion.Size = New System.Drawing.Size(109, 22)
+        Me.LblDescripcion.TabIndex = 13
+        Me.LblDescripcion.Text = "Descripción:"
+        '
         'TxtNombre
         '
         Me.TxtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombre.Location = New System.Drawing.Point(537, 31)
+        Me.TxtNombre.Location = New System.Drawing.Point(130, 36)
         Me.TxtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(247, 27)
@@ -165,35 +184,15 @@ Partial Class FrmCategorias
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(448, 36)
+        Me.Label1.Location = New System.Drawing.Point(48, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(78, 22)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Nombre:"
         '
-        'TxtIdentificador
-        '
-        Me.TxtIdentificador.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdentificador.Location = New System.Drawing.Point(162, 31)
-        Me.TxtIdentificador.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TxtIdentificador.Name = "TxtIdentificador"
-        Me.TxtIdentificador.ReadOnly = True
-        Me.TxtIdentificador.Size = New System.Drawing.Size(247, 27)
-        Me.TxtIdentificador.TabIndex = 10
-        '
-        'Lbl_nombres
-        '
-        Me.Lbl_nombres.AutoSize = True
-        Me.Lbl_nombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_nombres.Location = New System.Drawing.Point(39, 36)
-        Me.Lbl_nombres.Name = "Lbl_nombres"
-        Me.Lbl_nombres.Size = New System.Drawing.Size(112, 22)
-        Me.Lbl_nombres.TabIndex = 9
-        Me.Lbl_nombres.Text = "Identificador:"
-        '
         'PanelRegistros
         '
-        Me.PanelRegistros.Controls.Add(Me.DataGridView1)
+        Me.PanelRegistros.Controls.Add(Me.DgvCategorias)
         Me.PanelRegistros.Controls.Add(Me.BtnBuscarEstudio)
         Me.PanelRegistros.Controls.Add(Me.TxtCategoria)
         Me.PanelRegistros.Dock = System.Windows.Forms.DockStyle.Top
@@ -202,18 +201,18 @@ Partial Class FrmCategorias
         Me.PanelRegistros.Size = New System.Drawing.Size(868, 650)
         Me.PanelRegistros.TabIndex = 3
         '
-        'DataGridView1
+        'DgvCategorias
         '
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.DgvCategorias.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(43, 104)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(776, 292)
-        Me.DataGridView1.TabIndex = 11
+        Me.DgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCategorias.Location = New System.Drawing.Point(43, 104)
+        Me.DgvCategorias.Name = "DgvCategorias"
+        Me.DgvCategorias.RowHeadersWidth = 51
+        Me.DgvCategorias.RowTemplate.Height = 24
+        Me.DgvCategorias.Size = New System.Drawing.Size(776, 292)
+        Me.DgvCategorias.TabIndex = 11
         '
         'BtnBuscarEstudio
         '
@@ -236,6 +235,16 @@ Partial Class FrmCategorias
         Me.TxtCategoria.Size = New System.Drawing.Size(657, 27)
         Me.TxtCategoria.TabIndex = 9
         '
+        'LblAdvertenciaCat
+        '
+        Me.LblAdvertenciaCat.AutoSize = True
+        Me.LblAdvertenciaCat.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAdvertenciaCat.Location = New System.Drawing.Point(127, 65)
+        Me.LblAdvertenciaCat.Name = "LblAdvertenciaCat"
+        Me.LblAdvertenciaCat.Size = New System.Drawing.Size(54, 16)
+        Me.LblAdvertenciaCat.TabIndex = 12
+        Me.LblAdvertenciaCat.Text = "Label2"
+        '
         'FrmCategorias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -254,7 +263,7 @@ Partial Class FrmCategorias
         Me.PanelDatosCategoria.PerformLayout()
         Me.PanelRegistros.ResumeLayout(False)
         Me.PanelRegistros.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvCategorias, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -268,12 +277,13 @@ Partial Class FrmCategorias
     Friend WithEvents PanelDatosCategoria As Panel
     Friend WithEvents TxtNombre As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TxtIdentificador As TextBox
-    Friend WithEvents Lbl_nombres As Label
     Friend WithEvents PanelRegistros As Panel
     Friend WithEvents TxtCategoria As TextBox
     Friend WithEvents BtnBuscarEstudio As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgvCategorias As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents BtnSalir As Button
+    Friend WithEvents LblDescripcion As Label
+    Friend WithEvents TxtDescripcion As TextBox
+    Friend WithEvents LblAdvertenciaCat As Label
 End Class
