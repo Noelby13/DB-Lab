@@ -227,5 +227,32 @@ Public Class FrmAgregarEstudio
 
     End Sub
 
+    Private Sub BtnBuscarEstudio_Click(sender As Object, e As EventArgs) Handles BtnBuscarEstudio.Click
+        If TxtBuscar.Text = "" Then
+            MsgBox("Ingrese el nombre del estudio a buscar", MsgBoxStyle.Information, "Buscar Estudio")
+            Exit Sub
+        End If
 
+        Dim ds As New DataSet
+        Dim dEstudio As New DEstudio
+        ds = dEstudio.buscarEstudio(TxtBuscar.Text)
+        DgvEstudio.DataSource = ds.Tables(0)
+        DgvEstudio.Columns(0).Visible = False
+        DgvEstudio.Columns(1).HeaderText = "Nombre"
+        DgvEstudio.Columns(2).HeaderText = "Valor Inferior H"
+        DgvEstudio.Columns(3).HeaderText = "Valor Superior H"
+        DgvEstudio.Columns(4).HeaderText = "Valor Texto H"
+        DgvEstudio.Columns(5).HeaderText = "Valor Inferior M"
+        DgvEstudio.Columns(6).HeaderText = "Valor Superior M"
+        DgvEstudio.Columns(7).HeaderText = "Valor Texto M"
+        DgvEstudio.Columns(8).HeaderText = "Unidad"
+        DgvEstudio.Columns(9).Visible = False
+
+    End Sub
+
+    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
+        If TxtBuscar.Text = "" Then
+            llenarTabla()
+        End If
+    End Sub
 End Class
