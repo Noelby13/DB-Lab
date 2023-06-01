@@ -572,25 +572,25 @@ Partial Class FrmPrincipal
         '
         'PanelFrmHijo
         '
-        Me.PanelFrmHijo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelFrmHijo.BackColor = System.Drawing.SystemColors.Control
+        Me.PanelFrmHijo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelFrmHijo.Location = New System.Drawing.Point(2, 2)
         Me.PanelFrmHijo.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelFrmHijo.Name = "PanelFrmHijo"
-        Me.PanelFrmHijo.Size = New System.Drawing.Size(614, 821)
+        Me.PanelFrmHijo.Size = New System.Drawing.Size(614, 845)
         Me.PanelFrmHijo.TabIndex = 1
         '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.PanelFrmHijo, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(200, 0)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(618, 845)
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(618, 847)
         Me.TableLayoutPanel2.TabIndex = 3
         '
         'FrmPrincipal

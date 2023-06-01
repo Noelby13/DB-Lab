@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dao\DArqueo.vb" />
+    <Compile Include="dao\DCategoria.vb" />
     <Compile Include="dao\DCliente.vb" />
     <Compile Include="dao\DEstudio.vb" />
     <Compile Include="dao\DFactura.vb" />
@@ -89,6 +90,7 @@
       <DependentUpon>DsDBLab.xsd</DependentUpon>
     </Compile>
     <Compile Include="entidades\ArqueoCaja.vb" />
+    <Compile Include="entidades\Categoria.vb" />
     <Compile Include="entidades\DetalleFactura.vb" />
     <Compile Include="entidades\Estudio.vb" />
     <Compile Include="entidades\Factura.vb" />
@@ -145,6 +147,12 @@
       <DependentUpon>FrmDoctor.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmDoctor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmExamen.Designer.vb">
+      <DependentUpon>FrmExamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmExamen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmPrueba.Designer.vb">
@@ -244,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmDoctor.resx">
       <DependentUpon>FrmDoctor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmExamen.resx">
+      <DependentUpon>FrmExamen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPrueba.resx">
       <DependentUpon>FrmPrueba.vb</DependentUpon>
