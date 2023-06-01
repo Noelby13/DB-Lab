@@ -265,7 +265,7 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub BtnAgregarExamen_Click(sender As Object, e As EventArgs) Handles BtnAgregarExamen.Click
-        abrirFrmHijo(New FrmAgregarExamen())
+        abrirFrmHijo(New FrmExamen())
     End Sub
 
     Private Sub BtnCancelarFactura_Click(sender As Object, e As EventArgs) Handles BtnCancelarFactura.Click
@@ -291,4 +291,6 @@ Public Class FrmPrincipal
     Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
         mostrarSubMenu(PanelSubReportes)
     End Sub
+
+
 End Class
