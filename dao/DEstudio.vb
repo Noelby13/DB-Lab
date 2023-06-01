@@ -91,4 +91,19 @@ Public Class DEstudio
 
     End Function
 
+    Public Function buscarEstudio(ByVal cadena As String) As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "select idEstudio, nombreEstudio as 'Nombre', valorInferiorH, valorSuperiorH, valorTextoH , valorInferiorM, valorSuperiorM , valorTextoM, U.nombre, U.idUnidad from Tbl_Estudio inner join Tbl_Unidad as U on Tbl_Estudio.idUnidad =U.idUnidad where  U.estado = 1 and nombreEstudio like @nombre"
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@nombre", "%" + cadena + "%")
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al buscar el estudio", MsgBoxStyle.Critical, "Error")
+        End Try
+        Return ds
+    End Function
+
 End Class
