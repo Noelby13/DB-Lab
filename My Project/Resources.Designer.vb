@@ -113,9 +113,29 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property leftButton26() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("leftButton26", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property okButton24() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("okButton24", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property rightButton26() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("rightButton26", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
