@@ -81,8 +81,9 @@ Partial Class FrmExamen
         Me.PanelLeyenda.Controls.Add(Me.Label1)
         Me.PanelLeyenda.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLeyenda.Location = New System.Drawing.Point(0, 0)
+        Me.PanelLeyenda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelLeyenda.Name = "PanelLeyenda"
-        Me.PanelLeyenda.Size = New System.Drawing.Size(964, 51)
+        Me.PanelLeyenda.Size = New System.Drawing.Size(1285, 63)
         Me.PanelLeyenda.TabIndex = 3
         '
         'BtnSalir
@@ -90,9 +91,10 @@ Partial Class FrmExamen
         Me.BtnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.ForeColor = System.Drawing.Color.White
-        Me.BtnSalir.Location = New System.Drawing.Point(886, 11)
+        Me.BtnSalir.Location = New System.Drawing.Point(1181, 14)
+        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(68, 32)
+        Me.BtnSalir.Size = New System.Drawing.Size(91, 39)
         Me.BtnSalir.TabIndex = 1
         Me.BtnSalir.Text = "Salir"
         Me.BtnSalir.UseVisualStyleBackColor = False
@@ -102,9 +104,10 @@ Partial Class FrmExamen
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(10, 15)
+        Me.Label1.Location = New System.Drawing.Point(13, 18)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(165, 20)
+        Me.Label1.Size = New System.Drawing.Size(198, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Registro Examenes"
         '
@@ -116,19 +119,20 @@ Partial Class FrmExamen
         Me.PanelFunciones.Controls.Add(Me.BtnLimpiar)
         Me.PanelFunciones.Controls.Add(Me.BtnGuardarIcon)
         Me.PanelFunciones.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelFunciones.Location = New System.Drawing.Point(0, 51)
-        Me.PanelFunciones.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelFunciones.Location = New System.Drawing.Point(0, 63)
+        Me.PanelFunciones.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelFunciones.Name = "PanelFunciones"
-        Me.PanelFunciones.Size = New System.Drawing.Size(964, 60)
+        Me.PanelFunciones.Size = New System.Drawing.Size(1285, 74)
         Me.PanelFunciones.TabIndex = 4
         '
         'BtnBorrar
         '
         Me.BtnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnBorrar.Image = Global.DB_Lab.My.Resources.Resources.deleteButton
-        Me.BtnBorrar.Location = New System.Drawing.Point(873, 6)
+        Me.BtnBorrar.Location = New System.Drawing.Point(1164, 7)
+        Me.BtnBorrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnBorrar.Name = "BtnBorrar"
-        Me.BtnBorrar.Size = New System.Drawing.Size(81, 46)
+        Me.BtnBorrar.Size = New System.Drawing.Size(108, 57)
         Me.BtnBorrar.TabIndex = 5
         Me.BtnBorrar.UseVisualStyleBackColor = True
         '
@@ -136,9 +140,10 @@ Partial Class FrmExamen
         '
         Me.BtnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnEditar.Image = Global.DB_Lab.My.Resources.Resources.editButton
-        Me.BtnEditar.Location = New System.Drawing.Point(763, 6)
+        Me.BtnEditar.Location = New System.Drawing.Point(1017, 7)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnEditar.Name = "BtnEditar"
-        Me.BtnEditar.Size = New System.Drawing.Size(81, 46)
+        Me.BtnEditar.Size = New System.Drawing.Size(108, 57)
         Me.BtnEditar.TabIndex = 4
         Me.BtnEditar.UseVisualStyleBackColor = True
         '
@@ -146,9 +151,10 @@ Partial Class FrmExamen
         '
         Me.BtnLimpiar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnLimpiar.Image = Global.DB_Lab.My.Resources.Resources.cleanButton
-        Me.BtnLimpiar.Location = New System.Drawing.Point(544, 6)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(725, 7)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(81, 46)
+        Me.BtnLimpiar.Size = New System.Drawing.Size(108, 57)
         Me.BtnLimpiar.TabIndex = 2
         Me.BtnLimpiar.UseVisualStyleBackColor = True
         '
@@ -156,9 +162,10 @@ Partial Class FrmExamen
         '
         Me.BtnGuardarIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnGuardarIcon.Image = Global.DB_Lab.My.Resources.Resources.saveButton
-        Me.BtnGuardarIcon.Location = New System.Drawing.Point(654, 6)
+        Me.BtnGuardarIcon.Location = New System.Drawing.Point(872, 7)
+        Me.BtnGuardarIcon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnGuardarIcon.Name = "BtnGuardarIcon"
-        Me.BtnGuardarIcon.Size = New System.Drawing.Size(81, 46)
+        Me.BtnGuardarIcon.Size = New System.Drawing.Size(108, 57)
         Me.BtnGuardarIcon.TabIndex = 3
         Me.BtnGuardarIcon.UseVisualStyleBackColor = True
         '
@@ -174,12 +181,13 @@ Partial Class FrmExamen
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.PanelBuscar, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 111)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 137)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.54546!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.45454!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(964, 704)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1285, 866)
         Me.TableLayoutPanel1.TabIndex = 5
         '
         'PanelDatos
@@ -187,10 +195,10 @@ Partial Class FrmExamen
         Me.PanelDatos.BackColor = System.Drawing.Color.White
         Me.PanelDatos.Controls.Add(Me.GrbDatosEstudios)
         Me.PanelDatos.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelDatos.Location = New System.Drawing.Point(2, 2)
-        Me.PanelDatos.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelDatos.Location = New System.Drawing.Point(3, 2)
+        Me.PanelDatos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelDatos.Name = "PanelDatos"
-        Me.PanelDatos.Size = New System.Drawing.Size(609, 380)
+        Me.PanelDatos.Size = New System.Drawing.Size(811, 468)
         Me.PanelDatos.TabIndex = 5
         '
         'GrbDatosEstudios
@@ -207,10 +215,10 @@ Partial Class FrmExamen
         Me.GrbDatosEstudios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GrbDatosEstudios.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrbDatosEstudios.Location = New System.Drawing.Point(0, 0)
-        Me.GrbDatosEstudios.Margin = New System.Windows.Forms.Padding(2)
+        Me.GrbDatosEstudios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GrbDatosEstudios.Name = "GrbDatosEstudios"
-        Me.GrbDatosEstudios.Padding = New System.Windows.Forms.Padding(2)
-        Me.GrbDatosEstudios.Size = New System.Drawing.Size(609, 380)
+        Me.GrbDatosEstudios.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GrbDatosEstudios.Size = New System.Drawing.Size(811, 468)
         Me.GrbDatosEstudios.TabIndex = 0
         Me.GrbDatosEstudios.TabStop = False
         Me.GrbDatosEstudios.Text = "Datos del examen"
@@ -225,18 +233,21 @@ Partial Class FrmExamen
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.DgvDetalleExamen)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
-        Me.GroupBox2.Location = New System.Drawing.Point(10, 168)
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 207)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(590, 195)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(786, 240)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Listado de Estudios dentro del examen"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(418, 204)
+        Me.Button1.Location = New System.Drawing.Point(557, 251)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(122, 25)
+        Me.Button1.Size = New System.Drawing.Size(163, 31)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Eliminar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -244,17 +255,19 @@ Partial Class FrmExamen
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(174, 204)
+        Me.ComboBox2.Location = New System.Drawing.Point(232, 251)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(181, 25)
+        Me.ComboBox2.Size = New System.Drawing.Size(240, 30)
         Me.ComboBox2.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 207)
+        Me.Label2.Location = New System.Drawing.Point(8, 255)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 18)
+        Me.Label2.Size = New System.Drawing.Size(170, 22)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Seleccionar prueba:"
         '
@@ -268,17 +281,20 @@ Partial Class FrmExamen
         Me.DgvDetalleExamen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvDetalleExamen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvDetalleExamen.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Nombre})
-        Me.DgvDetalleExamen.Location = New System.Drawing.Point(9, 37)
+        Me.DgvDetalleExamen.Location = New System.Drawing.Point(12, 46)
+        Me.DgvDetalleExamen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DgvDetalleExamen.MultiSelect = False
         Me.DgvDetalleExamen.Name = "DgvDetalleExamen"
         Me.DgvDetalleExamen.ReadOnly = True
+        Me.DgvDetalleExamen.RowHeadersWidth = 51
         Me.DgvDetalleExamen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvDetalleExamen.Size = New System.Drawing.Size(575, 152)
+        Me.DgvDetalleExamen.Size = New System.Drawing.Size(766, 187)
         Me.DgvDetalleExamen.TabIndex = 0
         '
         'ID
         '
         Me.ID.HeaderText = "ID"
+        Me.ID.MinimumWidth = 6
         Me.ID.Name = "ID"
         Me.ID.ReadOnly = True
         Me.ID.Visible = False
@@ -286,40 +302,45 @@ Partial Class FrmExamen
         'Nombre
         '
         Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.MinimumWidth = 6
         Me.Nombre.Name = "Nombre"
         Me.Nombre.ReadOnly = True
         '
         'TxtDescripcion
         '
-        Me.TxtDescripcion.Location = New System.Drawing.Point(99, 72)
+        Me.TxtDescripcion.Location = New System.Drawing.Point(132, 89)
+        Me.TxtDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtDescripcion.Multiline = True
         Me.TxtDescripcion.Name = "TxtDescripcion"
         Me.TxtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TxtDescripcion.Size = New System.Drawing.Size(215, 64)
+        Me.TxtDescripcion.Size = New System.Drawing.Size(285, 78)
         Me.TxtDescripcion.TabIndex = 8
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(5, 72)
+        Me.Label11.Location = New System.Drawing.Point(7, 89)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(91, 18)
+        Me.Label11.Size = New System.Drawing.Size(109, 22)
         Me.Label11.TabIndex = 17
         Me.Label11.Text = "Descripción:"
         '
         'TxtPrecio
         '
-        Me.TxtPrecio.Location = New System.Drawing.Point(416, 67)
+        Me.TxtPrecio.Location = New System.Drawing.Point(555, 82)
+        Me.TxtPrecio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtPrecio.Name = "TxtPrecio"
-        Me.TxtPrecio.Size = New System.Drawing.Size(77, 24)
+        Me.TxtPrecio.Size = New System.Drawing.Size(101, 28)
         Me.TxtPrecio.TabIndex = 9
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(361, 72)
+        Me.Label7.Location = New System.Drawing.Point(481, 89)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 18)
+        Me.Label7.Size = New System.Drawing.Size(66, 22)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Precio:"
         '
@@ -327,34 +348,37 @@ Partial Class FrmExamen
         '
         Me.CbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbxCategoria.FormattingEnabled = True
-        Me.CbxCategoria.Location = New System.Drawing.Point(416, 26)
-        Me.CbxCategoria.Margin = New System.Windows.Forms.Padding(2)
+        Me.CbxCategoria.Location = New System.Drawing.Point(555, 32)
+        Me.CbxCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CbxCategoria.Name = "CbxCategoria"
-        Me.CbxCategoria.Size = New System.Drawing.Size(153, 25)
+        Me.CbxCategoria.Size = New System.Drawing.Size(203, 30)
         Me.CbxCategoria.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(341, 31)
+        Me.Label4.Location = New System.Drawing.Point(455, 38)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 18)
+        Me.Label4.Size = New System.Drawing.Size(93, 22)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Categoría:"
         '
         'TxtNombre
         '
-        Me.TxtNombre.Location = New System.Drawing.Point(99, 26)
+        Me.TxtNombre.Location = New System.Drawing.Point(132, 32)
+        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(215, 24)
+        Me.TxtNombre.Size = New System.Drawing.Size(285, 28)
         Me.TxtNombre.TabIndex = 6
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 31)
+        Me.Label3.Location = New System.Drawing.Point(21, 38)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 18)
+        Me.Label3.Size = New System.Drawing.Size(78, 22)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Nombre:"
         '
@@ -367,11 +391,11 @@ Partial Class FrmExamen
         Me.GroupBox1.Controls.Add(Me.TxtBuscarEstudio)
         Me.GroupBox1.Controls.Add(Me.DgvEstudios)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(722, 2)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Location = New System.Drawing.Point(962, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(240, 380)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(320, 468)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Lista de Estudios"
@@ -380,9 +404,10 @@ Partial Class FrmExamen
         '
         Me.TxtBuscarEstudio.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtBuscarEstudio.Location = New System.Drawing.Point(5, 22)
+        Me.TxtBuscarEstudio.Location = New System.Drawing.Point(7, 27)
+        Me.TxtBuscarEstudio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtBuscarEstudio.Name = "TxtBuscarEstudio"
-        Me.TxtBuscarEstudio.Size = New System.Drawing.Size(231, 24)
+        Me.TxtBuscarEstudio.Size = New System.Drawing.Size(307, 28)
         Me.TxtBuscarEstudio.TabIndex = 13
         '
         'DgvEstudios
@@ -394,15 +419,15 @@ Partial Class FrmExamen
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DgvEstudios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvEstudios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvEstudios.Location = New System.Drawing.Point(4, 72)
-        Me.DgvEstudios.Margin = New System.Windows.Forms.Padding(2)
+        Me.DgvEstudios.Location = New System.Drawing.Point(5, 89)
+        Me.DgvEstudios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DgvEstudios.MultiSelect = False
         Me.DgvEstudios.Name = "DgvEstudios"
         Me.DgvEstudios.ReadOnly = True
         Me.DgvEstudios.RowHeadersWidth = 51
         Me.DgvEstudios.RowTemplate.Height = 24
         Me.DgvEstudios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvEstudios.Size = New System.Drawing.Size(231, 304)
+        Me.DgvEstudios.Size = New System.Drawing.Size(308, 374)
         Me.DgvEstudios.TabIndex = 12
         '
         'Panel1
@@ -413,9 +438,10 @@ Partial Class FrmExamen
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.BtnQuitarD)
         Me.Panel1.Controls.Add(Me.BtnAñadirD)
-        Me.Panel1.Location = New System.Drawing.Point(616, 3)
+        Me.Panel1.Location = New System.Drawing.Point(821, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(101, 378)
+        Me.Panel1.Size = New System.Drawing.Size(134, 464)
         Me.Panel1.TabIndex = 8
         '
         'BtnQuitarD
@@ -424,9 +450,10 @@ Partial Class FrmExamen
         Me.BtnQuitarD.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnQuitarD.Image = Global.DB_Lab.My.Resources.Resources.rightButton26
         Me.BtnQuitarD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnQuitarD.Location = New System.Drawing.Point(0, 275)
+        Me.BtnQuitarD.Location = New System.Drawing.Point(0, 338)
+        Me.BtnQuitarD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnQuitarD.Name = "BtnQuitarD"
-        Me.BtnQuitarD.Size = New System.Drawing.Size(98, 45)
+        Me.BtnQuitarD.Size = New System.Drawing.Size(131, 54)
         Me.BtnQuitarD.TabIndex = 1
         Me.BtnQuitarD.Text = "Quitar"
         Me.BtnQuitarD.UseVisualStyleBackColor = True
@@ -437,9 +464,10 @@ Partial Class FrmExamen
         Me.BtnAñadirD.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAñadirD.Image = Global.DB_Lab.My.Resources.Resources.leftButton26
         Me.BtnAñadirD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAñadirD.Location = New System.Drawing.Point(3, 204)
+        Me.BtnAñadirD.Location = New System.Drawing.Point(4, 251)
+        Me.BtnAñadirD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnAñadirD.Name = "BtnAñadirD"
-        Me.BtnAñadirD.Size = New System.Drawing.Size(98, 45)
+        Me.BtnAñadirD.Size = New System.Drawing.Size(131, 54)
         Me.BtnAñadirD.TabIndex = 0
         Me.BtnAñadirD.Text = "Añadir"
         Me.BtnAñadirD.UseVisualStyleBackColor = True
@@ -450,9 +478,10 @@ Partial Class FrmExamen
         Me.TableLayoutPanel1.SetColumnSpan(Me.PanelBuscar, 3)
         Me.PanelBuscar.Controls.Add(Me.GbxDatos)
         Me.PanelBuscar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelBuscar.Location = New System.Drawing.Point(3, 387)
+        Me.PanelBuscar.Location = New System.Drawing.Point(4, 476)
+        Me.PanelBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelBuscar.Name = "PanelBuscar"
-        Me.PanelBuscar.Size = New System.Drawing.Size(958, 314)
+        Me.PanelBuscar.Size = New System.Drawing.Size(1277, 386)
         Me.PanelBuscar.TabIndex = 9
         '
         'GbxDatos
@@ -464,8 +493,10 @@ Partial Class FrmExamen
         Me.GbxDatos.Controls.Add(Me.BtnBuscar)
         Me.GbxDatos.Controls.Add(Me.TxtBuscar)
         Me.GbxDatos.Location = New System.Drawing.Point(0, 0)
+        Me.GbxDatos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GbxDatos.Name = "GbxDatos"
-        Me.GbxDatos.Size = New System.Drawing.Size(958, 317)
+        Me.GbxDatos.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GbxDatos.Size = New System.Drawing.Size(1277, 390)
         Me.GbxDatos.TabIndex = 0
         Me.GbxDatos.TabStop = False
         Me.GbxDatos.Text = "Buscar examen"
@@ -477,13 +508,16 @@ Partial Class FrmExamen
         Me.DgvExamenes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DgvExamenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvExamenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvExamenes.Location = New System.Drawing.Point(11, 72)
+        Me.DgvExamenes.Location = New System.Drawing.Point(15, 89)
+        Me.DgvExamenes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DgvExamenes.MultiSelect = False
         Me.DgvExamenes.Name = "DgvExamenes"
         Me.DgvExamenes.ReadOnly = True
+        Me.DgvExamenes.RowHeadersWidth = 51
         Me.DgvExamenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvExamenes.Size = New System.Drawing.Size(938, 207)
+        Me.DgvExamenes.Size = New System.Drawing.Size(1251, 255)
         Me.DgvExamenes.TabIndex = 35
         '
         'BtnBuscar
@@ -491,10 +525,10 @@ Partial Class FrmExamen
         Me.BtnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscar.Image = Global.DB_Lab.My.Resources.Resources.searchButton
         Me.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscar.Location = New System.Drawing.Point(427, 16)
-        Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnBuscar.Location = New System.Drawing.Point(569, 20)
+        Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(81, 46)
+        Me.BtnBuscar.Size = New System.Drawing.Size(108, 57)
         Me.BtnBuscar.TabIndex = 34
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -502,19 +536,21 @@ Partial Class FrmExamen
         '
         'TxtBuscar
         '
-        Me.TxtBuscar.Location = New System.Drawing.Point(9, 30)
+        Me.TxtBuscar.Location = New System.Drawing.Point(12, 37)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(386, 20)
+        Me.TxtBuscar.Size = New System.Drawing.Size(513, 22)
         Me.TxtBuscar.TabIndex = 0
         '
         'FrmExamen
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(964, 815)
+        Me.ClientSize = New System.Drawing.Size(1285, 1003)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.PanelFunciones)
         Me.Controls.Add(Me.PanelLeyenda)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmExamen"
         Me.Text = "FrmExamen"
         Me.PanelLeyenda.ResumeLayout(False)

@@ -113,6 +113,25 @@ Public Class DExamen
         Return resultado
     End Function
 
+    Public Function existeExamen(ByVal nombre As String) As Boolean
+        Dim resultado = False
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "select count(*) from Tbl_Examen where nombre = @nombre"
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@nombre", nombre)
+            conn.Open()
+            Dim count = cmd.ExecuteScalar()
+            If count > 0 Then
+                resultado = True
+            End If
+            conn.Close()
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al verificar si existe el examen", MsgBoxStyle.Information, "Verificar examen")
+        End Try
+        Return resultado
+
+    End Function
 
 
 
