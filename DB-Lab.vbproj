@@ -77,6 +77,8 @@
     <Compile Include="dao\DCategoria.vb" />
     <Compile Include="dao\DCliente.vb" />
     <Compile Include="dao\DEstudio.vb" />
+    <Compile Include="dao\DExamen.vb" />
+    <Compile Include="dao\DExamenEstudio.vb" />
     <Compile Include="dao\DFactura.vb" />
     <Compile Include="dao\DFuncion.vb" />
     <Compile Include="dao\DRolFuncion.vb" />
@@ -93,6 +95,8 @@
     <Compile Include="entidades\Categoria.vb" />
     <Compile Include="entidades\DetalleFactura.vb" />
     <Compile Include="entidades\Estudio.vb" />
+    <Compile Include="entidades\Examen.vb" />
+    <Compile Include="entidades\ExamenEstudio.vb" />
     <Compile Include="entidades\Factura.vb" />
     <Compile Include="entidades\Funcion.vb" />
     <Compile Include="entidades\RolFuncion.vb" />
@@ -321,6 +325,8 @@
     <None Include="img\deleteButton.png" />
     <None Include="img\okButton24.png" />
     <None Include="img\cancelarButton24.png" />
+    <Content Include="img\rightButton26.png" />
+    <Content Include="img\leftButton26.png" />
     <Content Include="img\saveButton.png" />
     <Content Include="img\cleanButton.png" />
   </ItemGroup>

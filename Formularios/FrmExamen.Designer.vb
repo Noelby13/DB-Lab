@@ -31,39 +31,47 @@ Partial Class FrmExamen
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnGuardarIcon = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DgvEstudios = New System.Windows.Forms.DataGridView()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.PanelDatos = New System.Windows.Forms.Panel()
         Me.GrbDatosEstudios = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DgvDetalleExamen = New System.Windows.Forms.DataGridView()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TxtDescripcion = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TxtPrecio = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CbxCategoria = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.GbxBuscar = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TxtBuscarEstudio = New System.Windows.Forms.TextBox()
+        Me.DgvEstudios = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnQuitarD = New System.Windows.Forms.Button()
+        Me.BtnAñadirD = New System.Windows.Forms.Button()
+        Me.PanelBuscar = New System.Windows.Forms.Panel()
+        Me.GbxDatos = New System.Windows.Forms.GroupBox()
+        Me.DgvExamenes = New System.Windows.Forms.DataGridView()
         Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.PanelLeyenda.SuspendLayout()
         Me.PanelFunciones.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.DgvEstudios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
         Me.GrbDatosEstudios.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GbxBuscar.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvDetalleExamen, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.DgvEstudios, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.PanelBuscar.SuspendLayout()
+        Me.GbxDatos.SuspendLayout()
+        CType(Me.DgvExamenes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelLeyenda
@@ -156,69 +164,23 @@ Partial Class FrmExamen
         '
         'TableLayoutPanel1
         '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.00415!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.99585!))
-        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 0)
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.White
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.63637!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25253!))
         Me.TableLayoutPanel1.Controls.Add(Me.PanelDatos, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.GbxBuscar, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.PanelBuscar, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 111)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.54546!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.45454!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(964, 704)
         Me.TableLayoutPanel1.TabIndex = 5
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.Controls.Add(Me.DgvEstudios)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(619, 2)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(343, 452)
-        Me.GroupBox1.TabIndex = 6
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Lista de Estudios"
-        '
-        'DgvEstudios
-        '
-        Me.DgvEstudios.AllowUserToAddRows = False
-        Me.DgvEstudios.AllowUserToDeleteRows = False
-        Me.DgvEstudios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DgvEstudios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvEstudios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvEstudios.Location = New System.Drawing.Point(4, 72)
-        Me.DgvEstudios.Margin = New System.Windows.Forms.Padding(2)
-        Me.DgvEstudios.MultiSelect = False
-        Me.DgvEstudios.Name = "DgvEstudios"
-        Me.DgvEstudios.ReadOnly = True
-        Me.DgvEstudios.RowHeadersWidth = 51
-        Me.DgvEstudios.RowTemplate.Height = 24
-        Me.DgvEstudios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvEstudios.Size = New System.Drawing.Size(334, 376)
-        Me.DgvEstudios.TabIndex = 12
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox5.Location = New System.Drawing.Point(5, 25)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(333, 29)
-        Me.TextBox5.TabIndex = 10
         '
         'PanelDatos
         '
@@ -228,17 +190,17 @@ Partial Class FrmExamen
         Me.PanelDatos.Location = New System.Drawing.Point(2, 2)
         Me.PanelDatos.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelDatos.Name = "PanelDatos"
-        Me.PanelDatos.Size = New System.Drawing.Size(613, 452)
+        Me.PanelDatos.Size = New System.Drawing.Size(609, 380)
         Me.PanelDatos.TabIndex = 5
         '
         'GrbDatosEstudios
         '
         Me.GrbDatosEstudios.Controls.Add(Me.GroupBox2)
-        Me.GrbDatosEstudios.Controls.Add(Me.TextBox1)
+        Me.GrbDatosEstudios.Controls.Add(Me.TxtDescripcion)
         Me.GrbDatosEstudios.Controls.Add(Me.Label11)
-        Me.GrbDatosEstudios.Controls.Add(Me.TextBox3)
+        Me.GrbDatosEstudios.Controls.Add(Me.TxtPrecio)
         Me.GrbDatosEstudios.Controls.Add(Me.Label7)
-        Me.GrbDatosEstudios.Controls.Add(Me.ComboBox1)
+        Me.GrbDatosEstudios.Controls.Add(Me.CbxCategoria)
         Me.GrbDatosEstudios.Controls.Add(Me.Label4)
         Me.GrbDatosEstudios.Controls.Add(Me.TxtNombre)
         Me.GrbDatosEstudios.Controls.Add(Me.Label3)
@@ -248,7 +210,7 @@ Partial Class FrmExamen
         Me.GrbDatosEstudios.Margin = New System.Windows.Forms.Padding(2)
         Me.GrbDatosEstudios.Name = "GrbDatosEstudios"
         Me.GrbDatosEstudios.Padding = New System.Windows.Forms.Padding(2)
-        Me.GrbDatosEstudios.Size = New System.Drawing.Size(613, 452)
+        Me.GrbDatosEstudios.Size = New System.Drawing.Size(609, 380)
         Me.GrbDatosEstudios.TabIndex = 0
         Me.GrbDatosEstudios.TabStop = False
         Me.GrbDatosEstudios.Text = "Datos del examen"
@@ -261,14 +223,14 @@ Partial Class FrmExamen
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.ComboBox2)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.DataGridView2)
+        Me.GroupBox2.Controls.Add(Me.DgvDetalleExamen)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
         Me.GroupBox2.Location = New System.Drawing.Point(10, 168)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(594, 267)
+        Me.GroupBox2.Size = New System.Drawing.Size(590, 195)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Listado de examenes dentro de la prueba"
+        Me.GroupBox2.Text = "Listado de Estudios dentro del examen"
         '
         'Button1
         '
@@ -296,25 +258,45 @@ Partial Class FrmExamen
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Seleccionar prueba:"
         '
-        'DataGridView2
+        'DgvDetalleExamen
         '
-        Me.DataGridView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.DgvDetalleExamen.AllowUserToAddRows = False
+        Me.DgvDetalleExamen.AllowUserToDeleteRows = False
+        Me.DgvDetalleExamen.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(9, 37)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(579, 161)
-        Me.DataGridView2.TabIndex = 0
+        Me.DgvDetalleExamen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvDetalleExamen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvDetalleExamen.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Nombre})
+        Me.DgvDetalleExamen.Location = New System.Drawing.Point(9, 37)
+        Me.DgvDetalleExamen.MultiSelect = False
+        Me.DgvDetalleExamen.Name = "DgvDetalleExamen"
+        Me.DgvDetalleExamen.ReadOnly = True
+        Me.DgvDetalleExamen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvDetalleExamen.Size = New System.Drawing.Size(575, 152)
+        Me.DgvDetalleExamen.TabIndex = 0
         '
-        'TextBox1
+        'ID
         '
-        Me.TextBox1.Location = New System.Drawing.Point(99, 72)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(215, 64)
-        Me.TextBox1.TabIndex = 8
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Visible = False
+        '
+        'Nombre
+        '
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
+        '
+        'TxtDescripcion
+        '
+        Me.TxtDescripcion.Location = New System.Drawing.Point(99, 72)
+        Me.TxtDescripcion.Multiline = True
+        Me.TxtDescripcion.Name = "TxtDescripcion"
+        Me.TxtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TxtDescripcion.Size = New System.Drawing.Size(215, 64)
+        Me.TxtDescripcion.TabIndex = 8
         '
         'Label11
         '
@@ -325,12 +307,12 @@ Partial Class FrmExamen
         Me.Label11.TabIndex = 17
         Me.Label11.Text = "Descripción:"
         '
-        'TextBox3
+        'TxtPrecio
         '
-        Me.TextBox3.Location = New System.Drawing.Point(416, 67)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(77, 24)
-        Me.TextBox3.TabIndex = 9
+        Me.TxtPrecio.Location = New System.Drawing.Point(416, 67)
+        Me.TxtPrecio.Name = "TxtPrecio"
+        Me.TxtPrecio.Size = New System.Drawing.Size(77, 24)
+        Me.TxtPrecio.TabIndex = 9
         '
         'Label7
         '
@@ -341,14 +323,15 @@ Partial Class FrmExamen
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Precio:"
         '
-        'ComboBox1
+        'CbxCategoria
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(416, 26)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(153, 25)
-        Me.ComboBox1.TabIndex = 7
+        Me.CbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CbxCategoria.FormattingEnabled = True
+        Me.CbxCategoria.Location = New System.Drawing.Point(416, 26)
+        Me.CbxCategoria.Margin = New System.Windows.Forms.Padding(2)
+        Me.CbxCategoria.Name = "CbxCategoria"
+        Me.CbxCategoria.Size = New System.Drawing.Size(153, 25)
+        Me.CbxCategoria.TabIndex = 7
         '
         'Label4
         '
@@ -375,28 +358,140 @@ Partial Class FrmExamen
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Nombre:"
         '
-        'GbxBuscar
+        'GroupBox1
         '
-        Me.GbxBuscar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.SetColumnSpan(Me.GbxBuscar, 2)
-        Me.GbxBuscar.Controls.Add(Me.BtnBuscar)
-        Me.GbxBuscar.Controls.Add(Me.TextBox2)
-        Me.GbxBuscar.Controls.Add(Me.DataGridView1)
-        Me.GbxBuscar.Location = New System.Drawing.Point(3, 459)
-        Me.GbxBuscar.Name = "GbxBuscar"
-        Me.GbxBuscar.Size = New System.Drawing.Size(958, 242)
-        Me.GbxBuscar.TabIndex = 7
-        Me.GbxBuscar.TabStop = False
-        Me.GbxBuscar.Text = "Buscar Examenes"
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.TxtBuscarEstudio)
+        Me.GroupBox1.Controls.Add(Me.DgvEstudios)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(722, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(240, 380)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Lista de Estudios"
+        '
+        'TxtBuscarEstudio
+        '
+        Me.TxtBuscarEstudio.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtBuscarEstudio.Location = New System.Drawing.Point(5, 22)
+        Me.TxtBuscarEstudio.Name = "TxtBuscarEstudio"
+        Me.TxtBuscarEstudio.Size = New System.Drawing.Size(231, 24)
+        Me.TxtBuscarEstudio.TabIndex = 13
+        '
+        'DgvEstudios
+        '
+        Me.DgvEstudios.AllowUserToAddRows = False
+        Me.DgvEstudios.AllowUserToDeleteRows = False
+        Me.DgvEstudios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DgvEstudios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvEstudios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvEstudios.Location = New System.Drawing.Point(4, 72)
+        Me.DgvEstudios.Margin = New System.Windows.Forms.Padding(2)
+        Me.DgvEstudios.MultiSelect = False
+        Me.DgvEstudios.Name = "DgvEstudios"
+        Me.DgvEstudios.ReadOnly = True
+        Me.DgvEstudios.RowHeadersWidth = 51
+        Me.DgvEstudios.RowTemplate.Height = 24
+        Me.DgvEstudios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvEstudios.Size = New System.Drawing.Size(231, 304)
+        Me.DgvEstudios.TabIndex = 12
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.BtnQuitarD)
+        Me.Panel1.Controls.Add(Me.BtnAñadirD)
+        Me.Panel1.Location = New System.Drawing.Point(616, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(101, 378)
+        Me.Panel1.TabIndex = 8
+        '
+        'BtnQuitarD
+        '
+        Me.BtnQuitarD.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.BtnQuitarD.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnQuitarD.Image = Global.DB_Lab.My.Resources.Resources.rightButton26
+        Me.BtnQuitarD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnQuitarD.Location = New System.Drawing.Point(0, 275)
+        Me.BtnQuitarD.Name = "BtnQuitarD"
+        Me.BtnQuitarD.Size = New System.Drawing.Size(98, 45)
+        Me.BtnQuitarD.TabIndex = 1
+        Me.BtnQuitarD.Text = "Quitar"
+        Me.BtnQuitarD.UseVisualStyleBackColor = True
+        '
+        'BtnAñadirD
+        '
+        Me.BtnAñadirD.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.BtnAñadirD.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAñadirD.Image = Global.DB_Lab.My.Resources.Resources.leftButton26
+        Me.BtnAñadirD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnAñadirD.Location = New System.Drawing.Point(3, 204)
+        Me.BtnAñadirD.Name = "BtnAñadirD"
+        Me.BtnAñadirD.Size = New System.Drawing.Size(98, 45)
+        Me.BtnAñadirD.TabIndex = 0
+        Me.BtnAñadirD.Text = "Añadir"
+        Me.BtnAñadirD.UseVisualStyleBackColor = True
+        '
+        'PanelBuscar
+        '
+        Me.PanelBuscar.AutoScroll = True
+        Me.TableLayoutPanel1.SetColumnSpan(Me.PanelBuscar, 3)
+        Me.PanelBuscar.Controls.Add(Me.GbxDatos)
+        Me.PanelBuscar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelBuscar.Location = New System.Drawing.Point(3, 387)
+        Me.PanelBuscar.Name = "PanelBuscar"
+        Me.PanelBuscar.Size = New System.Drawing.Size(958, 314)
+        Me.PanelBuscar.TabIndex = 9
+        '
+        'GbxDatos
+        '
+        Me.GbxDatos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GbxDatos.Controls.Add(Me.DgvExamenes)
+        Me.GbxDatos.Controls.Add(Me.BtnBuscar)
+        Me.GbxDatos.Controls.Add(Me.TxtBuscar)
+        Me.GbxDatos.Location = New System.Drawing.Point(0, 0)
+        Me.GbxDatos.Name = "GbxDatos"
+        Me.GbxDatos.Size = New System.Drawing.Size(958, 317)
+        Me.GbxDatos.TabIndex = 0
+        Me.GbxDatos.TabStop = False
+        Me.GbxDatos.Text = "Buscar examen"
+        '
+        'DgvExamenes
+        '
+        Me.DgvExamenes.AllowUserToAddRows = False
+        Me.DgvExamenes.AllowUserToDeleteRows = False
+        Me.DgvExamenes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DgvExamenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvExamenes.Location = New System.Drawing.Point(11, 72)
+        Me.DgvExamenes.MultiSelect = False
+        Me.DgvExamenes.Name = "DgvExamenes"
+        Me.DgvExamenes.ReadOnly = True
+        Me.DgvExamenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvExamenes.Size = New System.Drawing.Size(938, 207)
+        Me.DgvExamenes.TabIndex = 35
         '
         'BtnBuscar
         '
         Me.BtnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscar.Image = Global.DB_Lab.My.Resources.Resources.searchButton
         Me.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscar.Location = New System.Drawing.Point(246, 20)
+        Me.BtnBuscar.Location = New System.Drawing.Point(427, 16)
         Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(81, 46)
@@ -405,23 +500,12 @@ Partial Class FrmExamen
         Me.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBuscar.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'TxtBuscar
         '
-        Me.TextBox2.Location = New System.Drawing.Point(6, 34)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(215, 20)
-        Me.TextBox2.TabIndex = 7
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 83)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(943, 150)
-        Me.DataGridView1.TabIndex = 0
+        Me.TxtBuscar.Location = New System.Drawing.Point(9, 30)
+        Me.TxtBuscar.Name = "TxtBuscar"
+        Me.TxtBuscar.Size = New System.Drawing.Size(386, 20)
+        Me.TxtBuscar.TabIndex = 0
         '
         'FrmExamen
         '
@@ -437,18 +521,20 @@ Partial Class FrmExamen
         Me.PanelLeyenda.PerformLayout()
         Me.PanelFunciones.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.DgvEstudios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelDatos.ResumeLayout(False)
         Me.GrbDatosEstudios.ResumeLayout(False)
         Me.GrbDatosEstudios.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GbxBuscar.ResumeLayout(False)
-        Me.GbxBuscar.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvDetalleExamen, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.DgvEstudios, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.PanelBuscar.ResumeLayout(False)
+        Me.GbxDatos.ResumeLayout(False)
+        Me.GbxDatos.PerformLayout()
+        CType(Me.DgvExamenes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -464,24 +550,30 @@ Partial Class FrmExamen
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents PanelDatos As Panel
     Friend WithEvents GrbDatosEstudios As GroupBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtDescripcion As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TxtPrecio As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CbxCategoria As ComboBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtNombre As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DgvEstudios As DataGridView
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents GbxBuscar As GroupBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents DgvDetalleExamen As DataGridView
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents BtnQuitarD As Button
+    Friend WithEvents BtnAñadirD As Button
+    Friend WithEvents PanelBuscar As Panel
+    Friend WithEvents GbxDatos As GroupBox
+    Friend WithEvents TxtBuscar As TextBox
+    Friend WithEvents DgvExamenes As DataGridView
     Friend WithEvents BtnBuscar As Button
+    Friend WithEvents TxtBuscarEstudio As TextBox
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents Nombre As DataGridViewTextBoxColumn
 End Class
