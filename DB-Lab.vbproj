@@ -94,6 +94,7 @@
     <Compile Include="entidades\ArqueoCaja.vb" />
     <Compile Include="entidades\Categoria.vb" />
     <Compile Include="entidades\DetalleFactura.vb" />
+    <Compile Include="entidades\EstadoFactura.vb" />
     <Compile Include="entidades\Estudio.vb" />
     <Compile Include="entidades\Examen.vb" />
     <Compile Include="entidades\ExamenEstudio.vb" />
@@ -325,6 +326,7 @@
     <None Include="img\deleteButton.png" />
     <None Include="img\okButton24.png" />
     <None Include="img\cancelarButton24.png" />
+    <Content Include="img\reload26.png" />
     <Content Include="img\rightButton26.png" />
     <Content Include="img\leftButton26.png" />
     <Content Include="img\saveButton.png" />

@@ -6,12 +6,13 @@
     Dim _idUsuario As Integer
     Dim _idMetodoPago As Integer
     Dim _idDoctor As Integer
+    Dim _idEstadoFactura As Integer
 
     Public Sub New()
 
     End Sub
 
-    Public Sub New(idFactura As Integer, total As Decimal, fechaEmision As DateTime, idPaciente As Integer, idUsuario As Integer, idMetodoPago As Integer, idDoctor As Integer)
+    Public Sub New(idFactura As Integer, total As Decimal, fechaEmision As Date, idPaciente As Integer, idUsuario As Integer, idMetodoPago As Integer, idDoctor As Integer, idEstadoFactura As Integer)
         _idFactura = idFactura
         _total = total
         _fechaEmision = fechaEmision
@@ -19,6 +20,7 @@
         _idUsuario = idUsuario
         _idMetodoPago = idMetodoPago
         _idDoctor = idDoctor
+        _idEstadoFactura = idEstadoFactura
     End Sub
 
     Public Property IdFactura As Integer
@@ -81,6 +83,15 @@
         End Get
         Set(value As Integer)
             _idDoctor = value
+        End Set
+    End Property
+
+    Public Property IdEstadoFactura As Integer
+        Get
+            Return _idEstadoFactura
+        End Get
+        Set(value As Integer)
+            _idEstadoFactura = value
         End Set
     End Property
 End Class
