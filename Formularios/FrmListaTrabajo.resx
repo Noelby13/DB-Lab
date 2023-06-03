@@ -117,16 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Orden.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="HoraInicio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Estado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnRecargar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAAAfdJREFUSEvNljtrFVEURm+0iNpYGSWYRsQuIklnbSMYwRAQrbQwiIWdWElAyG8I
+        KRI0VSpBTZr8hIAoKr7AVwoD+iN0LeK+7Hnc6x3vFPlgwXDOnP3N2eexp7PfNALn4SFswRv4AtvwHB7A
+        JAwlTa7Ba/g9AO/gOjiukcZgA+qC/gtnfxxCZ2Fm77GqCfgG5SCmbhXuwjzcgzXYhfK7jj8NGv2Cm1CR
+        X/QB8kDT45cdgDqZtjn4DHncd9DI51qzTcgDVuAwDKJRWIc8PqiYXYb8gilrutgH4QnkOFIxM13R+R4O
+        QVPFGmUjKZidg9x5EZpKo5+Q4wQFs0WIDhe612bopym40INx6CqfqSUbWtBROPWXkzaEXkGY3bahBd2C
+        iPnVhtAPiI4bNrQg1yliGr8rnaPDL2pDdyBivrQhZE4jv+a6DS1DmD2zIeRuqdtF4i5rKnezd2mYWZ66
+        yvnNeG48P011CXKcQow6M2+C/zHyLv0IEectFFRn5h3nXddEpu8R5DjOsqBeafQW9zYfREfgMeTx/jZU
+        FGamLh8DcaGtV70qgLO/Ajl1Yj07ARVpFmvkMSgPFCuylfk+WKmt2KbMoOV3d+AM1MpKnDeDFfsplIMM
+        gmt9DBprFvK92Y8XcBWG1jR4MJ2t/yiWoU9gtVgA/yv3kzqdPyri6gmHYGuJAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

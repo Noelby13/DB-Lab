@@ -80,4 +80,24 @@ Public Class DFactura
         End Try
         Return resultado
     End Function
+
+    Public Function obtenerListaTrabajo() As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "SELECT F.idFactura, CONVERT(varchar(5), F.fechaEmision, 108) as 'Hora', CONCAT(C.primerNombre,' ',C.primerApellido) as 'Nombre',  E.estado From Tbl_Factura as F 
+                                  INNER JOIN Tbl_Cliente as C on F.idPaciente = C.idPaciente
+                                  INNER JOIN Tbl_EstadoFactura as E on F.idEstadoFactura = E.idEstadoFactura
+                                  where DAY(F.fechaEmision) = DAY(GETDATE())
+                                  AND MONTH(F.fechaEmision) = MONTH(GETDATE())
+                                  AND YEAR(F.fechaEmision) = YEAR(GETDATE())
+                                  ORDER BY Hora ASC , E.idEstadoFactura ASC"
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox("Ocurrió un error al obtener la lista de trabajo" & ex.Message, MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return ds
+
+    End Function
 End Class
