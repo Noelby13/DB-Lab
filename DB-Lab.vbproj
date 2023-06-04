@@ -76,6 +76,7 @@
     <Compile Include="dao\DArqueo.vb" />
     <Compile Include="dao\DCategoria.vb" />
     <Compile Include="dao\DCliente.vb" />
+    <Compile Include="dao\DDoctor.vb" />
     <Compile Include="dao\DEstudio.vb" />
     <Compile Include="dao\DExamen.vb" />
     <Compile Include="dao\DExamenEstudio.vb" />

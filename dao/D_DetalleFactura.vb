@@ -34,7 +34,7 @@ Public Class D_DetalleFactura
         Try
             Dim conn As New SqlConnection(strConexion)
             Dim tsql As String = "SELECT Tbl_Examen.Nombre, Tbl_DetalleFactura.cantidad AS Cantidad, Tbl_DetalleFactura.precioUnitario AS [Precio por unidad]
-FROM                                Tbl_DetalleFactura INNER JOIN
+                                    FROM Tbl_DetalleFactura INNER JOIN
                                     Tbl_Examen ON Tbl_DetalleFactura.idExamen = Tbl_Examen.idExamen WHERE Tbl_DetalleFactura.idFactura = @idFactura"
             Dim da As New SqlDataAdapter(tsql, conn)
             da.SelectCommand.Parameters.AddWithValue("@idFactura", idFactura)
