@@ -292,5 +292,7 @@ Public Class FrmPrincipal
         mostrarSubMenu(PanelSubReportes)
     End Sub
 
-
+    Private Sub BtnGestiónReportes_Click(sender As Object, e As EventArgs) Handles BtnGestiónReportes.Click
+        abrirFrmHijo(New FrmGestiónReportes())
+    End Sub
 End Class
