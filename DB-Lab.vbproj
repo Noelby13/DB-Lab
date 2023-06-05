@@ -184,6 +184,12 @@
     <Compile Include="Formularios\FrmExamen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmGestiónReportes.Designer.vb">
+      <DependentUpon>FrmGestiónReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmGestiónReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmPrueba.Designer.vb">
       <DependentUpon>FrmPrueba.vb</DependentUpon>
     </Compile>
@@ -292,6 +298,9 @@
     <EmbeddedResource Include="Formularios\FrmExamen.resx">
       <DependentUpon>FrmExamen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmGestiónReportes.resx">
+      <DependentUpon>FrmGestiónReportes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPrueba.resx">
       <DependentUpon>FrmPrueba.vb</DependentUpon>
     </EmbeddedResource>
@@ -327,6 +336,24 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptCantidadEdad.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptCategoriasDisponibles.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptClientesDisponibles.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptDoctoresDisponibles.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptEstudiosDisponibles.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptExamenesDisponibles.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptResultadoMedico.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

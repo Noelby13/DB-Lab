@@ -25,8 +25,7 @@ Partial Class FrmPrincipal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.PanelSubReportes = New System.Windows.Forms.Panel()
-        Me.BtnMostrarDoctores = New System.Windows.Forms.Button()
-        Me.BtnReporteExamenes = New System.Windows.Forms.Button()
+        Me.BtnGestiónReportes = New System.Windows.Forms.Button()
         Me.BtnReportes = New System.Windows.Forms.Button()
         Me.BtnDoctor = New System.Windows.Forms.Button()
         Me.PanelSubDoctor = New System.Windows.Forms.Panel()
@@ -118,46 +117,29 @@ Partial Class FrmPrincipal
         'PanelSubReportes
         '
         Me.PanelSubReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.PanelSubReportes.Controls.Add(Me.BtnMostrarDoctores)
-        Me.PanelSubReportes.Controls.Add(Me.BtnReporteExamenes)
+        Me.PanelSubReportes.Controls.Add(Me.BtnGestiónReportes)
         Me.PanelSubReportes.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSubReportes.Location = New System.Drawing.Point(2, 742)
         Me.PanelSubReportes.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelSubReportes.Name = "PanelSubReportes"
-        Me.PanelSubReportes.Size = New System.Drawing.Size(196, 49)
+        Me.PanelSubReportes.Size = New System.Drawing.Size(196, 27)
         Me.PanelSubReportes.TabIndex = 18
         '
-        'BtnMostrarDoctores
+        'BtnGestiónReportes
         '
-        Me.BtnMostrarDoctores.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnMostrarDoctores.FlatAppearance.BorderSize = 0
-        Me.BtnMostrarDoctores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMostrarDoctores.ForeColor = System.Drawing.Color.White
-        Me.BtnMostrarDoctores.Location = New System.Drawing.Point(0, 24)
-        Me.BtnMostrarDoctores.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnMostrarDoctores.Name = "BtnMostrarDoctores"
-        Me.BtnMostrarDoctores.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnMostrarDoctores.Size = New System.Drawing.Size(196, 24)
-        Me.BtnMostrarDoctores.TabIndex = 2
-        Me.BtnMostrarDoctores.Text = "Doctores"
-        Me.BtnMostrarDoctores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnMostrarDoctores.UseVisualStyleBackColor = True
-        '
-        'BtnReporteExamenes
-        '
-        Me.BtnReporteExamenes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnReporteExamenes.FlatAppearance.BorderSize = 0
-        Me.BtnReporteExamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnReporteExamenes.ForeColor = System.Drawing.Color.White
-        Me.BtnReporteExamenes.Location = New System.Drawing.Point(0, 0)
-        Me.BtnReporteExamenes.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnReporteExamenes.Name = "BtnReporteExamenes"
-        Me.BtnReporteExamenes.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
-        Me.BtnReporteExamenes.Size = New System.Drawing.Size(196, 24)
-        Me.BtnReporteExamenes.TabIndex = 0
-        Me.BtnReporteExamenes.Text = "Examenes"
-        Me.BtnReporteExamenes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnReporteExamenes.UseVisualStyleBackColor = True
+        Me.BtnGestiónReportes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnGestiónReportes.FlatAppearance.BorderSize = 0
+        Me.BtnGestiónReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGestiónReportes.ForeColor = System.Drawing.Color.White
+        Me.BtnGestiónReportes.Location = New System.Drawing.Point(0, 0)
+        Me.BtnGestiónReportes.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnGestiónReportes.Name = "BtnGestiónReportes"
+        Me.BtnGestiónReportes.Padding = New System.Windows.Forms.Padding(26, 0, 0, 0)
+        Me.BtnGestiónReportes.Size = New System.Drawing.Size(196, 24)
+        Me.BtnGestiónReportes.TabIndex = 0
+        Me.BtnGestiónReportes.Text = "Gestión de reportes"
+        Me.BtnGestiónReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGestiónReportes.UseVisualStyleBackColor = True
         '
         'BtnReportes
         '
@@ -577,7 +559,7 @@ Partial Class FrmPrincipal
         Me.PanelFrmHijo.Location = New System.Drawing.Point(2, 2)
         Me.PanelFrmHijo.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelFrmHijo.Name = "PanelFrmHijo"
-        Me.PanelFrmHijo.Size = New System.Drawing.Size(614, 845)
+        Me.PanelFrmHijo.Size = New System.Drawing.Size(614, 843)
         Me.PanelFrmHijo.TabIndex = 1
         '
         'TableLayoutPanel2
@@ -654,6 +636,5 @@ Partial Class FrmPrincipal
     Friend WithEvents BtnAbrirDr As Button
     Friend WithEvents BtnReportes As Button
     Friend WithEvents PanelSubReportes As Panel
-    Friend WithEvents BtnMostrarDoctores As Button
-    Friend WithEvents BtnReporteExamenes As Button
+    Friend WithEvents BtnGestiónReportes As Button
 End Class
