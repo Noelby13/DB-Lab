@@ -27,6 +27,7 @@ Public Class DEstudio
 
         Catch ex As Exception
             MsgBox("Ocurrio un error al guardar el estudio", MsgBoxStyle.Critical, "Error")
+            MsgBox(ex.ToString())
         End Try
         Return b
     End Function
@@ -35,7 +36,7 @@ Public Class DEstudio
         Dim ds As New DataSet
         Try
             Dim conn As New SqlConnection(strConexion)
-            Dim tsql As String = "select idEstudio, nombreEstudio as 'Nombre', valorInferiorH, valorSuperiorH, valorTextoH , valorInferiorM, valorSuperiorM , valorTextoM, U.nombre, U.idUnidad from Tbl_Estudio inner join Tbl_Unidad as U on Tbl_Estudio.idUnidad =U.idUnidad where  U.estado = 1"
+            Dim tsql As String = "select idEstudio, nombreEstudio as 'Nombre', valorInferiorH, valorSuperiorH, valorTextoH , valorInferiorM, valorSuperiorM , valorTextoM, U.nombre, U.idUnidad from Tbl_Estudio inner join Tbl_Unidad as U on Tbl_Estudio.idUnidad =U.idUnidad where  U.estado = 1 and Tbl_Estudio.estado = 1"
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
         Catch ex As Exception
