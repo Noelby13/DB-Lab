@@ -2,7 +2,5 @@
 
 
 
-
-
-Partial Class DsDBLab
+Partial Public Class DsDBLab
 End Class
