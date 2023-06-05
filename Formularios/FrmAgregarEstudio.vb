@@ -107,22 +107,39 @@ Public Class FrmAgregarEstudio
         'prueba = Unidad(CbxUnidad1.Items(0))
 
 
-
-
-
         If Not validarCampos() Then
             Exit Sub
         End If
 
         Dim estudio As New Estudio()
+        'estudio.NombreEstudio = TxtNombre.Text
+        'estudio.IdUnidad = CbxUnidad1.SelectedValue
+        'estudio.ValorTextoH = TxtValorTextoH.Text
+        'estudio.ValorInferiorH = TxtValorInferiorH.Text
+        'estudio.ValorSuperiorH = TxtValorSuperiorH.Text
+        'estudio.ValorTextoM = TxtValorTextoM.Text
+        'estudio.ValorInferiorM = TxtValorInferiorM.Text
+        'estudio.ValorSuperiorM = TxtValorSuperiorM.Text
         estudio.NombreEstudio = TxtNombre.Text
         estudio.IdUnidad = CbxUnidad1.SelectedValue
-        estudio.ValorTextoH = TxtValorTextoH.Text
-        estudio.ValorInferiorH = TxtValorInferiorH.Text
-        estudio.ValorSuperiorH = TxtValorSuperiorH.Text
-        estudio.ValorTextoM = TxtValorTextoM.Text
-        estudio.ValorInferiorM = TxtValorInferiorM.Text
-        estudio.ValorSuperiorM = TxtValorSuperiorM.Text
+
+
+        If TxtValorInferiorH.Text = "" Or TxtValorSuperiorH.Text = "" Then
+            estudio.ValorInferiorH = Nothing
+            estudio.ValorSuperiorH = Nothing
+            estudio.ValorInferiorM = Nothing
+            estudio.ValorSuperiorM = Nothing
+            estudio.ValorTextoM = TxtValorTextoM.Text
+            estudio.ValorTextoH = TxtValorTextoH.Text
+        Else
+            estudio.ValorTextoH = TxtValorTextoH.Text
+            estudio.ValorInferiorH = TxtValorInferiorH.Text
+            estudio.ValorSuperiorH = TxtValorSuperiorH.Text
+            estudio.ValorTextoM = TxtValorTextoM.Text
+            estudio.ValorInferiorM = TxtValorInferiorM.Text
+            estudio.ValorSuperiorM = TxtValorSuperiorM.Text
+
+        End If
 
         Dim dEstuido As New DEstudio
         If Not dEstuido.insertarEstudio(estudio) Then
@@ -135,6 +152,7 @@ Public Class FrmAgregarEstudio
 
 
     End Sub
+
 
     Private Sub selecionarFila()
         Dim i As Integer

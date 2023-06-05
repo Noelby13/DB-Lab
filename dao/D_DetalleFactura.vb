@@ -45,6 +45,28 @@ Public Class D_DetalleFactura
         Return ds
     End Function
 
+
+    Public Function obtenerExamenes(ByVal idFactura As Integer) As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "SELECT Est.idEstudio, Est.nombreEstudio, Est.valorInferiorH, Est.ValorSuperiorH, Est.valorTextoH, Est.valorInferiorM, Est.ValorSuperiorM, est.valorTextoM, U.nombre FROM Tbl_DetalleFactura as DE
+                                  INNER JOIN Tbl_ExamenEstudio as EE
+                                  on DE.idExamen = EE.idExamen
+                                  INNER JOIN Tbl_Estudio as Est
+                                  on EE.idEstudio = Est.idEstudio
+                                  INNER JOIN Tbl_Unidad as U
+                                  on Est.idUnidad = U.idUnidad
+                                  where DE.idFactura = @idFactura"
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.SelectCommand.Parameters.AddWithValue("@idFactura", idFactura)
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al buscar los detalles", MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return ds
+    End Function
+
     'Public Function eliminarDetalle(ByVal idDetalle As Integer) As Boolean
     '    Dim B As Boolean = False
     '    Try
