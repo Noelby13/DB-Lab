@@ -1,8 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
 
 Public Class FrmListaTrabajo
-    Dim datoNuevo As DataSet
-    Dim datoEditado As DataSet
+    Dim dataReport As New DataSet
 
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
         Me.Close()
@@ -103,7 +102,7 @@ Public Class FrmListaTrabajo
 
     Private Sub DgvLista_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvLista.CellDoubleClick
         Dim fila As Integer = e.RowIndex
-        MsgBox(fila)
+
         'validar que no sea la fila de los titulos
         If fila >= 0 Then
             Dim idCliente = Convert.ToInt32(DgvLista.Rows(fila).Cells(1).Value.ToString())
@@ -210,6 +209,7 @@ Public Class FrmListaTrabajo
             ds.Tables(0).Rows.Add(row)
 
         Next
+        dataReport = ds
 
         DgvResultados.DataSource = ds.Tables(0)
         DgvResultados.Columns(0).Visible = False
@@ -293,6 +293,24 @@ Public Class FrmListaTrabajo
         End If
 
 
+    End Sub
+
+    Private Sub BtnReporte_Click(sender As Object, e As EventArgs) Handles BtnReporte.Click
+        'Dim dDetalle As New D_DetalleFactura
+        'Dim DResultado As New DResultado
+
+        'Dim t = dDetalle.obtenerExamenes(Convert.ToInt32(TxtOrden.Text))
+
+        '' genera una consulta linq para filtrar si un resultadoNumericoH tenga 0 o "" debe mostrar el resultadoTextoH, debe generar otra tabla que solo tenga los datos del reporte(NombreEstudio, resultado, valoresReferencia, unidad)
+        'Dim resul = DResultado.obtenerResultados(Convert.ToInt32(TxtOrden.Text))
+        'Dim ds As New DataSet
+        Dim tblFactura As New DsDBLabTableAdapters.RptDatosFacturaTableAdapter
+        Dim datosFactura = tblFactura.GetData(Convert.ToInt32(TxtOrden.Text))
+
+
+
+
+        verReporteMedico(dataReport.Tables(0), datosFactura, "DsResultado", "DsDatosFactura", "Reportes/RptResultadoMedico.rdlc")
     End Sub
 
 
