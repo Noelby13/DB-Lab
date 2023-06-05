@@ -154,4 +154,25 @@ Public Class DRol
         End Try
         Return ds
     End Function
+
+    Public Function obtenerListaFunciones(ByVal idRol As Integer) As List(Of Integer)
+        Dim lista As New List(Of Integer)
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "select RF.idFuncion from Tbl_RolFuncion RF where RF.idRol = @idRol"
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@idRol", idRol)
+
+            conn.Open()
+            Dim reader As SqlDataReader = cmd.ExecuteReader()
+            While reader.Read()
+                lista.Add(reader.GetInt32(0))
+            End While
+            conn.Close()
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al obtener la lista de funciones", MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return lista
+    End Function
+
 End Class

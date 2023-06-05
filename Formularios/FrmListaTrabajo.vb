@@ -304,7 +304,13 @@ Public Class FrmListaTrabajo
         '' genera una consulta linq para filtrar si un resultadoNumericoH tenga 0 o "" debe mostrar el resultadoTextoH, debe generar otra tabla que solo tenga los datos del reporte(NombreEstudio, resultado, valoresReferencia, unidad)
         'Dim resul = DResultado.obtenerResultados(Convert.ToInt32(TxtOrden.Text))
         'Dim ds As New DataSet
+
+
+
+
         Dim tblFactura As New DsDBLabTableAdapters.RptDatosFacturaTableAdapter
+
+
         Dim datosFactura = tblFactura.GetData(Convert.ToInt32(TxtOrden.Text))
 
 
