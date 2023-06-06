@@ -124,10 +124,10 @@ Partial Class FrmGestiónReportes
         Me.CbxTipoReporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbxTipoReporte.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxTipoReporte.FormattingEnabled = True
-        Me.CbxTipoReporte.Items.AddRange(New Object() {"---REPORTES GENERALES--", "Exámenes disponibles", "Estudios disponibles", "Categorias de exámenes", "Clientes", "Edades de los pacientes registrados", "Doctores", "---REPORTES PERSONALIZADOS---", "Ingresos", "Exámenes más vendidos", "Categoría de exámenes más vendidos", "Doctores que más mandan exámenes", "Especialidad médica que más manda exámenes"})
+        Me.CbxTipoReporte.Items.AddRange(New Object() {"-----REPORTES GENERALES-----", "Exámenes disponibles", "Estudios disponibles", "Categorias de exámenes", "Lista de clientes ", "Edades de los pacientes registrados", "Lista de doctores", "-----REPORTES PERSONALIZADOS-----", "Ingresos por día", "Ingresos por examenes", "Ingresos por categoría", "Ingresos por doctores"})
         Me.CbxTipoReporte.Location = New System.Drawing.Point(14, 47)
         Me.CbxTipoReporte.Name = "CbxTipoReporte"
-        Me.CbxTipoReporte.Size = New System.Drawing.Size(248, 28)
+        Me.CbxTipoReporte.Size = New System.Drawing.Size(292, 28)
         Me.CbxTipoReporte.TabIndex = 0
         '
         'PanelLeyenda
