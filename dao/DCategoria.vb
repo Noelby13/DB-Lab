@@ -50,16 +50,18 @@ Public Class DCategoria
         Dim resultado = False
         Try
             Dim conn As New SqlConnection(strConexion)
-            Dim tsql As String = "update Tbl_Categoria set nombre = @nombre, descripcion = @descripcion where idCategoria = @idCategoria"
+            Dim tsql As String = "update Tbl_Categoria set nombre = @nombre, descripcion = @descripcion, estado = @estado where idCategoria = @idCategoria"
             Dim cmd As New SqlCommand(tsql, conn)
             cmd.Parameters.AddWithValue("@nombre", categoria.Nombre)
             cmd.Parameters.AddWithValue("@descripcion", (categoria.Descripcion))
+            cmd.Parameters.AddWithValue("@idCategoria", (categoria.IdCategoria))
+            cmd.Parameters.AddWithValue("estado", 1)
+
             conn.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
                 resultado = True
             End If
             conn.Close()
-
         Catch ex As Exception
             MsgBox("Ocurrio un error al editar el registro", MsgBoxStyle.Critical, "ERROR")
         End Try
@@ -67,7 +69,7 @@ Public Class DCategoria
     End Function
 
 
-    'Funcion para eliminar un registro de la tabla Tbl_Usuario'
+    'Funcion para eliminar un registro de la tabla Tbl_Categoria'
     Public Function eliminarRegistro(ByVal nombreCategoria As String) As Boolean
         Dim resultado = False
         Try
@@ -95,24 +97,24 @@ Public Class DCategoria
             Dim conn As New SqlConnection(strConexion)
             Dim tsql As String = "SELECT * FROM Tbl_Categoria WHERE nombre = @nombreCategoria"
             Dim da As New SqlDataAdapter(tsql, conn)
-            da.SelectCommand.Parameters.AddWithValue("@nombreRol", categoria.Nombre)
+            da.SelectCommand.Parameters.AddWithValue("@nombreCategoria", categoria.Nombre)
             da.Fill(ds)
             If (ds.Rows.Count > 0) Then Return True
         Catch ex As Exception
-            MsgBox("Ocurrio un error al comprobar el rol", MsgBoxStyle.Critical, "ERROR")
+            MsgBox("Ocurrio un error al comprobar la categoria", MsgBoxStyle.Critical, "ERROR")
         End Try
         Return resultado
     End Function
 
 
-    Public Function buscarXNombre(ByVal nombreCategoria As String) As DataSet
+    Public Function buscarXNombre(ByVal cadena As String) As DataSet
         Dim ds As New DataSet
-        nombreCategoria = nombreCategoria + "%"
+        cadena = cadena + "%"
         Try
             Dim conn As New SqlConnection(strConexion)
-            Dim tsql As String = "SELECT idCategoria AS Código, nombre AS Nombre, descripcion AS Descripción FROM Tbl_Categoria where nombre like @nombreCategoria and estado = 'True'"
+            Dim tsql As String = "SELECT idCategoria As 'Codigo', nombre AS 'Nombre', descripcion FROM Tbl_Categoria where estado = 1 and nombre like @nombre"
             Dim da As New SqlDataAdapter(tsql, conn)
-            da.SelectCommand.Parameters.AddWithValue("@nombreCategoria", nombreCategoria)
+            da.SelectCommand.Parameters.AddWithValue("@nombre", "%" + cadena + "%")
             da.Fill(ds)
         Catch ex As Exception
             MsgBox("Ocurrio un error al buscar el registro", MsgBoxStyle.Critical, "ERROR")
