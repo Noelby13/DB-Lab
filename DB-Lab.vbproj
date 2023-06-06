@@ -100,6 +100,7 @@
     <Compile Include="dao\DExamenEstudio.vb" />
     <Compile Include="dao\DFactura.vb" />
     <Compile Include="dao\DFuncion.vb" />
+    <Compile Include="dao\DPaciente.vb" />
     <Compile Include="dao\DResultado.vb" />
     <Compile Include="dao\DRolFuncion.vb" />
     <Compile Include="dao\D_DetalleFactura.vb" />
@@ -123,6 +124,7 @@
     <Compile Include="entidades\ExamenEstudio.vb" />
     <Compile Include="entidades\Factura.vb" />
     <Compile Include="entidades\Funcion.vb" />
+    <Compile Include="entidades\Paciente.vb" />
     <Compile Include="entidades\Resultado.vb" />
     <Compile Include="entidades\RolFuncion.vb" />
     <Compile Include="entidades\Unidad.vb" />
