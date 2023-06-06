@@ -209,4 +209,8 @@
     Private Sub FrmGestiónReportes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub BtnSalir_Click_1(sender As Object, e As EventArgs) Handles BtnSalir.Click
+        Me.Close()
+    End Sub
 End Class

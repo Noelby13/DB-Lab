@@ -27,8 +27,7 @@ Public Class DDoctor
         Dim ds As New DataSet
         Try
             Dim conn As New SqlConnection(strConexion)
-            Dim tsql As String = "SELECT idDoctor , primerNombre AS [Primer Nombre], segundoNombre AS [Segundo Nombre], primerApellido AS [Primer Apellido], segundoApellido AS [Segundo Apellido]
-                                    FROM Tbl_Doctor where estado = 1"
+            Dim tsql As String = "SELECT idDoctor , primerNombre AS [Primer Nombre], segundoNombre AS [Segundo Nombre], primerApellido AS [Primer Apellido], segundoApellido AS [Segundo Apellido], especialidad AS [Especialidad] FROM Tbl_Doctor where estado = 1"
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
         Catch ex As Exception
@@ -42,15 +41,17 @@ Public Class DDoctor
 
         Try
             Dim conn As New SqlConnection(strConexion)
-            Dim tsql As String = "INSERT INTO Tbl_Doctor (primerNombre, segundoNombre, primerApellido, segundoApellido) VALUES (@primerNombre, @segundoNombre, @primerApellido, @segundoApellido)"
+            Dim tsql As String = "INSERT INTO Tbl_Doctor (primerNombre, segundoNombre, primerApellido, segundoApellido, especialidad) VALUES (@primerNombre, @segundoNombre, @primerApellido, @segundoApellido, @especialidad)"
             Dim cmd As New SqlCommand(tsql, conn)
             cmd.Parameters.AddWithValue("@primerNombre", doctor.PrimerNombre)
             cmd.Parameters.AddWithValue("@segundoNombre", comprobarValorNull(doctor.SegundoNombre))
             cmd.Parameters.AddWithValue("@primerApellido", doctor.PrimerApellido)
             cmd.Parameters.AddWithValue("@segundoApellido", comprobarValorNull(doctor.SegundoApellido))
-            'cmd.Parameters.AddWithValue("@especialidad", doctor.Especialidad)
+            cmd.Parameters.AddWithValue("@especialidad", doctor.Especialidad)
             conn.Open()
-            cmd.ExecuteNonQuery()
+            If cmd.ExecuteNonQuery() <> 0 Then
+                resultado = True
+            End If
             conn.Close()
             Return True
         Catch ex As Exception
@@ -86,13 +87,13 @@ Public Class DDoctor
         Try
             Dim conn As New SqlConnection(strConexion)
             Dim tsql As String = "Update Tbl_Doctor set primerNombre = @primerNombre, segundoNombre = @segundoNombre, 
-                                  primerApellido = @primerApellido, segundoApellido = @segundoApellido where idDoctor = @idDoctor"
+                                  primerApellido = @primerApellido, segundoApellido = @segundoApellido, especialidad =@especialidad  where idDoctor = @idDoctor"
             Dim cmd As New SqlCommand(tsql, conn)
             cmd.Parameters.AddWithValue("@primerNombre", doctor.PrimerNombre)
             cmd.Parameters.AddWithValue("@segundoNombre", comprobarValorNull(doctor.SegundoNombre))
             cmd.Parameters.AddWithValue("@primerApellido", doctor.PrimerApellido)
             cmd.Parameters.AddWithValue("@segundoApellido", comprobarValorNull(doctor.SegundoApellido))
-            'cmd.Parameters.AddWithValue("@especialidad", comprobarValorNull(doctor.Especialidad))
+            cmd.Parameters.AddWithValue("@especialidad", comprobarValorNull(doctor.Especialidad))
             cmd.Parameters.AddWithValue("@idDoctor", doctor.IdDoctor)
 
             conn.Open()
