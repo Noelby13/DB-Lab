@@ -10,7 +10,6 @@
         Dim dDoctor As New DDoctor
         DgvDoctor.DataSource = dDoctor.mostrarRegistro.Tables(0)
         DgvDoctor.Refresh()
-
         DgvDoctor.Columns("idDoctor").Visible = False
     End Sub
 
@@ -20,6 +19,7 @@
 
     Private Sub FrmDoctor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarRegistro()
+        BtnLimpiar.PerformClick()
     End Sub
 
     Private Function validarCampos() As Boolean
@@ -39,6 +39,10 @@
         TxtSegundoApellido.Clear()
         TxtBuscar.Clear()
         CbxEspecialidad.SelectedIndex = -1
+        BtnBorrar.Enabled = False
+        BtnEditar.Enabled = False
+        BtnGuardar.Enabled = True
+
         'DgvDoctor.DataSource = Nothing
     End Sub
 
@@ -55,7 +59,9 @@
             doctor.SegundoNombre = comprobarNull(doctor.SegundoNombre, TxtSegundoNombre)
             doctor.PrimerApellido = TxtPrimerApellido.Text
             doctor.SegundoApellido = comprobarNull(doctor.SegundoApellido, TxtSegundoApellido)
-            'doctor.Especialidad = CbxEspecialidad.SelectedItem.ToString()
+            'obtene el valor del combobox
+            doctor.Especialidad = CbxEspecialidad.SelectedItem.ToString()
+
             'dDoctor.insertarDoctor(doctor)
 
             If dDoctor.guardarDoctor(doctor) Then
@@ -65,6 +71,7 @@
             End If
 
             llenarRegistro()
+            BtnLimpiar.PerformClick()
         Catch ex As Exception
             MsgBox("Ocurrio un error al intentar registrar el doctor", MsgBoxStyle.Information, "Doctor")
         End Try
@@ -91,7 +98,7 @@
         d.SegundoNombre = TxtSegundoNombre.Text
         d.PrimerApellido = TxtPrimerApellido.Text
         d.SegundoApellido = TxtSegundoApellido.Text
-        'd.Especialidad = CbxEspecialidad.SelectedItem.ToString()
+        d.Especialidad = CbxEspecialidad.SelectedItem.ToString()
 
         Dim resp As VariantType
         resp = (MsgBox("¿Desea editar este registro?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "CONFIRMACION"))
@@ -159,9 +166,13 @@
         TxtSegundoNombre.Text = DgvDoctor.Rows(fila).Cells(2).Value.ToString()
         TxtPrimerApellido.Text = DgvDoctor.Rows(fila).Cells(3).Value
         TxtSegundoApellido.Text = DgvDoctor.Rows(fila).Cells(4).Value.ToString()
-        'CbxEspecialidad.SelectedItem = DgvDoctor.Rows(fila).Cells(5).Value.ToString()
+        'carga el combobox
+        CbxEspecialidad.SelectedItem = DgvDoctor.Rows(fila).Cells(5).Value.ToString()
 
         BtnGuardar.Enabled = False
+        BtnEditar.Enabled = True
+        BtnBorrar.Enabled = True
+
     End Sub
 
     Private Sub BtnBuscarEstudio_Click(sender As Object, e As EventArgs) Handles BtnBuscarEstudio.Click

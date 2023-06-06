@@ -24,13 +24,13 @@ Public Class DRolFuncion
         Return resultado
     End Function
 
-    Public Function borrarPermisos(ByVal rolFuncion As RolFuncion) As Boolean
+    Public Function borrarPermisos(ByVal idRol As Integer) As Boolean
         Dim resultado = False
         Try
             Dim conn As New SqlConnection(strConexion)
             Dim tsql As String = "DELETE FROM Tbl_RolFuncion WHERE idRol = @idRol"
             Dim cmd As New SqlCommand(tsql, conn)
-            cmd.Parameters.AddWithValue("@idRol", rolFuncion.IdRol)
+            cmd.Parameters.AddWithValue("@idRol", idRol)
             conn.Open()
             If (cmd.ExecuteNonQuery() <> 0) Then
                 resultado = True

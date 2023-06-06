@@ -153,4 +153,8 @@ Public Class FrmCategorias
         DgvCategorias.DataSource = dCategoria.buscarXNombre(TxtCategoria.Text.ToString()).Tables(0)
         DgvCategorias.Refresh()
     End Sub
+
+    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
+        Me.Close()
+    End Sub
 End Class

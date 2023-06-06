@@ -1,10 +1,5 @@
 ﻿Public Class FrmRol
-    Dim cantidadFunciones As Integer 'sirve para recorrer los checkbox
-    Dim marcadosAhora As New List(Of Object)
-    Dim noMarcadosAhora As New List(Of Object)
-    Dim recienMarcados As New List(Of Object)
-    Dim recienDesmarcados As New List(Of Object)
-    Dim estadoAnterior As New Dictionary(Of Object, Boolean)
+
 
     Sub llenarRegistros()
         Dim dRol As New DRol
@@ -95,7 +90,40 @@
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         Try
+            'borra todos los permisos del rol y los vuelve a insertar
+            Dim dRolFuncion As New DRolFuncion
+            If Not dRolFuncion.borrarPermisos(CInt(DgvRegistrosRol.CurrentRow.Cells(0).Value)) Then
+                MsgBox("No se pudo editar el rol", MsgBoxStyle.Critical, "ERROR")
+                Exit Sub
+            End If
 
+            'recorre la lista de permisos y los inserta
+            Dim rolFuncion As New RolFuncion
+            For Each item As Object In ClbPermisosRol.CheckedItems
+                rolFuncion.IdRol = CInt(DgvRegistrosRol.CurrentRow.Cells(0).Value)
+                rolFuncion.IdFuncion = item(0)
+                dRolFuncion.guardarPermiso(rolFuncion)
+            Next
+
+            Dim rol As New Rol
+            Dim dRol As New DRol
+            If Not validarCampo() Then
+                MsgBox("La información está incompleta", MsgBoxStyle.Exclamation, "ADVERTENCIA")
+                Exit Sub
+            End If
+
+
+            rol.Nombre = TxtNombre.Text
+            rol.Descripcion = comprobarNull(rol.Descripcion, TxtDescripcion)
+
+
+            Dim editado = dRol.editarRegistro(rol)
+            If (editado) Then
+                MsgBox("Rol editado correctamente", MsgBoxStyle.Information, "Gestión de Roles")
+                BtnLimpiar.PerformClick()
+            End If
+
+            rellenarCheckedListItem()
 
         Catch ex As Exception
             MsgBox("No se pudo editar el rol", MsgBoxStyle.Critical, "ERROR")
@@ -108,10 +136,6 @@
             Dim rol As New Rol
             Dim dRol As New DRol
 
-            If Not validarCampo() Then
-                MsgBox("La información está incompleta", MsgBoxStyle.Exclamation, "ADVERTENCIA")
-                Exit Sub
-            End If
 
             rol.Nombre = TxtNombre.Text
 
@@ -123,6 +147,7 @@
                            MsgBoxStyle.Information, "Gestión de Roles")
                 Exit Sub
             End If
+
 
             Dim eliminado = dRol.eliminarRegistro(rol.Nombre)
             If (eliminado) Then
@@ -211,9 +236,8 @@
             ClbPermisosRol.SetItemChecked(indice, True)
         Next
 
-
-
-
+        BtnEditar.Enabled = True
+        BtnBorrar.Enabled = True
 
     End Sub
 

@@ -216,7 +216,7 @@ Public Class FrmFacturar
             End If
         Next
 
-        MsgBox("Factura guardada con exito")
+        MsgBox("Los examenes han sido agregado a la lista de Trabajo")
         limpiarCampos()
     End Sub
 
@@ -253,6 +253,31 @@ Public Class FrmFacturar
         TabPaciente.SelectedTab = Paciente
         'oculta esta tabPage
         TabPaciente.TabPages.Remove(Examenes)
+
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        'eliminalo del dataset dataExamen
+        If TxtExamen.Text = "" Then
+            Exit Sub
+        End If
+
+        Dim idExamen As Integer = obtenerIdExamen()
+
+        For Each item As DataRow In dataExamen.Tables(0).Rows
+            If item("ID") = idExamen Then
+                item.Delete()
+                Exit For
+            End If
+        Next
+        DgvExamen.DataSource = dataExamen.Tables(0)
+        DgvExamen.Refresh()
+        calcularMonto()
+    End Sub
+
+    Private Sub DgvExamen_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvExamen.CellDoubleClick
+        'seleciona el nombre del dvgexamen y poneselo a txtExamen
+        TxtExamen.Text = DgvExamen.CurrentRow.Cells(1).Value.ToString()
 
     End Sub
 End Class

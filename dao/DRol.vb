@@ -82,9 +82,9 @@ Public Class DRol
             cmd.Parameters.AddWithValue("@descripcion", comprobarValorNull(rol.Descripcion))
             cmd.Parameters.AddWithValue("@idRol", rol.IdRol)
             conn.Open()
-            If (cmd.ExecuteNonQuery() <> 0) Then
-                resultado = True
-            End If
+            cmd.ExecuteNonQuery()
+            Return True
+
             conn.Close()
         Catch ex As Exception
             MsgBox("Ocurrio un error al editar el registro", MsgBoxStyle.Critical, "ERROR")
