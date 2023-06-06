@@ -16,69 +16,9 @@
     Private Sub FrmRol_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarRegistros()
         rellenarCheckedListItem()
-        rellenarPanel()
+
         LblAdvertencia.Text = ""
     End Sub
-
-    Public Sub obtenerCambios()
-
-
-        ' Llenamos el estado anterior con los valores actuales
-        For i As Integer = 0 To ClbPermisosRol.Items.Count - 1
-            estadoAnterior(ClbPermisosRol.Items(i)) = ClbPermisosRol.GetItemChecked(i)
-        Next
-
-        ' Luego, después de que las marcas hayan cambiado, puedes usar código similar al siguiente para determinar qué cambió:
-
-
-        For i As Integer = 0 To ClbPermisosRol.Items.Count - 1
-            Dim item = ClbPermisosRol.Items(i)
-            Dim marcadoAhora = ClbPermisosRol.GetItemChecked(i)
-            If marcadoAhora Then
-                marcadosAhora.Add(item)
-                If Not estadoAnterior(item) Then
-                    recienMarcados.Add(item)
-                End If
-            Else
-                noMarcadosAhora.Add(item)
-                If estadoAnterior(item) Then
-                    recienDesmarcados.Add(item)
-                End If
-            End If
-        Next
-
-    End Sub
-    Public Sub rellenarPanel()
-        'Me.Ckb1.AutoSize = True
-        'Me.Ckb1.Location = New System.Drawing.Point(16, 16)
-        'Me.Ckb1.Name = "Ckb1"
-        'Me.Ckb1.Size = New System.Drawing.Size(81, 17)
-        'Me.Ckb1.TabIndex = 0
-        'Me.Ckb1.Text = "CheckBox1"
-        'Me.Ckb1.UseVisualStyleBackColor = True
-
-
-        Dim dFuncion As New DFuncion
-
-        Dim ds = dFuncion.listarFunciones()
-
-        Dim i As Integer = 0
-        cantidadFunciones = ds.Tables(0).Rows.Count
-        For Each fila As DataRow In ds.Tables(0).Rows
-            Dim ckb As New CheckBox
-            ckb.AutoSize = True
-            ckb.Location = New System.Drawing.Point(16, 16 + i)
-            ckb.Name = fila(0).ToString()
-            ckb.Size = New System.Drawing.Size(81, 17)
-            ckb.TabIndex = 0
-            ckb.Text = fila(1).ToString().ToUpper()
-            ckb.UseVisualStyleBackColor = True
-            PanelPermisos.Controls.Add(ckb)
-            i = i + 20
-        Next
-
-    End Sub
-
 
     Private Function validarCampo() As Boolean
         Dim resultado = False
@@ -108,8 +48,9 @@
         ClbPermisosRol.ClearSelected()
         TxtDescripcion.Clear()
         BtnGuardar.Enabled = True
+        BtnBorrar.Enabled = False
+        BtnEditar.Enabled = False
         borrarChecked()
-
 
     End Sub
 
@@ -154,41 +95,7 @@
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         Try
-            'Dim fila As Integer = DgvRegistrosRol.CurrentRow.Index
-            'Dim rolActual As String = DgvRegistrosRol.Rows(fila).Cells(1).Value
 
-            'If Not validarCampo() Then
-            '    MsgBox("La información está incompleta", MsgBoxStyle.Exclamation, "ADVERTENCIA")
-            '    Exit Sub
-            'End If
-
-            'Dim resp As VariantType
-            'resp = (MsgBox("Desea editar los datos y permisos de este rol? Rol: " & rolActual, MsgBoxStyle.Question +
-            '           MsgBoxStyle.YesNo, "CONFIRMACIÓN"))
-            'If (resp = vbNo) Then
-            '    MsgBox("Operación cancelada",
-            '           MsgBoxStyle.Information, "Gestión de Roles")
-            '    Exit Sub
-            'End If
-
-            'Dim rol As New Rol()
-            'Dim dRol As New DRol
-
-            'rol.IdRol = DgvRegistrosRol.Rows(fila).Cells(0).Value
-            'rol.Nombre = TxtNombre.Text
-            'rol.Descripcion = comprobarNull(rol.Descripcion, TxtDescripcion)
-
-
-            'If dRol.editarRegistro(rol) Then
-            '    MsgBox("Rol editado correctamente", MsgBoxStyle.Information, "Gestión de Roles")
-            '    llenarRegistros()
-            '    BtnLimpiar.PerformClick()
-            'End If
-
-            obtenerCambios()
-            For Each linea As Object In recienMarcados
-                MsgBox(linea.ToString())
-            Next
 
         Catch ex As Exception
             MsgBox("No se pudo editar el rol", MsgBoxStyle.Critical, "ERROR")

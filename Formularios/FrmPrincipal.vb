@@ -235,8 +235,9 @@ Public Class FrmPrincipal
 
     Private Sub BtnFacturar_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
         'Me.Size = New Size(1106, 940)
-
-        abrirFrmHijo(New FrmFacturarOrdenes())
+        Dim frmFacturar As New FrmFacturar()
+        frmFacturar.user = usuario
+        abrirFrmHijo(frmFacturar)
     End Sub
 
     Private Sub BtnCrearRol_Click(sender As Object, e As EventArgs) Handles BtnCrearRol.Click

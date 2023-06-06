@@ -100,4 +100,50 @@ Public Class DFactura
         Return ds
 
     End Function
+
+    Public Function guardarFactura(ByVal fac As Factura) As Integer
+        Dim resultado As Integer = -1
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "INSERT INTO Tbl_Factura (total, fechaEmision, idPaciente, idUsuario, idMetodoPago, idDoctor, idEstadoFactura) 
+                                  VALUES (@total, @fechaEmision, @idPaciente, @idUsuario, @idMetodoPago, @idDoctor, @idEstadoFactura)
+                                  SELECT SCOPE_IDENTITY()"
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@total", fac.Total)
+            cmd.Parameters.AddWithValue("@fechaEmision", fac.FechaEmision)
+            cmd.Parameters.AddWithValue("@idPaciente", fac.IdPaciente)
+            cmd.Parameters.AddWithValue("@idUsuario", fac.IdUsuario)
+            cmd.Parameters.AddWithValue("@idMetodoPago", fac.IdMetodoPago)
+            cmd.Parameters.AddWithValue("@idDoctor", fac.IdDoctor)
+            cmd.Parameters.AddWithValue("@idEstadoFactura", fac.IdEstadoFactura)
+            conn.Open()
+            resultado = cmd.ExecuteScalar()
+            conn.Close()
+
+        Catch ex As Exception
+            MsgBox("Ocurrió un error al guardar la factura" & ex.Message, MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return resultado
+
+    End Function
+
+    Public Function actualizarEstadoFactura(ByVal factura As Factura) As Boolean
+        Dim resultado As Boolean = False
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "UPDATE Tbl_Factura SET idEstadoFactura = @estado WHERE idFactura = @idFactura"
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@estado", factura.IdEstadoFactura)
+            cmd.Parameters.AddWithValue("@idFactura", factura.IdFactura)
+            conn.Open()
+            If (cmd.ExecuteNonQuery <> 0) Then
+                resultado = True
+            End If
+            conn.Close()
+        Catch ex As Exception
+            MsgBox("Ocurrió un error al actualizar el estado de la factura" & ex.Message, MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return resultado
+
+    End Function
 End Class

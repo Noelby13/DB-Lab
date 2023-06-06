@@ -147,5 +147,42 @@ Public Class DPaciente
         End Try
         Return ds
     End Function
+
+    Public Function listaPacienteNombre(ByVal nombre As String) As DataSet
+        Dim resultado As New DataSet
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "SELECT idPaciente , primerNombre , segundoNombre , primerApellido, segundoApellido , CASE WHEN sexo = 0 THEN 'Femenino' WHEN sexo = 1 THEN 'Masculino' END AS 'Sexo', sexo AS 'SexoBooleano', fechaNacimiento, telefono , correo , direccion , cedula 
+                                                     FROM Tbl_Cliente Where estado = 'True' and primerNombre like @nombre"
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.SelectCommand.Parameters.AddWithValue("@nombre", "%" + nombre + "%")
+
+            da.Fill(resultado)
+
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al buscar el registro" & ex.Message, MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return resultado
+
+    End Function
+
+    Public Function listaPacienteCedula(ByVal cedulas As String) As DataSet
+
+        Dim ds As New DataSet
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "SELECT idPaciente AS 'Código', primerNombre AS 'PrimerNombre', segundoNombre AS 'SegundoNombre', primerApellido AS 'PrimerApellido', segundoApellido AS 'SegundoApellido', CASE WHEN sexo = 0 THEN 'Femenino' WHEN sexo = 1 THEN 'Masculino' END AS 'Sexo', sexo AS 'SexoBooleano', fechaNacimiento AS 'FechaNacimiento', telefono AS 'Teléfono', correo AS 'Correo', direccion AS 'Dirección', cedula AS 'Cédula'
+                                                     FROM Tbl_Cliente Where estado = 'True' and cedula like @cedula"
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.SelectCommand.Parameters.AddWithValue("@cedula", "%" + cedulas + "%")
+            da.Fill(ds)
+
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al buscar el registro" & ex.Message, MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return ds
+
+    End Function
+
 End Class
 

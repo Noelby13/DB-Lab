@@ -1,35 +1,39 @@
 ﻿Public Class FrmFacturarOrdenes
+    Dim datosTxtBuscar As DataSet
+    Dim dPaciente As New DPaciente
     Private Sub FrmFacturarOrdenes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Size = Screen.PrimaryScreen.WorkingArea.Size
         ' Location = Screen.PrimaryScreen.WorkingArea.Location
-        Dim datosEjemplos As New AutoCompleteStringCollection()
-        datosEjemplos.AddRange(
-            {"Ana García",
-            "Ana Rodríguez",
-            "Ana Fernández",
-            "Juan Pérez",
-            "Juan Gómez",
-            "Juan Hernández",
-            "María López",
-            "María Martínez",
-            "María Sánchez",
-            "Pedro Ramírez",
-            "Pedro Ruiz",
-            "Pedro Castro",
-            "Luisa Díaz",
-            "Luisa Ortiz1",
-            "Luisa Moreno90"
-            }
-            )
-        TxtBuscar.AutoCompleteCustomSource = datosEjemplos
-        Dim examenesEjemplo As New AutoCompleteStringCollection()
-        examenesEjemplo.AddRange(
-            {"Análisis de sangre completo",
-             "Análisis de orina",
-             "Prueba de Papanicolaou",
-             "Prueba de VIH"
-            })
-        TxtExamen.AutoCompleteCustomSource = examenesEjemplo
+        'Dim datosEjemplos As New AutoCompleteStringCollection()
+        'datosEjemplos.AddRange(
+        '    {"Ana García",
+        '    "Ana Rodríguez",
+        '    "Ana Fernández",
+        '    "Juan Pérez",
+        '    "Juan Gómez",
+        '    "Juan Hernández",
+        '    "María López",
+        '    "María Martínez",
+        '    "María Sánchez",
+        '    "Pedro Ramírez",
+        '    "Pedro Ruiz",
+        '    "Pedro Castro",
+        '    "Luisa Díaz",
+        '    "Luisa Ortiz1",
+        '    "Luisa Moreno90"
+        '    }
+        '    )
+        'TxtBuscar.AutoCompleteCustomSource = datosEjemplos
+        'Dim examenesEjemplo As New AutoCompleteStringCollection()
+        'examenesEjemplo.AddRange(
+        '    {"Análisis de sangre completo",
+        '     "Análisis de orina",
+        '     "Prueba de Papanicolaou",
+        '     "Prueba de VIH"
+        '    })
+        'TxtExamen.AutoCompleteCustomSource = examenesEjemplo
+        'rellenarAutoComplete()
+        rellenarComboDoctores()
     End Sub
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
@@ -74,9 +78,48 @@
         TxtExamen.Clear()
     End Sub
 
-    Private Sub BtnAgregarPaciente_Click(sender As Object, e As EventArgs) Handles BtnAgregarPaciente.Click
+    'Private Sub BtnAgregarPaciente_Click(sender As Object, e As EventArgs) Handles BtnAgregarPaciente.Click
+    '    If Not TxtBuscar.Text = "" Then
+    '        Dim cliente = dPaciente.listaPacienteCedula(TxtBuscar.Text)
+    '        'verifica que no este vacio
+    '        TxtNombre.Text = cliente.PrimerNombre
+    '        TxtCedula.Text = cliente.Cedula
+    '        TxtEdad.Text = 'calcular la 
+
+
+
+    '    End If
+    'End Sub
+
+    Private Sub rellenarComboDoctores()
+        Dim ds As New DataSet
+        Dim dDoctor As New DDoctor
+        ds = dDoctor.obtenerDoctor
+        CmbDoctor.DataSource = ds.Tables(0)
+        CmbDoctor.DisplayMember = "Doctor"
+        CmbDoctor.ValueMember = "idDoctor"
+
 
     End Sub
+
+    Private Sub CmbDoctor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbDoctor.SelectedIndexChanged
+
+    End Sub
+
+
+
+    'Private Sub rellenarAutoComplete()
+
+    '    datosTxtBuscar = dPaciente.listaPaciente(TxtBuscar.Text)
+
+    '    Using datosTxtBuscar
+    '        TxtBuscar.AutoCompleteCustomSource.Clear()
+    '        For Each fila As DataRow In datosTxtBuscar.Tables(0).Rows
+    '            TxtBuscar.AutoCompleteCustomSource.Add(fila("Nombre").ToString())
+    '        Next
+    '    End Using
+    'End Sub
+
 
 
 End Class

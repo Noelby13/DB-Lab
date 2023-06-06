@@ -93,6 +93,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property DB_Lab_logo_250x141() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("DB_Lab_logo_250x141", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property deleteButton() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("deleteButton", resourceCulture)

@@ -6,11 +6,11 @@
     Dim _idFactura As Integer
     Dim _idExamen As Integer
 
-    Private Sub New()
+    Public Sub New()
 
     End Sub
 
-    Private Sub New(idDetalleFactura As Integer, cantidad As Integer, precioUnitario As Decimal, idFactura As Integer, idExamen As Integer)
+    Public Sub New(idDetalleFactura As Integer, cantidad As Integer, precioUnitario As Decimal, idFactura As Integer, idExamen As Integer)
         _idDetalleFactura = idDetalleFactura
         _cantidad = cantidad
         _precioUnitario = precioUnitario
