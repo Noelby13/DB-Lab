@@ -1,4 +1,8 @@
 ﻿Public Class FrmGestiónReportes
+    Dim data As New DsDBLab.TblIntervaloFechasDataTable
+    Dim fechaInicio As DateTime
+    Dim fechaFin As DateTime
+
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
@@ -13,6 +17,11 @@
     End Sub
 
     Private Sub BtnReporte_Click(sender As Object, e As EventArgs) Handles BtnReporte.Click
+        If CbxTipoReporte.SelectedIndex = -1 Or CbxTipoReporte.SelectedIndex = 7 Or CbxTipoReporte.SelectedIndex = 0 Then
+            MsgBox("Seleccione un tipo de reporte", vbInformation, "Reporte")
+            Exit Sub
+        End If
+
         'pregunta si quiere el reporte en la misma pantalla o en otra
         If CbxTipoReporte.SelectedIndex = 0 And CbxTipoReporte.SelectedIndex = 7 Then
             MsgBox("Seleccione un tipo de reporte", vbInformation, "Reporte")
@@ -43,13 +52,105 @@
             mostrarDoctoresDisponibles()
         End If
 
+        If CbxTipoReporte.SelectedIndex = 8 Then
+            mostrarIngresosDias()
+        End If
 
+        If CbxTipoReporte.SelectedIndex = 9 Then
+            mostrarVentasExamenes()
+        End If
 
+        If CbxTipoReporte.SelectedIndex = 10 Then
+            mostrarIngresosCategorias()
+        End If
 
+        If CbxTipoReporte.SelectedIndex = 11 Then
+            mostrarIngresosDoctor()
+        End If
 
 
 
     End Sub
+
+    Private Sub mostrarIngresosDoctor()
+        If obtenerRangoFecha() = False Then
+            Exit Sub
+        End If
+
+        Dim tbl As New DsDBLabTableAdapters.RptIngresosDoctorTableAdapter
+        Dim datos = tbl.GetData(fechaInicio, fechaFin)
+        verReportePersonalizado(datos, data, "DsIngresosDoctor", "DsFechas", "Reportes/RptIngresosDoctor.rdlc")
+    End Sub
+
+
+
+    Private Sub mostrarIngresosCategorias()
+        If obtenerRangoFecha() = False Then
+            Exit Sub
+        End If
+        Dim tbl As New DsDBLabTableAdapters.RptCategoriasVendidasTableAdapter
+        Dim datos = tbl.GetData(fechaInicio, fechaFin)
+        verReportePersonalizado(datos, data, "DsCategoriasVendidas", "DsFechas", "Reportes/RptCategoriasVendidas.rdlc")
+    End Sub
+
+    Private Sub mostrarVentasExamenes()
+        If obtenerRangoFecha() = False Then
+            Exit Sub
+        End If
+
+        Dim tbl As New DsDBLabTableAdapters.RptVentaExamenesTableAdapter
+        Dim datos = tbl.GetData(fechaInicio, fechaFin)
+        verReportePersonalizado(datos, data, "DsVentaExamenes", "DsFechas", "Reportes/RptVentaExamenes.rdlc")
+    End Sub
+
+
+    Private Sub mostrarIngresosDias()
+        If obtenerRangoFecha() = False Then
+            Exit Sub
+        End If
+        Dim tbl As New DsDBLabTableAdapters.RptIngresosDiasTableAdapter
+        Dim datos = tbl.GetData(fechaInicio, fechaFin)
+        verReportePersonalizado(datos, data, "DsIngresosDias", "DsFechas", "Reportes/RptIngresosDias.rdlc")
+    End Sub
+
+    Private Function obtenerRangoFecha()
+
+        If CbxFecha.SelectedIndex = -1 Then
+            MsgBox("Seleccione un rango de fecha", vbInformation, "Reporte")
+            Return False
+        End If
+
+        'genera 2 datetime que tengan una semana de diferencia
+
+
+        If CbxFecha.SelectedIndex = 0 Then
+            fechaFin = Date.Now
+            fechaInicio = Date.Now.AddDays(-7)
+        End If
+
+        If CbxFecha.SelectedIndex = 1 Then
+            fechaFin = Date.Now
+            fechaInicio = Date.Now.AddDays(-30)
+        End If
+
+
+        If CbxFecha.SelectedIndex = 2 Then
+            fechaFin = Date.Now
+            fechaInicio = Date.Now.AddDays(-365)
+        End If
+
+        'borra todos los datos que tenga el datatable incluidas las columnas
+        data.Clear()
+        'guarda estas fechas en un datatable
+        data.Rows.Add(fechaInicio, fechaFin)
+
+        Return True
+
+    End Function
+
+
+
+
 
     Private Sub mostrarCantidadEdades()
         Dim tbl As New DsDBLabTableAdapters.RptCantidadEdadesTableAdapter
