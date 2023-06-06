@@ -29,8 +29,14 @@ Partial Class FrmPaciente
         Me.BtnBorrar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
-        Me.BtnGuardarIcon = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.PanelDatosPaciente = New System.Windows.Forms.Panel()
+        Me.LblSegApe = New System.Windows.Forms.Label()
+        Me.LblPrimApe = New System.Windows.Forms.Label()
+        Me.LblSegNom = New System.Windows.Forms.Label()
+        Me.LblPrimNim = New System.Windows.Forms.Label()
+        Me.TxtPrimApe = New System.Windows.Forms.TextBox()
+        Me.TxtSegNom = New System.Windows.Forms.TextBox()
         Me.RbFemenino = New System.Windows.Forms.RadioButton()
         Me.RbMasculino = New System.Windows.Forms.RadioButton()
         Me.TxtCorreo = New System.Windows.Forms.TextBox()
@@ -41,22 +47,22 @@ Partial Class FrmPaciente
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TxtCedula = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DtpFechaNac = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxtApellido = New System.Windows.Forms.TextBox()
+        Me.TxtSegApe = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtNombre = New System.Windows.Forms.TextBox()
+        Me.TxtPrimNombre = New System.Windows.Forms.TextBox()
         Me.Lbl_nombre = New System.Windows.Forms.Label()
         Me.PanelRegistros = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnBuscarEstudio = New System.Windows.Forms.Button()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.DgvPacientes = New System.Windows.Forms.DataGridView()
+        Me.BtnBuscarPaciente = New System.Windows.Forms.Button()
+        Me.TxtPaciente = New System.Windows.Forms.TextBox()
         Me.PanelLeyenda.SuspendLayout()
         Me.PanelOpciones.SuspendLayout()
         Me.PanelDatosPaciente.SuspendLayout()
         Me.PanelRegistros.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelLeyenda
@@ -80,7 +86,7 @@ Partial Class FrmPaciente
         Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(91, 39)
-        Me.BtnSalir.TabIndex = 1
+        Me.BtnSalir.TabIndex = 19
         Me.BtnSalir.Text = "Salir"
         Me.BtnSalir.UseVisualStyleBackColor = False
         '
@@ -101,7 +107,7 @@ Partial Class FrmPaciente
         Me.PanelOpciones.Controls.Add(Me.BtnBorrar)
         Me.PanelOpciones.Controls.Add(Me.BtnEditar)
         Me.PanelOpciones.Controls.Add(Me.BtnLimpiar)
-        Me.PanelOpciones.Controls.Add(Me.BtnGuardarIcon)
+        Me.PanelOpciones.Controls.Add(Me.BtnGuardar)
         Me.PanelOpciones.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelOpciones.Location = New System.Drawing.Point(0, 63)
         Me.PanelOpciones.Margin = New System.Windows.Forms.Padding(4)
@@ -142,20 +148,26 @@ Partial Class FrmPaciente
         Me.BtnLimpiar.TabIndex = 1
         Me.BtnLimpiar.UseVisualStyleBackColor = True
         '
-        'BtnGuardarIcon
+        'BtnGuardar
         '
-        Me.BtnGuardarIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnGuardarIcon.Image = Global.DB_Lab.My.Resources.Resources.saveButton
-        Me.BtnGuardarIcon.Location = New System.Drawing.Point(455, 7)
-        Me.BtnGuardarIcon.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnGuardarIcon.Name = "BtnGuardarIcon"
-        Me.BtnGuardarIcon.Size = New System.Drawing.Size(108, 57)
-        Me.BtnGuardarIcon.TabIndex = 2
-        Me.BtnGuardarIcon.UseVisualStyleBackColor = True
+        Me.BtnGuardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnGuardar.Image = Global.DB_Lab.My.Resources.Resources.saveButton
+        Me.BtnGuardar.Location = New System.Drawing.Point(455, 7)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(108, 57)
+        Me.BtnGuardar.TabIndex = 2
+        Me.BtnGuardar.UseVisualStyleBackColor = True
         '
         'PanelDatosPaciente
         '
         Me.PanelDatosPaciente.BackColor = System.Drawing.Color.White
+        Me.PanelDatosPaciente.Controls.Add(Me.LblSegApe)
+        Me.PanelDatosPaciente.Controls.Add(Me.LblPrimApe)
+        Me.PanelDatosPaciente.Controls.Add(Me.LblSegNom)
+        Me.PanelDatosPaciente.Controls.Add(Me.LblPrimNim)
+        Me.PanelDatosPaciente.Controls.Add(Me.TxtPrimApe)
+        Me.PanelDatosPaciente.Controls.Add(Me.TxtSegNom)
         Me.PanelDatosPaciente.Controls.Add(Me.RbFemenino)
         Me.PanelDatosPaciente.Controls.Add(Me.RbMasculino)
         Me.PanelDatosPaciente.Controls.Add(Me.TxtCorreo)
@@ -166,19 +178,75 @@ Partial Class FrmPaciente
         Me.PanelDatosPaciente.Controls.Add(Me.Label8)
         Me.PanelDatosPaciente.Controls.Add(Me.TxtCedula)
         Me.PanelDatosPaciente.Controls.Add(Me.Label7)
-        Me.PanelDatosPaciente.Controls.Add(Me.DateTimePicker1)
+        Me.PanelDatosPaciente.Controls.Add(Me.DtpFechaNac)
         Me.PanelDatosPaciente.Controls.Add(Me.Label6)
         Me.PanelDatosPaciente.Controls.Add(Me.Label3)
-        Me.PanelDatosPaciente.Controls.Add(Me.TxtApellido)
+        Me.PanelDatosPaciente.Controls.Add(Me.TxtSegApe)
         Me.PanelDatosPaciente.Controls.Add(Me.Label2)
-        Me.PanelDatosPaciente.Controls.Add(Me.TxtNombre)
+        Me.PanelDatosPaciente.Controls.Add(Me.TxtPrimNombre)
         Me.PanelDatosPaciente.Controls.Add(Me.Lbl_nombre)
         Me.PanelDatosPaciente.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelDatosPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PanelDatosPaciente.Location = New System.Drawing.Point(0, 137)
         Me.PanelDatosPaciente.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelDatosPaciente.Name = "PanelDatosPaciente"
         Me.PanelDatosPaciente.Size = New System.Drawing.Size(868, 345)
         Me.PanelDatosPaciente.TabIndex = 3
+        '
+        'LblSegApe
+        '
+        Me.LblSegApe.AutoSize = True
+        Me.LblSegApe.Location = New System.Drawing.Point(711, 49)
+        Me.LblSegApe.Name = "LblSegApe"
+        Me.LblSegApe.Size = New System.Drawing.Size(69, 16)
+        Me.LblSegApe.TabIndex = 28
+        Me.LblSegApe.Text = "Segundo"
+        '
+        'LblPrimApe
+        '
+        Me.LblPrimApe.AutoSize = True
+        Me.LblPrimApe.Location = New System.Drawing.Point(560, 49)
+        Me.LblPrimApe.Name = "LblPrimApe"
+        Me.LblPrimApe.Size = New System.Drawing.Size(52, 16)
+        Me.LblPrimApe.TabIndex = 27
+        Me.LblPrimApe.Text = "Primer"
+        '
+        'LblSegNom
+        '
+        Me.LblSegNom.AutoSize = True
+        Me.LblSegNom.Location = New System.Drawing.Point(276, 49)
+        Me.LblSegNom.Name = "LblSegNom"
+        Me.LblSegNom.Size = New System.Drawing.Size(69, 16)
+        Me.LblSegNom.TabIndex = 26
+        Me.LblSegNom.Text = "Segundo"
+        '
+        'LblPrimNim
+        '
+        Me.LblPrimNim.AutoSize = True
+        Me.LblPrimNim.Location = New System.Drawing.Point(117, 50)
+        Me.LblPrimNim.Name = "LblPrimNim"
+        Me.LblPrimNim.Size = New System.Drawing.Size(52, 16)
+        Me.LblPrimNim.TabIndex = 25
+        Me.LblPrimNim.Text = "Primer"
+        '
+        'TxtPrimApe
+        '
+        Me.TxtPrimApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPrimApe.Location = New System.Drawing.Point(560, 22)
+        Me.TxtPrimApe.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtPrimApe.Name = "TxtPrimApe"
+        Me.TxtPrimApe.Size = New System.Drawing.Size(144, 27)
+        Me.TxtPrimApe.TabIndex = 7
+        '
+        'TxtSegNom
+        '
+        Me.TxtSegNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtSegNom.Location = New System.Drawing.Point(276, 22)
+        Me.TxtSegNom.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtSegNom.Name = "TxtSegNom"
+        Me.TxtSegNom.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TxtSegNom.Size = New System.Drawing.Size(143, 27)
+        Me.TxtSegNom.TabIndex = 6
         '
         'RbFemenino
         '
@@ -186,8 +254,8 @@ Partial Class FrmPaciente
         Me.RbFemenino.Location = New System.Drawing.Point(241, 85)
         Me.RbFemenino.Margin = New System.Windows.Forms.Padding(4)
         Me.RbFemenino.Name = "RbFemenino"
-        Me.RbFemenino.Size = New System.Drawing.Size(88, 20)
-        Me.RbFemenino.TabIndex = 4
+        Me.RbFemenino.Size = New System.Drawing.Size(96, 20)
+        Me.RbFemenino.TabIndex = 10
         Me.RbFemenino.TabStop = True
         Me.RbFemenino.Text = "Femenino"
         Me.RbFemenino.UseVisualStyleBackColor = True
@@ -198,8 +266,8 @@ Partial Class FrmPaciente
         Me.RbMasculino.Location = New System.Drawing.Point(120, 85)
         Me.RbMasculino.Margin = New System.Windows.Forms.Padding(4)
         Me.RbMasculino.Name = "RbMasculino"
-        Me.RbMasculino.Size = New System.Drawing.Size(89, 20)
-        Me.RbMasculino.TabIndex = 3
+        Me.RbMasculino.Size = New System.Drawing.Size(98, 20)
+        Me.RbMasculino.TabIndex = 9
         Me.RbMasculino.TabStop = True
         Me.RbMasculino.Text = "Masculino"
         Me.RbMasculino.UseVisualStyleBackColor = True
@@ -211,7 +279,7 @@ Partial Class FrmPaciente
         Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtCorreo.Name = "TxtCorreo"
         Me.TxtCorreo.Size = New System.Drawing.Size(299, 27)
-        Me.TxtCorreo.TabIndex = 9
+        Me.TxtCorreo.TabIndex = 15
         '
         'Label10
         '
@@ -230,7 +298,7 @@ Partial Class FrmPaciente
         Me.TxtTelefono.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtTelefono.Name = "TxtTelefono"
         Me.TxtTelefono.Size = New System.Drawing.Size(299, 27)
-        Me.TxtTelefono.TabIndex = 8
+        Me.TxtTelefono.TabIndex = 14
         '
         'Label9
         '
@@ -251,7 +319,7 @@ Partial Class FrmPaciente
         Me.TxtDireccion.Name = "TxtDireccion"
         Me.TxtDireccion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TxtDireccion.Size = New System.Drawing.Size(253, 90)
-        Me.TxtDireccion.TabIndex = 7
+        Me.TxtDireccion.TabIndex = 13
         '
         'Label8
         '
@@ -270,7 +338,7 @@ Partial Class FrmPaciente
         Me.TxtCedula.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtCedula.Name = "TxtCedula"
         Me.TxtCedula.Size = New System.Drawing.Size(299, 27)
-        Me.TxtCedula.TabIndex = 6
+        Me.TxtCedula.TabIndex = 12
         '
         'Label7
         '
@@ -282,13 +350,15 @@ Partial Class FrmPaciente
         Me.Label7.TabIndex = 15
         Me.Label7.Text = "Cedula:"
         '
-        'DateTimePicker1
+        'DtpFechaNac
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(583, 85)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(257, 22)
-        Me.DateTimePicker1.TabIndex = 5
+        Me.DtpFechaNac.CustomFormat = "yyyy-MM-dd"
+        Me.DtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DtpFechaNac.Location = New System.Drawing.Point(583, 85)
+        Me.DtpFechaNac.Margin = New System.Windows.Forms.Padding(4)
+        Me.DtpFechaNac.Name = "DtpFechaNac"
+        Me.DtpFechaNac.Size = New System.Drawing.Size(257, 22)
+        Me.DtpFechaNac.TabIndex = 11
         '
         'Label6
         '
@@ -310,14 +380,14 @@ Partial Class FrmPaciente
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Sexo:"
         '
-        'TxtApellido
+        'TxtSegApe
         '
-        Me.TxtApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtApellido.Location = New System.Drawing.Point(583, 21)
-        Me.TxtApellido.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TxtApellido.Name = "TxtApellido"
-        Me.TxtApellido.Size = New System.Drawing.Size(215, 27)
-        Me.TxtApellido.TabIndex = 2
+        Me.TxtSegApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtSegApe.Location = New System.Drawing.Point(711, 22)
+        Me.TxtSegApe.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtSegApe.Name = "TxtSegApe"
+        Me.TxtSegApe.Size = New System.Drawing.Size(144, 27)
+        Me.TxtSegApe.TabIndex = 8
         '
         'Label2
         '
@@ -329,14 +399,15 @@ Partial Class FrmPaciente
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Apellido: "
         '
-        'TxtNombre
+        'TxtPrimNombre
         '
-        Me.TxtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombre.Location = New System.Drawing.Point(120, 21)
-        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(299, 27)
-        Me.TxtNombre.TabIndex = 1
+        Me.TxtPrimNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPrimNombre.Location = New System.Drawing.Point(120, 21)
+        Me.TxtPrimNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtPrimNombre.Name = "TxtPrimNombre"
+        Me.TxtPrimNombre.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TxtPrimNombre.Size = New System.Drawing.Size(143, 27)
+        Me.TxtPrimNombre.TabIndex = 5
         '
         'Lbl_nombre
         '
@@ -350,9 +421,9 @@ Partial Class FrmPaciente
         '
         'PanelRegistros
         '
-        Me.PanelRegistros.Controls.Add(Me.DataGridView1)
-        Me.PanelRegistros.Controls.Add(Me.BtnBuscarEstudio)
-        Me.PanelRegistros.Controls.Add(Me.TextBox8)
+        Me.PanelRegistros.Controls.Add(Me.DgvPacientes)
+        Me.PanelRegistros.Controls.Add(Me.BtnBuscarPaciente)
+        Me.PanelRegistros.Controls.Add(Me.TxtPaciente)
         Me.PanelRegistros.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelRegistros.Location = New System.Drawing.Point(0, 482)
         Me.PanelRegistros.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -360,41 +431,47 @@ Partial Class FrmPaciente
         Me.PanelRegistros.Size = New System.Drawing.Size(868, 409)
         Me.PanelRegistros.TabIndex = 4
         '
-        'DataGridView1
+        'DgvPacientes
         '
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.DgvPacientes.AllowUserToAddRows = False
+        Me.DgvPacientes.AllowUserToDeleteRows = False
+        Me.DgvPacientes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(45, 103)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(781, 271)
-        Me.DataGridView1.TabIndex = 3
+        Me.DgvPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvPacientes.Location = New System.Drawing.Point(45, 103)
+        Me.DgvPacientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DgvPacientes.MultiSelect = False
+        Me.DgvPacientes.Name = "DgvPacientes"
+        Me.DgvPacientes.ReadOnly = True
+        Me.DgvPacientes.RowHeadersWidth = 51
+        Me.DgvPacientes.RowTemplate.Height = 24
+        Me.DgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvPacientes.Size = New System.Drawing.Size(781, 271)
+        Me.DgvPacientes.TabIndex = 18
         '
-        'BtnBuscarEstudio
+        'BtnBuscarPaciente
         '
-        Me.BtnBuscarEstudio.Image = Global.DB_Lab.My.Resources.Resources.searchButton
-        Me.BtnBuscarEstudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarEstudio.Location = New System.Drawing.Point(723, 28)
-        Me.BtnBuscarEstudio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BtnBuscarEstudio.Name = "BtnBuscarEstudio"
-        Me.BtnBuscarEstudio.Size = New System.Drawing.Size(108, 57)
-        Me.BtnBuscarEstudio.TabIndex = 2
-        Me.BtnBuscarEstudio.Text = "Buscar"
-        Me.BtnBuscarEstudio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnBuscarEstudio.UseVisualStyleBackColor = True
+        Me.BtnBuscarPaciente.Image = Global.DB_Lab.My.Resources.Resources.searchButton
+        Me.BtnBuscarPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBuscarPaciente.Location = New System.Drawing.Point(723, 28)
+        Me.BtnBuscarPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnBuscarPaciente.Name = "BtnBuscarPaciente"
+        Me.BtnBuscarPaciente.Size = New System.Drawing.Size(108, 57)
+        Me.BtnBuscarPaciente.TabIndex = 17
+        Me.BtnBuscarPaciente.Text = "Buscar"
+        Me.BtnBuscarPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBuscarPaciente.UseVisualStyleBackColor = True
         '
-        'TextBox8
+        'TxtPaciente
         '
-        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(45, 42)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(659, 27)
-        Me.TextBox8.TabIndex = 1
+        Me.TxtPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPaciente.Location = New System.Drawing.Point(45, 42)
+        Me.TxtPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtPaciente.Name = "TxtPaciente"
+        Me.TxtPaciente.Size = New System.Drawing.Size(659, 27)
+        Me.TxtPaciente.TabIndex = 16
         '
         'FrmPaciente
         '
@@ -417,7 +494,7 @@ Partial Class FrmPaciente
         Me.PanelDatosPaciente.PerformLayout()
         Me.PanelRegistros.ResumeLayout(False)
         Me.PanelRegistros.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvPacientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -428,12 +505,12 @@ Partial Class FrmPaciente
     Friend WithEvents PanelOpciones As Panel
     Friend WithEvents PanelDatosPaciente As Panel
     Friend WithEvents Lbl_nombre As Label
-    Friend WithEvents TxtNombre As TextBox
+    Friend WithEvents TxtPrimNombre As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TxtApellido As TextBox
+    Friend WithEvents TxtSegApe As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DtpFechaNac As DateTimePicker
     Friend WithEvents TxtCorreo As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TxtTelefono As TextBox
@@ -442,14 +519,20 @@ Partial Class FrmPaciente
     Friend WithEvents Label8 As Label
     Friend WithEvents TxtCedula As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents BtnGuardarIcon As Button
+    Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnLimpiar As Button
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnBorrar As Button
     Friend WithEvents PanelRegistros As Panel
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents BtnBuscarEstudio As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TxtPaciente As TextBox
+    Friend WithEvents BtnBuscarPaciente As Button
+    Friend WithEvents DgvPacientes As DataGridView
     Friend WithEvents RbFemenino As RadioButton
     Friend WithEvents RbMasculino As RadioButton
+    Friend WithEvents TxtPrimApe As TextBox
+    Friend WithEvents TxtSegNom As TextBox
+    Friend WithEvents LblPrimNim As Label
+    Friend WithEvents LblSegNom As Label
+    Friend WithEvents LblSegApe As Label
+    Friend WithEvents LblPrimApe As Label
 End Class

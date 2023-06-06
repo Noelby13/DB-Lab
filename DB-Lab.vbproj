@@ -100,6 +100,7 @@
     <Compile Include="dao\DExamenEstudio.vb" />
     <Compile Include="dao\DFactura.vb" />
     <Compile Include="dao\DFuncion.vb" />
+    <Compile Include="dao\DPaciente.vb" />
     <Compile Include="dao\DResultado.vb" />
     <Compile Include="dao\DRolFuncion.vb" />
     <Compile Include="dao\D_DetalleFactura.vb" />
@@ -123,6 +124,7 @@
     <Compile Include="entidades\ExamenEstudio.vb" />
     <Compile Include="entidades\Factura.vb" />
     <Compile Include="entidades\Funcion.vb" />
+    <Compile Include="entidades\Paciente.vb" />
     <Compile Include="entidades\Resultado.vb" />
     <Compile Include="entidades\RolFuncion.vb" />
     <Compile Include="entidades\Unidad.vb" />
@@ -343,6 +345,9 @@
     <EmbeddedResource Include="Reportes\RptCategoriasDisponibles.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptCategoriasVendidas.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptClientesDisponibles.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -355,7 +360,16 @@
     <EmbeddedResource Include="Reportes\RptExamenesDisponibles.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptIngresosDias.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptIngresosDoctor.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptResultadoMedico.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptVentaExamenes.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

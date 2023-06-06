@@ -31,6 +31,7 @@ Partial Class FrmCategorias
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.PanelDatosCategoria = New System.Windows.Forms.Panel()
+        Me.LblAdvertenciaCat = New System.Windows.Forms.Label()
         Me.TxtDescripcion = New System.Windows.Forms.TextBox()
         Me.LblDescripcion = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
@@ -39,7 +40,6 @@ Partial Class FrmCategorias
         Me.DgvCategorias = New System.Windows.Forms.DataGridView()
         Me.BtnBuscarEstudio = New System.Windows.Forms.Button()
         Me.TxtCategoria = New System.Windows.Forms.TextBox()
-        Me.LblAdvertenciaCat = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.PanelBotones.SuspendLayout()
         Me.PanelDatosCategoria.SuspendLayout()
@@ -154,6 +154,16 @@ Partial Class FrmCategorias
         Me.PanelDatosCategoria.Size = New System.Drawing.Size(868, 101)
         Me.PanelDatosCategoria.TabIndex = 2
         '
+        'LblAdvertenciaCat
+        '
+        Me.LblAdvertenciaCat.AutoSize = True
+        Me.LblAdvertenciaCat.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAdvertenciaCat.Location = New System.Drawing.Point(127, 65)
+        Me.LblAdvertenciaCat.Name = "LblAdvertenciaCat"
+        Me.LblAdvertenciaCat.Size = New System.Drawing.Size(54, 16)
+        Me.LblAdvertenciaCat.TabIndex = 12
+        Me.LblAdvertenciaCat.Text = "Label2"
+        '
         'TxtDescripcion
         '
         Me.TxtDescripcion.Location = New System.Drawing.Point(537, 39)
@@ -203,6 +213,7 @@ Partial Class FrmCategorias
         '
         'DgvCategorias
         '
+        Me.DgvCategorias.AllowUserToAddRows = False
         Me.DgvCategorias.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -234,16 +245,6 @@ Partial Class FrmCategorias
         Me.TxtCategoria.Name = "TxtCategoria"
         Me.TxtCategoria.Size = New System.Drawing.Size(657, 27)
         Me.TxtCategoria.TabIndex = 9
-        '
-        'LblAdvertenciaCat
-        '
-        Me.LblAdvertenciaCat.AutoSize = True
-        Me.LblAdvertenciaCat.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAdvertenciaCat.Location = New System.Drawing.Point(127, 65)
-        Me.LblAdvertenciaCat.Name = "LblAdvertenciaCat"
-        Me.LblAdvertenciaCat.Size = New System.Drawing.Size(54, 16)
-        Me.LblAdvertenciaCat.TabIndex = 12
-        Me.LblAdvertenciaCat.Text = "Label2"
         '
         'FrmCategorias
         '

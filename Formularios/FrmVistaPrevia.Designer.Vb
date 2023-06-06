@@ -41,7 +41,8 @@ Partial Class FrmVistaPrevia
         Me.ClientSize = New System.Drawing.Size(864, 450)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "FrmVistaPrevia"
-        Me.Text = "FrmVistaPrevia"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Reporte"
         Me.ResumeLayout(False)
 
     End Sub
