@@ -22,7 +22,7 @@ Partial Class FrmRol
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelLeyenda = New System.Windows.Forms.Panel()
         Me.BtnSalir = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -44,7 +44,6 @@ Partial Class FrmRol
         Me.DgvRegistrosRol = New System.Windows.Forms.DataGridView()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
-        Me.PanelPermisos = New System.Windows.Forms.Panel()
         Me.PanelLeyenda.SuspendLayout()
         Me.PanelBotones.SuspendLayout()
         Me.PanelDatosRol.SuspendLayout()
@@ -59,7 +58,7 @@ Partial Class FrmRol
         Me.PanelLeyenda.Controls.Add(Me.Label4)
         Me.PanelLeyenda.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLeyenda.Location = New System.Drawing.Point(0, 0)
-        Me.PanelLeyenda.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelLeyenda.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelLeyenda.Name = "PanelLeyenda"
         Me.PanelLeyenda.Size = New System.Drawing.Size(970, 52)
         Me.PanelLeyenda.TabIndex = 0
@@ -96,7 +95,7 @@ Partial Class FrmRol
         Me.PanelBotones.Controls.Add(Me.BtnLimpiar)
         Me.PanelBotones.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelBotones.Location = New System.Drawing.Point(0, 52)
-        Me.PanelBotones.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelBotones.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelBotones.Name = "PanelBotones"
         Me.PanelBotones.Size = New System.Drawing.Size(970, 60)
         Me.PanelBotones.TabIndex = 1
@@ -104,6 +103,7 @@ Partial Class FrmRol
         'BtnBorrar
         '
         Me.BtnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnBorrar.Enabled = False
         Me.BtnBorrar.Image = Global.DB_Lab.My.Resources.Resources.deleteButton
         Me.BtnBorrar.Location = New System.Drawing.Point(879, 6)
         Me.BtnBorrar.Name = "BtnBorrar"
@@ -114,6 +114,7 @@ Partial Class FrmRol
         'BtnEditar
         '
         Me.BtnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnEditar.Enabled = False
         Me.BtnEditar.Image = Global.DB_Lab.My.Resources.Resources.editButton
         Me.BtnEditar.Location = New System.Drawing.Point(770, 6)
         Me.BtnEditar.Name = "BtnEditar"
@@ -144,7 +145,6 @@ Partial Class FrmRol
         'PanelDatosRol
         '
         Me.PanelDatosRol.BackColor = System.Drawing.Color.White
-        Me.PanelDatosRol.Controls.Add(Me.PanelPermisos)
         Me.PanelDatosRol.Controls.Add(Me.LblAdvertencia)
         Me.PanelDatosRol.Controls.Add(Me.ClbPermisosRol)
         Me.PanelDatosRol.Controls.Add(Me.LblPermisosRol)
@@ -154,7 +154,7 @@ Partial Class FrmRol
         Me.PanelDatosRol.Controls.Add(Me.LblNombreRol)
         Me.PanelDatosRol.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelDatosRol.Location = New System.Drawing.Point(0, 112)
-        Me.PanelDatosRol.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelDatosRol.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelDatosRol.Name = "PanelDatosRol"
         Me.PanelDatosRol.Size = New System.Drawing.Size(970, 333)
         Me.PanelDatosRol.TabIndex = 2
@@ -176,7 +176,7 @@ Partial Class FrmRol
         Me.ClbPermisosRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClbPermisosRol.FormattingEnabled = True
         Me.ClbPermisosRol.Location = New System.Drawing.Point(367, 67)
-        Me.ClbPermisosRol.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ClbPermisosRol.Margin = New System.Windows.Forms.Padding(2)
         Me.ClbPermisosRol.Name = "ClbPermisosRol"
         Me.ClbPermisosRol.Size = New System.Drawing.Size(253, 213)
         Me.ClbPermisosRol.TabIndex = 12
@@ -196,7 +196,7 @@ Partial Class FrmRol
         '
         Me.TxtDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtDescripcion.Location = New System.Drawing.Point(100, 83)
-        Me.TxtDescripcion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtDescripcion.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtDescripcion.Multiline = True
         Me.TxtDescripcion.Name = "TxtDescripcion"
         Me.TxtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -218,7 +218,7 @@ Partial Class FrmRol
         '
         Me.TxtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNombre.Location = New System.Drawing.Point(100, 34)
-        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(234, 23)
         Me.TxtNombre.TabIndex = 6
@@ -242,7 +242,7 @@ Partial Class FrmRol
         Me.PanelRegistros.Controls.Add(Me.TxtBuscar)
         Me.PanelRegistros.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelRegistros.Location = New System.Drawing.Point(0, 445)
-        Me.PanelRegistros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelRegistros.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelRegistros.Name = "PanelRegistros"
         Me.PanelRegistros.Size = New System.Drawing.Size(970, 449)
         Me.PanelRegistros.TabIndex = 3
@@ -262,14 +262,14 @@ Partial Class FrmRol
         '
         Me.DgvRegistrosRol.AllowUserToAddRows = False
         Me.DgvRegistrosRol.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.SkyBlue
-        Me.DgvRegistrosRol.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.SkyBlue
+        Me.DgvRegistrosRol.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvRegistrosRol.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DgvRegistrosRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvRegistrosRol.Location = New System.Drawing.Point(34, 89)
-        Me.DgvRegistrosRol.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DgvRegistrosRol.Margin = New System.Windows.Forms.Padding(2)
         Me.DgvRegistrosRol.MultiSelect = False
         Me.DgvRegistrosRol.Name = "DgvRegistrosRol"
         Me.DgvRegistrosRol.ReadOnly = True
@@ -284,7 +284,7 @@ Partial Class FrmRol
         Me.BtnBuscar.Image = Global.DB_Lab.My.Resources.Resources.searchButton
         Me.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnBuscar.Location = New System.Drawing.Point(538, 19)
-        Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(81, 46)
         Me.BtnBuscar.TabIndex = 14
@@ -296,18 +296,10 @@ Partial Class FrmRol
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtBuscar.Location = New System.Drawing.Point(34, 30)
-        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtBuscar.Name = "TxtBuscar"
         Me.TxtBuscar.Size = New System.Drawing.Size(498, 23)
         Me.TxtBuscar.TabIndex = 13
-        '
-        'PanelPermisos
-        '
-        Me.PanelPermisos.AutoScroll = True
-        Me.PanelPermisos.Location = New System.Drawing.Point(660, 67)
-        Me.PanelPermisos.Name = "PanelPermisos"
-        Me.PanelPermisos.Size = New System.Drawing.Size(279, 213)
-        Me.PanelPermisos.TabIndex = 13
         '
         'FrmRol
         '
@@ -319,7 +311,7 @@ Partial Class FrmRol
         Me.Controls.Add(Me.PanelDatosRol)
         Me.Controls.Add(Me.PanelBotones)
         Me.Controls.Add(Me.PanelLeyenda)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmRol"
         Me.Text = "Gestion de Roles"
         Me.PanelLeyenda.ResumeLayout(False)
@@ -355,5 +347,4 @@ Partial Class FrmRol
     Friend WithEvents LblPermisosRol As Label
     Friend WithEvents LblAdvertencia As Label
     Friend WithEvents LblAviso As Label
-    Friend WithEvents PanelPermisos As Panel
 End Class

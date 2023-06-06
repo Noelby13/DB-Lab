@@ -24,4 +24,21 @@ Public Class DRolFuncion
         Return resultado
     End Function
 
+    Public Function borrarPermisos(ByVal rolFuncion As RolFuncion) As Boolean
+        Dim resultado = False
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "DELETE FROM Tbl_RolFuncion WHERE idRol = @idRol"
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@idRol", rolFuncion.IdRol)
+            conn.Open()
+            If (cmd.ExecuteNonQuery() <> 0) Then
+                resultado = True
+            End If
+            conn.Close()
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al borrar los permisos", MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return resultado
+    End Function
 End Class

@@ -22,7 +22,6 @@ Partial Class FrmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.PanelSubReportes = New System.Windows.Forms.Panel()
         Me.BtnGestiónReportes = New System.Windows.Forms.Button()
@@ -51,11 +50,10 @@ Partial Class FrmPrincipal
         Me.BtnCrearUsuario = New System.Windows.Forms.Button()
         Me.BtnUsuario = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnExamenes = New System.Windows.Forms.Button()
         Me.PanelFrmHijo = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.PanelSubReportes.SuspendLayout()
         Me.PanelSubDoctor.SuspendLayout()
@@ -65,8 +63,8 @@ Partial Class FrmPrincipal
         Me.PanelSubExamenes.SuspendLayout()
         Me.PanelSubUsuario.SuspendLayout()
         Me.Panel7.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -503,37 +501,12 @@ Partial Class FrmPrincipal
         '
         'Panel7
         '
-        Me.Panel7.Controls.Add(Me.Label2)
-        Me.Panel7.Controls.Add(Me.PictureBox2)
+        Me.Panel7.Controls.Add(Me.PictureBox1)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel7.Location = New System.Drawing.Point(3, 3)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(194, 116)
         Me.Panel7.TabIndex = 4
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(82, 50)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 20)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "DB-LAB"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(8, 19)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(70, 82)
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
         '
         'BtnExamenes
         '
@@ -575,6 +548,17 @@ Partial Class FrmPrincipal
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(618, 847)
         Me.TableLayoutPanel2.TabIndex = 3
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = Global.DB_Lab.My.Resources.Resources.DB_Lab_logo_250x141
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(194, 116)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -598,9 +582,8 @@ Partial Class FrmPrincipal
         Me.PanelSubExamenes.ResumeLayout(False)
         Me.PanelSubUsuario.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -624,8 +607,6 @@ Partial Class FrmPrincipal
     Friend WithEvents BtnCrearUsuario As Button
     Friend WithEvents BtnUsuario As Button
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BtnExamenes As Button
     Friend WithEvents PanelFrmHijo As Panel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
@@ -637,4 +618,5 @@ Partial Class FrmPrincipal
     Friend WithEvents BtnReportes As Button
     Friend WithEvents PanelSubReportes As Panel
     Friend WithEvents BtnGestiónReportes As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

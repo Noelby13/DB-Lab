@@ -39,12 +39,12 @@ Partial Class FrmFacturarOrdenes
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnAgregarPaciente = New System.Windows.Forms.Button()
-        Me.TxtFiltro = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.PanelLeyendaExamen = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.CbxMetodoPago = New System.Windows.Forms.ComboBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnAceptar = New System.Windows.Forms.Button()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -61,6 +61,8 @@ Partial Class FrmFacturarOrdenes
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.CmbDoctor = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.TxtBuscarCedula = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.PanelLeyendaFactura.SuspendLayout()
         Me.PanelBuscar.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -80,7 +82,7 @@ Partial Class FrmFacturarOrdenes
         Me.PanelLeyendaFactura.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLeyendaFactura.Location = New System.Drawing.Point(0, 0)
         Me.PanelLeyendaFactura.Name = "PanelLeyendaFactura"
-        Me.PanelLeyendaFactura.Size = New System.Drawing.Size(671, 51)
+        Me.PanelLeyendaFactura.Size = New System.Drawing.Size(996, 51)
         Me.PanelLeyendaFactura.TabIndex = 0
         '
         'BtnSalir
@@ -88,7 +90,7 @@ Partial Class FrmFacturarOrdenes
         Me.BtnSalir.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.ForeColor = System.Drawing.Color.White
-        Me.BtnSalir.Location = New System.Drawing.Point(591, 7)
+        Me.BtnSalir.Location = New System.Drawing.Point(916, 7)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(68, 32)
         Me.BtnSalir.TabIndex = 1
@@ -113,7 +115,7 @@ Partial Class FrmFacturarOrdenes
         Me.PanelBuscar.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelBuscar.Location = New System.Drawing.Point(0, 51)
         Me.PanelBuscar.Name = "PanelBuscar"
-        Me.PanelBuscar.Size = New System.Drawing.Size(671, 298)
+        Me.PanelBuscar.Size = New System.Drawing.Size(996, 298)
         Me.PanelBuscar.TabIndex = 1
         '
         'GroupBox2
@@ -134,7 +136,7 @@ Partial Class FrmFacturarOrdenes
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(16, 83)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(623, 201)
+        Me.GroupBox2.Size = New System.Drawing.Size(948, 201)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos del paciente"
@@ -229,50 +231,42 @@ Partial Class FrmFacturarOrdenes
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.TxtBuscarCedula)
         Me.GroupBox1.Controls.Add(Me.BtnAgregarPaciente)
-        Me.GroupBox1.Controls.Add(Me.TxtFiltro)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.TxtBuscar)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(16, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(623, 61)
+        Me.GroupBox1.Size = New System.Drawing.Size(948, 61)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Buscar Paciente"
         '
         'BtnAgregarPaciente
         '
-        Me.BtnAgregarPaciente.Location = New System.Drawing.Point(513, 23)
+        Me.BtnAgregarPaciente.Location = New System.Drawing.Point(638, 21)
         Me.BtnAgregarPaciente.Name = "BtnAgregarPaciente"
         Me.BtnAgregarPaciente.Size = New System.Drawing.Size(89, 27)
         Me.BtnAgregarPaciente.TabIndex = 4
         Me.BtnAgregarPaciente.Text = "Agregar"
         Me.BtnAgregarPaciente.UseVisualStyleBackColor = True
         '
-        'TxtFiltro
-        '
-        Me.TxtFiltro.FormattingEnabled = True
-        Me.TxtFiltro.Items.AddRange(New Object() {"Cedula", "Telefono", "Nombre"})
-        Me.TxtFiltro.Location = New System.Drawing.Point(86, 24)
-        Me.TxtFiltro.Name = "TxtFiltro"
-        Me.TxtFiltro.Size = New System.Drawing.Size(128, 26)
-        Me.TxtFiltro.TabIndex = 1
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(7, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 18)
+        Me.Label2.Size = New System.Drawing.Size(62, 18)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Filtrar por: "
+        Me.Label2.Text = "Cedula: "
         '
         'TxtBuscar
         '
         Me.TxtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TxtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.TxtBuscar.Location = New System.Drawing.Point(228, 24)
+        Me.TxtBuscar.Location = New System.Drawing.Point(362, 24)
         Me.TxtBuscar.Name = "TxtBuscar"
         Me.TxtBuscar.Size = New System.Drawing.Size(260, 24)
         Me.TxtBuscar.TabIndex = 2
@@ -285,7 +279,7 @@ Partial Class FrmFacturarOrdenes
         Me.PanelLeyendaExamen.ForeColor = System.Drawing.Color.White
         Me.PanelLeyendaExamen.Location = New System.Drawing.Point(0, 349)
         Me.PanelLeyendaExamen.Name = "PanelLeyendaExamen"
-        Me.PanelLeyendaExamen.Size = New System.Drawing.Size(671, 25)
+        Me.PanelLeyendaExamen.Size = New System.Drawing.Size(996, 25)
         Me.PanelLeyendaExamen.TabIndex = 2
         '
         'Label8
@@ -302,6 +296,7 @@ Partial Class FrmFacturarOrdenes
         'Panel4
         '
         Me.Panel4.AutoScroll = True
+        Me.Panel4.Controls.Add(Me.CbxMetodoPago)
         Me.Panel4.Controls.Add(Me.BtnCancelar)
         Me.Panel4.Controls.Add(Me.BtnAceptar)
         Me.Panel4.Controls.Add(Me.TextBox8)
@@ -312,8 +307,18 @@ Partial Class FrmFacturarOrdenes
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 374)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(671, 350)
+        Me.Panel4.Size = New System.Drawing.Size(996, 350)
         Me.Panel4.TabIndex = 3
+        '
+        'CbxMetodoPago
+        '
+        Me.CbxMetodoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CbxMetodoPago.FormattingEnabled = True
+        Me.CbxMetodoPago.Items.AddRange(New Object() {"Cedula", "Telefono", "Nombre"})
+        Me.CbxMetodoPago.Location = New System.Drawing.Point(41, 314)
+        Me.CbxMetodoPago.Name = "CbxMetodoPago"
+        Me.CbxMetodoPago.Size = New System.Drawing.Size(135, 21)
+        Me.CbxMetodoPago.TabIndex = 9
         '
         'BtnCancelar
         '
@@ -321,7 +326,7 @@ Partial Class FrmFacturarOrdenes
         Me.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnCancelar.Location = New System.Drawing.Point(454, 310)
+        Me.BtnCancelar.Location = New System.Drawing.Point(779, 310)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(84, 24)
         Me.BtnCancelar.TabIndex = 8
@@ -333,7 +338,7 @@ Partial Class FrmFacturarOrdenes
         Me.BtnAceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.BtnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnAceptar.Location = New System.Drawing.Point(364, 311)
+        Me.BtnAceptar.Location = New System.Drawing.Point(689, 311)
         Me.BtnAceptar.Name = "BtnAceptar"
         Me.BtnAceptar.Size = New System.Drawing.Size(84, 24)
         Me.BtnAceptar.TabIndex = 7
@@ -343,7 +348,7 @@ Partial Class FrmFacturarOrdenes
         'TextBox8
         '
         Me.TextBox8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox8.Location = New System.Drawing.Point(258, 314)
+        Me.TextBox8.Location = New System.Drawing.Point(583, 314)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(100, 20)
         Me.TextBox8.TabIndex = 6
@@ -352,7 +357,7 @@ Partial Class FrmFacturarOrdenes
         '
         Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(185, 317)
+        Me.Label11.Location = New System.Drawing.Point(510, 317)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(76, 13)
         Me.Label11.TabIndex = 3
@@ -370,7 +375,7 @@ Partial Class FrmFacturarOrdenes
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(644, 84)
+        Me.DataGridView1.Size = New System.Drawing.Size(969, 84)
         Me.DataGridView1.TabIndex = 5
         '
         'id
@@ -406,7 +411,7 @@ Partial Class FrmFacturarOrdenes
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(15, 108)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(644, 88)
+        Me.GroupBox4.Size = New System.Drawing.Size(969, 88)
         Me.GroupBox4.TabIndex = 1
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Examenes de la orden"
@@ -457,17 +462,18 @@ Partial Class FrmFacturarOrdenes
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(12, 18)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(647, 89)
+        Me.GroupBox3.Size = New System.Drawing.Size(972, 89)
         Me.GroupBox3.TabIndex = 0
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Datos del doctor"
         '
         'CmbDoctor
         '
+        Me.CmbDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbDoctor.FormattingEnabled = True
         Me.CmbDoctor.Location = New System.Drawing.Point(103, 31)
         Me.CmbDoctor.Name = "CmbDoctor"
-        Me.CmbDoctor.Size = New System.Drawing.Size(279, 26)
+        Me.CmbDoctor.Size = New System.Drawing.Size(467, 26)
         Me.CmbDoctor.TabIndex = 1
         '
         'Label9
@@ -479,11 +485,29 @@ Partial Class FrmFacturarOrdenes
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Nombre:"
         '
+        'TxtBuscarCedula
+        '
+        Me.TxtBuscarCedula.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TxtBuscarCedula.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.TxtBuscarCedula.Location = New System.Drawing.Point(75, 24)
+        Me.TxtBuscarCedula.Name = "TxtBuscarCedula"
+        Me.TxtBuscarCedula.Size = New System.Drawing.Size(193, 24)
+        Me.TxtBuscarCedula.TabIndex = 5
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(290, 27)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(66, 18)
+        Me.Label12.TabIndex = 6
+        Me.Label12.Text = "Nombre:"
+        '
         'FrmFacturarOrdenes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(671, 724)
+        Me.ClientSize = New System.Drawing.Size(996, 724)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.PanelLeyendaExamen)
         Me.Controls.Add(Me.PanelBuscar)
@@ -517,7 +541,6 @@ Partial Class FrmFacturarOrdenes
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents BtnAgregarPaciente As Button
-    Friend WithEvents TxtFiltro As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents TxtCedula As TextBox
@@ -549,4 +572,7 @@ Partial Class FrmFacturarOrdenes
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnAgregar As Button
     Friend WithEvents BtnEliminar As Button
+    Friend WithEvents CbxMetodoPago As ComboBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents TxtBuscarCedula As TextBox
 End Class

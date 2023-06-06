@@ -122,10 +122,27 @@ Public Class FrmListaTrabajo
             End If
 
             TxtOrden.Text = DgvLista.Rows(fila).Cells(0).Value.ToString()
+            'pregunta si deseas cambiar el estado de la factura como en desarrollo
+
+            'chequea si la factura ya esta en desarrollo o terminada
+            If DgvLista.Rows(fila).Cells(4).Value.ToString() = "Sin Iniciar" Then
+                Dim respuesta As Integer = MessageBox.Show("¿Desea cambiar el estado de la factura a En desarrollo?", "Cambiar estado", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                If respuesta = DialogResult.Yes Then
+                    Dim fac As New Factura
+                    fac.IdFactura = Convert.ToInt32(TxtOrden.Text)
+                    fac.IdEstadoFactura = 2
+                    Dim dFactura As New DFactura
+                    dFactura.actualizarEstadoFactura(fac)
+                    cargarTabla()
+                End If
+            End If
+
+
+
             rellenarGridTrabajo()
+
             'cambia de tabpage
             TabControl1.SelectedTab = TpResultado
-
 
 
         End If
@@ -296,16 +313,19 @@ Public Class FrmListaTrabajo
     End Sub
 
     Private Sub BtnReporte_Click(sender As Object, e As EventArgs) Handles BtnReporte.Click
-        'Dim dDetalle As New D_DetalleFactura
-        'Dim DResultado As New DResultado
 
-        'Dim t = dDetalle.obtenerExamenes(Convert.ToInt32(TxtOrden.Text))
-
-        '' genera una consulta linq para filtrar si un resultadoNumericoH tenga 0 o "" debe mostrar el resultadoTextoH, debe generar otra tabla que solo tenga los datos del reporte(NombreEstudio, resultado, valoresReferencia, unidad)
-        'Dim resul = DResultado.obtenerResultados(Convert.ToInt32(TxtOrden.Text))
-        'Dim ds As New DataSet
-
-
+        'pregunta que si deseas imprimir el reporte se pondra el estado factura como terminado
+        Dim respuesta As Integer = MsgBox("¿Desea imprimir el reporte? El estado pasará como terminado", vbYesNo, "Imprimir reporte")
+        If respuesta = vbYes Then
+            Dim dFactura As New DFactura
+            Dim factura As New Factura
+            factura.IdFactura = Convert.ToInt32(TxtOrden.Text)
+            factura.IdEstadoFactura = 3
+            If Not dFactura.actualizarEstadoFactura(factura) Then
+                MsgBox("Error al actualizar el estado de la factura")
+                Exit Sub
+            End If
+        End If
 
 
         Dim tblFactura As New DsDBLabTableAdapters.RptDatosFacturaTableAdapter

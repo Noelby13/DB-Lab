@@ -82,5 +82,23 @@ Public Class D_DetalleFactura
     '    End Try
     '    Return B
     'End Function
-
+    Public Function guardarDetalles(ByVal detalles As DetalleFactura) As Boolean
+        Dim resultado = False
+        Try
+            Dim conn As New SqlConnection(strConexion)
+            Dim tsql As String = "INSERT INTO Tbl_DetalleFactura (idFactura, idExamen, cantidad, precioUnitario) VALUES (@idFactura, @idExamen, @cantidad, @precioUnitario)"
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@idFactura", detalles.IdFactura)
+            cmd.Parameters.AddWithValue("@idExamen", detalles.IdExamen)
+            cmd.Parameters.AddWithValue("@cantidad", detalles.Cantidad)
+            cmd.Parameters.AddWithValue("@precioUnitario", detalles.PrecioUnitario)
+            conn.Open()
+            If cmd.ExecuteNonQuery() <> 0 Then
+                resultado = True
+            End If
+        Catch ex As Exception
+            MsgBox("Ocurrio un error al guardar los detalles", MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return resultado
+    End Function
 End Class

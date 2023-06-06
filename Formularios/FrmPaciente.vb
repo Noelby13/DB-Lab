@@ -217,6 +217,8 @@ Public Class FrmPaciente
             MsgBox("No se pudo registrar el paciente" & ex.Message, MsgBoxStyle.Critical, "ERROR")
         End Try
     End Sub
+
+
 End Class
 
 

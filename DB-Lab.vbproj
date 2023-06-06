@@ -186,6 +186,12 @@
     <Compile Include="Formularios\FrmExamen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmFacturar.Designer.vb">
+      <DependentUpon>FrmFacturar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmFacturar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmGestiónReportes.Designer.vb">
       <DependentUpon>FrmGestiónReportes.vb</DependentUpon>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmExamen.resx">
       <DependentUpon>FrmExamen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmFacturar.resx">
+      <DependentUpon>FrmFacturar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmGestiónReportes.resx">
       <DependentUpon>FrmGestiónReportes.vb</DependentUpon>

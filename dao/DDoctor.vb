@@ -5,27 +5,22 @@ Public Class DDoctor
 
     Dim strConexion = My.Settings.miConexion.ToString()
 
-    Public Function obtenerDoctor()
-
+    Public Function obtenerDoctor() As DataSet
+        Dim ds As New DataSet
         Try
-            Dim doctor As New Doctor
-            Dim ds As New DataTable
+
+
             Dim conn As New SqlConnection(strConexion)
-            Dim tsql As String = "SELECT * FROM Tbl_Doctor WHERE idDoctor = @idDoctor"
+            Dim tsql As String = "SELECT D.idDoctor, CONCAT(D.primerNombre,' ',D.segundoNombre, ' ', D.primerApellido, ' ',D.segundoApellido, '---Especialidad: ', D.especialidad) as 'Doctor' FROM Tbl_Doctor as D"
             Dim da As New SqlDataAdapter(tsql, conn)
-            da.SelectCommand.Parameters.AddWithValue("@idDoctor", doctor.IdDoctor)
             da.Fill(ds)
-            doctor.IdDoctor = ds.Rows(0).Item("idDoctor")
-            doctor.PrimerNombre = ds.Rows(0).Item("primerNombre")
-            doctor.SegundoNombre = ds.Rows(0).Item("segundoNombre")
-            doctor.PrimerApellido = ds.Rows(0).Item("primerApellido")
-            doctor.SegundoApellido = ds.Rows(0).Item("segundoApellido")
+
             'doctor.Especialidad = ds.Rows(0).Item("especialidad")
-            Return doctor
+
         Catch ex As Exception
             MsgBox("Ocurrio un error al intentar obtener el doctor", MsgBoxStyle.Information, "Doctor")
         End Try
-
+        Return ds
     End Function
 
     Public Function mostrarRegistro() As DataSet
